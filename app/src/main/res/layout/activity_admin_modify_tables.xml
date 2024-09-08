@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background2"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".Admin.Admin_Account_Settings">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="500dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Add tables"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/imageButton_select_image"
+                android:layout_width="148dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="205dp"
+                android:layout_marginEnd="111dp"
+                android:background="@color/white"
+                android:contentDescription="Add table"
+                app:srcCompat="@drawable/add_employee_button" />
+
+            <TextView
+                android:id="@+id/textView_add_tables_seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Add tables"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_add_tables_description"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:text="To input the total number of table seats, first specify whether the tables are located indoors or outdoors. Then, enter the seat count in the provided field."
+                android:layout_marginTop="80dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
+                app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+            <RadioGroup
+                android:id="@+id/radioGroup_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="150dp"
+                android:layout_marginLeft="30dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/textView_add_tables_description"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButton_indoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Indoor"
+                android:textColor="@color/black" />
+
+            <RadioButton
+                android:id="@+id/radioButton_outdoor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Outdoor"
+                android:textColor="@color/black"
+                />
+        </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextNumber_number_of_tables"
+                android:layout_width="157dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="205dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/table_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Total tables"
+                android:inputType="number"
+                android:paddingStart="10dp" />
+
+            <TextView
+                android:id="@+id/textView_delete_table_seats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="290dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Delete tables"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_delete_tables_description"
+                android:layout_width="316dp"
+                android:layout_height="wrap_content"
+                android:text="To delete a table, please enter the name of the table."
+                android:layout_marginTop="330dp"
+                android:layout_marginLeft="30dp"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"/>
+
+            <EditText
+                android:id="@+id/editTextText_delete_tables"
+                android:layout_width="165dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="390dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/table_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="delete table"
+                android:inputType="number"
+                android:paddingStart="10dp" />
+
+            <ImageButton
+                android:id="@+id/imageButton_delete_table"
+                android:layout_width="149dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="390dp"
+                android:layout_marginEnd="111dp"
+                android:background="@color/white"
+                android:contentDescription="delete table"
+                app:srcCompat="@drawable/delete_table" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="570dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Indoor tables"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_Indoor_tables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Indoor tables"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="690dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Outdoor tables"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
+
+            <TextView
+                android:id="@+id/textView_outdoor_tables"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Outdoor tables"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

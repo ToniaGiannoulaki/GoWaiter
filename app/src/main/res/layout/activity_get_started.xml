@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1">
+
+    <ImageView
+        android:id="@+id/imageView_logo"
+        android:layout_width="256dp"
+        android:layout_height="254dp"
+        android:layout_marginStart="77dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="78dp"
+        android:layout_marginBottom="413dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <ImageButton
+        android:id="@+id/imageButton_getStarted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="555dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="112dp"
+        android:background="@drawable/custom_button"
+        android:contentDescription="Get started"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/get_started_button" />
+
+    <TextView
+        android:id="@+id/textView_GoWaiter"
+        android:layout_width="210dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="101dp"
+        android:layout_marginTop="388dp"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="228dp"
+        android:fontFamily="sans-serif-light"
+        android:gravity="center"
+        android:text="Welcome to\n\GoWaiter"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

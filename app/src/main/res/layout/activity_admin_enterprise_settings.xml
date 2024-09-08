@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Admin.Admin_Enterprise_Settings"
+    android:background="@drawable/background2">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="0dp"
+        android:layout_height="500dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="Change Enterprise name"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButton_apply_change"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="111dp"
+            android:background="@color/white"
+            android:contentDescription="Apply change in name"
+            app:srcCompat="@drawable/apply_change_button" />
+
+        <TextView
+            android:id="@+id/textView_change_enterprise_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Change Enterprise Name"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView_change_enterprise_name_description"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:text="To make any changes to your business's name, fill the designated field."
+            android:layout_marginTop="70dp"
+            android:layout_marginLeft="30dp"
+            android:textColor="@color/black"
+            app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"/>
+
+        <EditText
+            android:id="@+id/editText_change_enterprise_name"
+            android:layout_width="298dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="120dp"
+            android:layout_marginEnd="62dp"
+            android:layout_marginBottom="378dp"
+            android:background="@drawable/custom_input"
+            android:ems="10"
+            android:hint="Enter the new name"
+            android:inputType="text"
+            android:paddingStart="10dp"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView_tables_and_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="270dp"
+            android:fontFamily="sans-serif-black"
+            android:text="Tables &amp; Menu"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/imageButton_modify_tables"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="320dp"
+            android:layout_marginEnd="111dp"
+            android:background="@color/white"
+            android:contentDescription="Modify tables button"
+            app:srcCompat="@drawable/modify_tables_button" />
+
+        <ImageButton
+            android:id="@+id/imageButton_modify_menu"
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="85dp"
+            android:layout_marginTop="390dp"
+            android:layout_marginEnd="111dp"
+            android:background="@color/white"
+            android:contentDescription="Modify menu button"
+            app:srcCompat="@drawable/modify_menu_button" />
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

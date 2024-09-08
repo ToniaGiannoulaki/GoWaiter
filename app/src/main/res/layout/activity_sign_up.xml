@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    tools:context=".Sign_up">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="148dp"
+        android:layout_height="124dp"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginBottom="591dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="400dp"
+        android:layout_height="510dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginEnd="32dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView_sign_up"
+                android:layout_width="94dp"
+                android:layout_height="39dp"
+                android:layout_marginStart="152dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginEnd="154dp"
+                android:layout_marginBottom="446dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Sign Up"
+                android:textColor="@color/black"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                android:id="@+id/imageButton_sign_up"
+                android:layout_width="174dp"
+                android:layout_height="59dp"
+                android:layout_marginStart="112dp"
+                android:layout_marginTop="421dp"
+                android:layout_marginEnd="114dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/custom_button"
+                android:contentDescription="Sign Up"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/sign_up_button" />
+
+            <EditText
+                android:id="@+id/editTextTextEmailAddress"
+                android:layout_width="298dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="280dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="182dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/email_icon_purple"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextTextPassword"
+                android:layout_width="298dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="343dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="119dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/lock_icon_purple"
+                android:drawablePadding="9dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_enterprise"
+                android:layout_width="298dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="148dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="314dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Name of Enterprise"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_role"
+                android:layout_width="298dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="212dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_username"
+                android:layout_width="298dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="84dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="378dp"
+                android:background="@drawable/custom_input"
+                android:ems="10"
+                android:hint="Username"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

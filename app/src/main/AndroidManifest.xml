@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GoWaiter"
+        tools:targetApi="31">
+        <activity
+            android:name=".Admin.Admin_selected_category"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Modify_Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Modify_Menu"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Modify_Tables"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Enterprise_Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Staff_Settings"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Account_Settings"
+            android:exported="false" />
+        <activity
+            android:name=".ChefCook.Chef_Cook_Account"
+            android:exported="false"
+            android:label="@string/title_activity_chef_cook_account"
+            android:theme="@style/Theme.GoWaiter" />
+        <activity
+            android:name=".BaristaBarman.Barista_Barman_Account"
+            android:exported="false" />
+        <activity
+            android:name=".Waiter.Waiter_Account"
+            android:exported="false" />
+        <activity
+            android:name=".Admin.Admin_Account"
+            android:exported="false"
+            android:label="@string/title_activity_admin_account"
+            android:theme="@style/Theme.GoWaiter.NoActionBar" />
+        <activity
+            android:name=".Admin_Activity"
+            android:exported="false" />
+        <activity
+            android:name=".Sign_up"
+            android:exported="false" />
+        <activity
+            android:name=".Sign_in"
+            android:exported="false" />
+        <activity
+            android:name=".Get_Started"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.GoWaiter" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="android:statusBarColor">@color/status_bar_color
+        </item> <!-- Set the status bar color -->
+    </style>
+
+    <style name="Theme.GoWaiter" parent="Base.Theme.GoWaiter" />
+
+    <style name="Theme.GoWaiter.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.GoWaiter.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.GoWaiter.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <!-- For Admins profile pic -->
+    <style name="CircleImageView" parent="Widget.MaterialComponents.ShapeableImageView">
+        <item name="shapeAppearance">@style/CircleShape</item>
+    </style>
+
+    <style name="CircleShape" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+</resources>
