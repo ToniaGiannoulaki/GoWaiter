@@ -13,10 +13,10 @@
         android:theme="@style/Theme.GoWaiter"
         tools:targetApi="31">
         <activity
-            android:name=".Admin.Admin_selected_category"
+            android:name=".Admin.Admin_Messages"
             android:exported="false" />
         <activity
-            android:name=".Admin.Admin_Modify_Menu"
+            android:name=".Admin.Admin_selected_category"
             android:exported="false" />
         <activity
             android:name=".Admin.Admin_Modify_Menu"
@@ -49,9 +49,6 @@
             android:exported="false"
             android:label="@string/title_activity_admin_account"
             android:theme="@style/Theme.GoWaiter.NoActionBar" />
-        <activity
-            android:name=".Admin_Activity"
-            android:exported="false" />
         <activity
             android:name=".Sign_up"
             android:exported="false" />

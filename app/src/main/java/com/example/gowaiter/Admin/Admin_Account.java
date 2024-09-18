@@ -10,7 +10,7 @@ import com.example.gowaiter.R;
 
 public class Admin_Account extends AppCompatActivity {
 
-    CardView account_settings, staff_settings, enterprise_settings;
+    CardView account_settings, staff_settings, enterprise_settings, messages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,11 @@ public class Admin_Account extends AppCompatActivity {
         account_settings = findViewById(R.id.card_view_account_settings_admin);
         staff_settings = findViewById(R.id.card_view_staff_settings);
         enterprise_settings = findViewById(R.id.card_view_enterprise_settings);
+        messages = findViewById(R.id.card_view_messages);
 
         account_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Account_Settings.class)));
         staff_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Staff_Settings.class)));
         enterprise_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Enterprise_Settings.class)));
+        messages.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Messages.class)));
     }
 }
