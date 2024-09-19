@@ -1,4 +1,4 @@
-package com.example.gowaiter;
+package com.example.gowaiter.MainMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.widget.ImageButton;
 
 import com.example.gowaiter.Admin.Admin_Account;
+import com.example.gowaiter.R;
 
 public class Sign_in extends AppCompatActivity {
     ImageButton sign_up, sign_in;

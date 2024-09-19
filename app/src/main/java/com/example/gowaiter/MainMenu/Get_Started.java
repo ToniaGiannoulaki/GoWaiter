@@ -1,4 +1,4 @@
-package com.example.gowaiter;
+package com.example.gowaiter.MainMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.daimajia.androidanimations.library.Techniques;
 import com.daimajia.androidanimations.library.YoYo;
+import com.example.gowaiter.R;
 
 public class Get_Started extends AppCompatActivity {
 

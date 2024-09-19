@@ -1,4 +1,4 @@
-package com.example.gowaiter;
+package com.example.gowaiter.MainMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +10,8 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import com.example.gowaiter.R;
 
 import java.util.ArrayList;
 import java.util.Arrays;
