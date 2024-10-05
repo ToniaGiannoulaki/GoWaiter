@@ -28,7 +28,7 @@
         android:layout_marginTop="555dp"
         android:layout_marginEnd="89dp"
         android:layout_marginBottom="112dp"
-        android:background="@drawable/custom_button"
+        android:background="@drawable/get_started_button"
         android:contentDescription="Get started"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
