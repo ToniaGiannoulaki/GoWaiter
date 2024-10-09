@@ -13,6 +13,9 @@
         android:theme="@style/Theme.GoWaiter"
         tools:targetApi="31">
         <activity
+            android:name=".Waiter.Waiter_toolbar_category"
+            android:exported="false" />
+        <activity
             android:name=".Waiter.Waiter_selected_table"
             android:exported="false" />
         <activity
