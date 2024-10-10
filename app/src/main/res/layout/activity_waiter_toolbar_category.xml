@@ -23,16 +23,29 @@
 
             <!-- Title Section -->
             <TextView
-                android:id="@+id/tv_selected_category"
+                android:id="@+id/selected_category"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Selected Category: Beverages"
+                android:text="Selected Category:"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/white"
                 android:gravity="center"
                 android:layout_gravity="center"
                 android:layout_marginTop="32dp" />
+
+            <TextView
+                android:id="@+id/selected_category_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="2dp"
+                android:gravity="center"
+                android:text="category name"
+                android:textColor="@android:color/white"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
 
             <TextView
                 android:id="@+id/tv_instructions"
@@ -116,7 +129,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Add item"
-                            android:backgroundTint="#FF00C5"
+                            android:backgroundTint="#C835ED"
                             android:textColor="@android:color/white"
                             android:layout_marginStart="16dp" />
                     </LinearLayout>
@@ -194,7 +207,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Add item"
-                            android:backgroundTint="#FF00C5"
+                            android:backgroundTint="#C835ED"
                             android:textColor="@android:color/white"
                             android:layout_marginStart="16dp" />
                     </LinearLayout>
