@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".Waiter.Waiter_selected_table">
+    tools:context=".Waiter.Waiter_selected_table_take_order">
 
     <!-- Toolbar with Categories -->
     <androidx.appcompat.widget.Toolbar
@@ -139,15 +139,15 @@
                 />
 
             <!-- Add Order Button without CardView -->
-            <ImageButton
-                android:id="@+id/imageButton_add_order"
+
+            <Button
+                android:id="@+id/button_add_order"
                 android:layout_width="174dp"
-                android:layout_height="59dp"
+                android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/custom_button"
-                android:contentDescription="Add Order"
-                android:src="@drawable/add_order_button"
-                />
+                android:backgroundTint="#C835ED"
+                android:text="Add Order"
+                android:textSize="20sp"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

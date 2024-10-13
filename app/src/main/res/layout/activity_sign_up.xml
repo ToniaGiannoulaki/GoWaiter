@@ -56,21 +56,21 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton_sign_up"
-                android:layout_width="174dp"
-                android:layout_height="59dp"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="421dp"
-                android:layout_marginEnd="114dp"
-                android:layout_marginBottom="30dp"
-                android:background="@drawable/custom_button"
-                android:contentDescription="Sign Up"
+            <Button
+                android:id="@+id/button_sign_up"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="114dp"
+                android:layout_marginTop="431dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Sign Up"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/sign_up_button" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"

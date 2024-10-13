@@ -21,16 +21,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageButton
-            android:id="@+id/imageButton_apply_change"
+        <Button
+            android:id="@+id/button_apply_change"
             android:layout_width="204dp"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:layout_marginStart="85dp"
             android:layout_marginTop="190dp"
             android:layout_marginEnd="111dp"
-            android:background="@color/white"
-            android:contentDescription="Apply change in name"
-            app:srcCompat="@drawable/apply_change_button" />
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="#C835ED"
+            android:text="Apply change"
+            android:textSize="20sp"/>
 
         <TextView
             android:id="@+id/textView_change_enterprise_name"
@@ -96,27 +97,29 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageButton
-            android:id="@+id/imageButton_modify_tables"
+        <Button
+            android:id="@+id/button_modify_tables"
             android:layout_width="204dp"
-            android:layout_height="wrap_content"
+            android:layout_height="50dp"
             android:layout_marginStart="85dp"
             android:layout_marginTop="320dp"
             android:layout_marginEnd="111dp"
-            android:background="@color/white"
-            android:contentDescription="Modify tables button"
-            app:srcCompat="@drawable/modify_tables_button" />
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="#C835ED"
+            android:text="Modify tables"
+            android:textSize="20sp"/>
 
-        <ImageButton
-            android:id="@+id/imageButton_modify_menu"
+        <Button
+            android:id="@+id/button_modify_menu"
             android:layout_width="204dp"
-            android:layout_height="wrap_content"
+            android:layout_height="51dp"
             android:layout_marginStart="85dp"
             android:layout_marginTop="390dp"
             android:layout_marginEnd="111dp"
-            android:background="@color/white"
-            android:contentDescription="Modify menu button"
-            app:srcCompat="@drawable/modify_menu_button" />
+            android:layout_marginBottom="29dp"
+            android:backgroundTint="#C835ED"
+            android:text="Modify Menu"
+            android:textSize="20sp" />
 
     </androidx.cardview.widget.CardView>
 

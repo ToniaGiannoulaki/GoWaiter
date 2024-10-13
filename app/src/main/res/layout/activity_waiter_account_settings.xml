@@ -28,16 +28,17 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-            <ImageButton
-                android:id="@+id/imageButton_select_image"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
+            <Button
+                android:id="@+id/button_select_image"
+                android:layout_width="133dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="112dp"
                 android:layout_marginTop="350dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
-                android:contentDescription="Select Image"
-                app:srcCompat="@drawable/select_image_button" />
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Select"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView_new_card2"
@@ -90,16 +91,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton_authenticate_username"
+            <Button
+                android:id="@+id/button_authenticate_username"
                 android:layout_width="195dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginStart="85dp"
                 android:layout_marginTop="150dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
-                android:contentDescription="Authenticate"
-                app:srcCompat="@drawable/authenticate_button" />
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Authenticate"
+                android:textSize="20sp" />
 
             <TextView
                 android:id="@+id/textView_profile_pic"
@@ -204,16 +206,17 @@
                 android:layout_marginEnd="154dp"
                 android:text="To confirm your email, click on the send button. Afterwards, fill the PIN field to authenticate your new email address." />
 
-            <ImageButton
-                android:id="@+id/imageButton_send"
-                android:layout_width="wrap_content"
-                android:layout_height="48dp"
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="134dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="112dp"
                 android:layout_marginTop="210dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
-                android:contentDescription="Send"
-                app:srcCompat="@drawable/send_button" />
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Send"
+                android:textSize="20sp"/>
 
             <EditText
                 android:id="@+id/editText_pin"
@@ -236,18 +239,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton_authenticate_email"
+            <Button
+                android:id="@+id/button_authenticate_email"
                 android:layout_width="195dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginStart="85dp"
                 android:layout_marginTop="350dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
-                android:contentDescription="Authenticate"
-                app:srcCompat="@drawable/authenticate_button" />
-
-
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Authenticate"
+                android:textSize="20sp" />
 
         </androidx.cardview.widget.CardView>
 
@@ -345,16 +347,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton_authenticate_password"
+            <Button
+                android:id="@+id/button_authenticate_password"
                 android:layout_width="195dp"
-                android:layout_height="wrap_content"
+                android:layout_height="50dp"
                 android:layout_marginStart="85dp"
                 android:layout_marginTop="290dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
-                android:contentDescription="Authenticate"
-                app:srcCompat="@drawable/authenticate_button" />
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Authenticate"
+                android:textSize="20sp"/>
 
         </androidx.cardview.widget.CardView>
 

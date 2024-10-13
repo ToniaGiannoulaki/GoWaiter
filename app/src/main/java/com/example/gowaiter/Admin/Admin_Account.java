@@ -10,7 +10,7 @@ import com.example.gowaiter.R;
 
 public class Admin_Account extends AppCompatActivity {
 
-    CardView account_settings, staff_settings, enterprise_settings, messages, payments;
+    CardView account_settings, staff_settings, enterprise_settings, messages, payments, supplies;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,11 +22,13 @@ public class Admin_Account extends AppCompatActivity {
         enterprise_settings = findViewById(R.id.card_view_enterprise_settings);
         messages = findViewById(R.id.card_view_messages);
         payments = findViewById(R.id.card_view_payments);
+        supplies = findViewById(R.id.card_view_supplies);
 
         account_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Account_Settings.class)));
         staff_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Staff_Settings.class)));
         enterprise_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Enterprise_Settings.class)));
         messages.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Messages.class)));
         payments.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Payments.class)));
+        supplies.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Supplies.class)));
     }
 }

@@ -176,10 +176,10 @@
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_messages_waiter"
+                android:id="@+id/textView_notifications_waiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Messages"
+                android:text="Notifications"
                 android:layout_gravity="center_horizontal"
                 android:textSize="18sp"
                 android:textColor="@color/black"/>

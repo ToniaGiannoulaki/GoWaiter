@@ -57,37 +57,37 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <ImageButton
-                android:id="@+id/imageButton_sign_in"
-                android:layout_width="177dp"
-                android:layout_height="65dp"
+            <Button
+                android:id="@+id/button_sign_in"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
                 android:layout_marginStart="112dp"
-                android:layout_marginTop="274dp"
-                android:layout_marginEnd="111dp"
-                android:layout_marginBottom="111dp"
-                android:background="@drawable/custom_button"
-                android:contentDescription="Log In"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/log_in_button" />
-
-            <ImageButton
-                android:id="@+id/imageButton_sign_up"
-                android:layout_width="174dp"
-                android:layout_height="59dp"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="339dp"
+                android:layout_marginTop="259dp"
                 android:layout_marginEnd="114dp"
-                android:layout_marginBottom="52dp"
-                android:background="@drawable/custom_button"
-                android:contentDescription="Sign Up"
+                android:layout_marginBottom="106dp"
+                android:backgroundTint="#C835ED"
+                android:text="Log In"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/sign_up_button" />
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_sign_up"
+                android:layout_width="170dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="114dp"
+                android:layout_marginTop="322dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginBottom="48dp"
+                android:backgroundTint="#C835ED"
+                android:text="Sign Up"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
             <TextView
                 android:id="@+id/textView_forgot_password"
