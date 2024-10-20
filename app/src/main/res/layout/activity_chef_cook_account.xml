@@ -169,7 +169,7 @@
                 android:id="@+id/image_view_training_support_chef_cook"
                 android:layout_width="80dp"
                 android:layout_height="80dp"
-                android:src="@drawable/training_and_support_icon"
+                android:src="@drawable/drink_beverage_recipes_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Training &amp; Support"
                 android:clickable="true"

@@ -6,8 +6,6 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.gowaiter.Admin.Admin_Account;
-import com.example.gowaiter.Admin.Admin_Account_Settings;
 import com.example.gowaiter.R;
 
 public class Waiter_Account extends AppCompatActivity {
@@ -25,7 +23,7 @@ public class Waiter_Account extends AppCompatActivity {
 
         takeOrder.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Take_Order.class)));
         changeOrder.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Change_Order.class)));
-        messages.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Messages.class)));
+        messages.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Notifications.class)));
         account_settings.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Account_Settings.class)));
     }
 }

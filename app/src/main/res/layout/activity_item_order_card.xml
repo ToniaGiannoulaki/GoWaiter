@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="16dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Order Info -->
+        <TextView
+            android:id="@+id/textView_order_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Table Name - Order #12"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/textView_order_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ordered at 12:30PM" />
+
+        <!-- Order Items -->
+        <TextView
+            android:id="@+id/textView_order_items"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cappuccino x2, Espresso, Lemonade"
+            android:layout_marginTop="8dp" />
+
+        <!-- Order Notes (Multi-line) -->
+        <TextView
+            android:id="@+id/textView_order_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:height="48dp"
+            android:inputType="textMultiLine"
+            android:maxLines="4"
+            android:scrollHorizontally="false"
+            android:text="Notes: Cappuccino sugar sweet, Cappuccino medium" /> <!-- Optional: limit max lines -->
+
+        <!-- Accept and Reject Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/button_accept"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Accept"
+                android:backgroundTint="#4FD72D"
+                android:textColor="@android:color/white" />
+
+            <Button
+                android:id="@+id/button_reject"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Reject"
+                android:backgroundTint="#E91111"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

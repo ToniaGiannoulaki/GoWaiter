@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background2"
+    tools:context=".BaristaBarman.Barista_Barman_Orders">
+
+    <!-- Toolbar with Tabs -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F3F2F2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_new_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Orders" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_prepared_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Prepared Orders" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_completed_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Completed Orders" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_rejected_orders"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rejected Orders" />
+        </com.google.android.material.tabs.TabLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- RecyclerView for displaying orders -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView_orders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical"
+        tools:listitem="@layout/activity_item_order_card" />
+</LinearLayout>

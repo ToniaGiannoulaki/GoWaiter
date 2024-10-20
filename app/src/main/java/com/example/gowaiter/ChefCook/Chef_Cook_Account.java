@@ -9,7 +9,7 @@ import com.example.gowaiter.R;
 
 public class Chef_Cook_Account extends AppCompatActivity {
 
-    CardView account_settings, messages;
+    CardView account_settings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

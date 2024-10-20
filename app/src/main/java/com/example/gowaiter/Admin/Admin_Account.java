@@ -27,7 +27,7 @@ public class Admin_Account extends AppCompatActivity {
         account_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Account_Settings.class)));
         staff_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Staff_Settings.class)));
         enterprise_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Enterprise_Settings.class)));
-        messages.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Messages.class)));
+        messages.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Statistics.class)));
         payments.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Payments.class)));
         supplies.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Supplies.class)));
     }

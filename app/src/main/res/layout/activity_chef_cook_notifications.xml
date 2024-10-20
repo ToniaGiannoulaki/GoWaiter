@@ -10,8 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".BaristaBarman.Barista_Barman_Messages">
-
+        tools:context=".ChefCook.Chef_Cook_Notifications">
 
         <View
             android:id="@+id/top_view2"

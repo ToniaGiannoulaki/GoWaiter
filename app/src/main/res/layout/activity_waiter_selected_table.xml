@@ -91,7 +91,7 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="559dp"
+            android:layout_height="600dp"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="16dp">
@@ -131,15 +131,28 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/card_view_final_order"
                 android:layout_width="300dp"
-                android:layout_height="300dp"
+                android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#F3F2F2"
                 app:cardCornerRadius="8dp"
-                app:cardElevation="4dp"
-                />
+                app:cardElevation="4dp"/>
 
-            <!-- Add Order Button without CardView -->
+            <!-- Multi-line Text Input -->
+            <MultiAutoCompleteTextView
+                android:id="@+id/multiText_order_notes"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:hint="Add any notes"
+                android:minLines="3"
+                android:maxLines="5"
+                android:inputType="textMultiLine"
+                android:gravity="top|start"
+                android:padding="8dp"
+                android:background="@android:color/white"
+                android:scrollbars="vertical"/>
 
+            <!-- Add Order Button -->
             <Button
                 android:id="@+id/button_add_order"
                 android:layout_width="174dp"
@@ -148,7 +161,6 @@
                 android:backgroundTint="#C835ED"
                 android:text="Add Order"
                 android:textSize="20sp"/>
-
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
