@@ -9,13 +9,13 @@
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="148dp"
-        android:layout_height="124dp"
+        android:layout_width="@dimen/imageView_sign_in_width"
+        android:layout_height="@dimen/imageView_sign_in_height"
         android:layout_marginStart="131dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="132dp"
-        android:layout_marginBottom="591dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="30dp"
+        app:layout_constraintBottom_toTopOf="@id/cardView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,16 +23,16 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="400dp"
-        android:layout_height="510dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="170dp"
-        android:layout_marginEnd="32dp"
-        app:cardCornerRadius="12dp"
+        android:layout_width="@dimen/card_width"
+        android:layout_height="@dimen/card_height"
+        android:layout_marginStart="@dimen/card_margin_start"
+        android:layout_marginTop="@dimen/card_margin_top"
+        android:layout_marginEnd="@dimen/card_margin_end"
+        app:cardCornerRadius="@dimen/card_corner_radius"
         app:cardElevation="12dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView2"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintStart_toStartOf="parent">
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -41,8 +41,8 @@
 
             <TextView
                 android:id="@+id/textView_sign_up"
-                android:layout_width="94dp"
-                android:layout_height="39dp"
+                android:layout_width="@dimen/text_view_sign_in_text_size_sign_in_width1"
+                android:layout_height="@dimen/text_view_sign_in_text_size_sign_in_height1"
                 android:layout_marginStart="152dp"
                 android:layout_marginTop="25dp"
                 android:layout_marginEnd="154dp"
@@ -50,7 +50,7 @@
                 android:fontFamily="sans-serif-black"
                 android:text="Sign Up"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/text_view_sign_in_text_size_sign_in"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,15 +58,15 @@
 
             <Button
                 android:id="@+id/button_sign_up"
-                android:layout_width="170dp"
-                android:layout_height="50dp"
+                android:layout_width="@dimen/button_sign_in_sign_in_width"
+                android:layout_height="@dimen/button_sign_in_sign_in_height"
                 android:layout_marginStart="114dp"
                 android:layout_marginTop="431dp"
                 android:layout_marginEnd="116dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
                 android:text="Sign Up"
-                android:textSize="20sp"
+                android:textSize="@dimen/button_sign_in_sign_in_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -74,12 +74,12 @@
 
             <EditText
                 android:id="@+id/editTextTextEmailAddress"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="280dp"
                 android:layout_marginEnd="62dp"
-                android:layout_marginBottom="182dp"
+                android:layout_marginBottom="@dimen/form_field_vertical_padding"
                 android:background="@drawable/custom_input"
                 android:drawableStart="@drawable/email_icon_purple"
                 android:drawablePadding="10dp"
@@ -87,7 +87,7 @@
                 android:hint="Email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="10dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -95,8 +95,8 @@
 
             <EditText
                 android:id="@+id/editTextTextPassword"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="343dp"
                 android:layout_marginEnd="62dp"
@@ -108,7 +108,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:paddingStart="10dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -116,8 +116,8 @@
 
             <EditText
                 android:id="@+id/editText_enterprise"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="148dp"
                 android:layout_marginEnd="62dp"
@@ -127,7 +127,7 @@
                 android:hint="Name of Enterprise"
                 android:inputType="text"
                 android:paddingStart="10dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -135,15 +135,15 @@
 
             <Spinner
                 android:id="@+id/spinner_role"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="212dp"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
                 android:paddingStart="10dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -151,8 +151,8 @@
 
             <EditText
                 android:id="@+id/editText_username"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="40dp"
                 android:layout_marginTop="84dp"
                 android:layout_marginEnd="62dp"
@@ -162,7 +162,7 @@
                 android:hint="Username"
                 android:inputType="text"
                 android:paddingStart="10dp"
-                android:textSize="15sp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
