@@ -11,7 +11,6 @@ import com.example.gowaiter.Admin.Admin_Account_Settings;
 import com.example.gowaiter.R;
 
 public class Barista_Barman_Account extends AppCompatActivity {
-
     CardView account_settings, orders, recipes;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

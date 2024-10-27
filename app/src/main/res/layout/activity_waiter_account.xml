@@ -19,21 +19,21 @@
         android:layout_height="wrap_content"
         android:columnCount="2"
         android:rowCount="3"
-        android:layout_marginLeft="24dp"
-        android:layout_marginRight="25dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginLeft="@dimen/card_view_margin_horizontal"
+        android:layout_marginRight="@dimen/card_view_margin_horizontal"
+        android:layout_marginTop="@dimen/card_view_margin_top"
         android:layout_below="@id/top_view" />
 
     <!-- First CardView -->
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_take_order"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
-        android:layout_marginStart="45dp"
+        android:layout_marginStart="@dimen/card_view_margin_start"
         android:layout_columnWeight="1"
-        android:layout_marginTop="-80dp"
+        android:layout_marginTop="@dimen/card_view_margin_top"
         android:layout_row="1"
         android:layout_column="0"
         app:cardCornerRadius="15dp"
@@ -46,8 +46,8 @@
 
             <ImageView
                 android:id="@+id/image_view_take_order"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
                 android:src="@drawable/take_order_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Take order"
@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:text="Take Order"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -71,12 +71,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_change_order"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
         android:layout_toRightOf="@id/card_view_take_order"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="-80dp"
+        android:layout_marginLeft="@dimen/card_view_margin_horizontal"
+        android:layout_marginTop="@dimen/card_view_margin_top"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp">
 
@@ -87,8 +87,8 @@
 
             <ImageView
                 android:id="@+id/image_view_change_order"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
                 android:src="@drawable/change_order_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Change Order"
@@ -101,7 +101,7 @@
                 android:layout_height="wrap_content"
                 android:text="Change Order"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -112,11 +112,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_payments_waiter"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
+        android:layout_marginStart="@dimen/card_view_margin_start"
         android:layout_below="@id/card_view_take_order"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/card_margin_left_enterprise_settings"
+        android:layout_marginTop="@dimen/card_margin_top_enterprise_settings"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp">
 
@@ -127,8 +128,8 @@
 
             <ImageView
                 android:id="@+id/image_view_payments_waiter"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
                 android:src="@drawable/payment_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Payments"
@@ -141,7 +142,7 @@
                 android:layout_height="wrap_content"
                 android:text="Payments"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -152,11 +153,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_messages_waiter"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/card_view_change_order"
-        android:layout_marginLeft="210dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
+        android:layout_marginLeft="@dimen/card_view_messages_margin_left"
+        android:layout_marginTop="@dimen/card_view_messages_margin_top"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp">
 
@@ -167,8 +169,8 @@
 
             <ImageView
                 android:id="@+id/image_view_messages_waiter"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/messages_image_size"
+                android:layout_height="@dimen/messages_image_size"
                 android:src="@drawable/message_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Messages"
@@ -181,7 +183,7 @@
                 android:layout_height="wrap_content"
                 android:text="Notifications"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -192,11 +194,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_supplies_waiter"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/card_view_payments_waiter"
-        android:layout_marginLeft="45dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginLeft="@dimen/cardview_supplies_margin_left"
+        android:layout_marginTop="@dimen/cardview_supplies_margin_top"
+        android:layout_marginStart="@dimen/card_view_margin_start"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp">
 
@@ -207,8 +210,8 @@
 
             <ImageView
                 android:id="@+id/image_view_supplies_waiter"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
                 android:src="@drawable/shopping_cart_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Supplies"
@@ -221,7 +224,7 @@
                 android:layout_height="wrap_content"
                 android:text="Supplies"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -232,11 +235,12 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_view_account_settings_waiter"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
+        android:layout_width="@dimen/card_view_size"
+        android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/card_view_messages_waiter"
         android:layout_marginLeft="210dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
+        android:layout_marginTop="@dimen/cardview_supplies_margin_top"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp">
 
@@ -247,8 +251,8 @@
 
             <ImageView
                 android:id="@+id/image_view_account_settings_waiter"
-                android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_width="@dimen/image_size"
+                android:layout_height="@dimen/image_size"
                 android:src="@drawable/account_settings_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Account Settings"
@@ -261,7 +265,7 @@
                 android:layout_height="wrap_content"
                 android:text="Account\nSettings"
                 android:layout_gravity="center_horizontal"
-                android:textSize="18sp"
+                android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -275,7 +279,7 @@
         android:fontFamily="sans-serif-light"
         android:text="Welcome"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/welcome_text_size"
         android:layout_marginTop="40dp"
         android:layout_marginLeft="70dp"/>
 
@@ -286,14 +290,14 @@
         android:fontFamily="sans-serif-light"
         android:text="Waiter"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="@dimen/welcome_text_size"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="90dp"/>
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView_profile_pic"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="@dimen/image_size"
+        android:layout_height="@dimen/image_size"
         android:layout_alignParentRight="true"
         android:layout_marginTop="40dp"
         android:layout_marginRight="55dp"
@@ -308,10 +312,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView_profile_pic"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="265dp"
+        android:layout_marginLeft="@dimen/log_out_layout_marginLeft"
         android:fontFamily="sans-serif-light"
         android:text="Log Out"
         android:textColor="@color/white"
-        android:textSize="22sp" />
+        android:textSize="@dimen/log_out_text_size" />
 
 </RelativeLayout>

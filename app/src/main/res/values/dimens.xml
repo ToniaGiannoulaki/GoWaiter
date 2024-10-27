@@ -44,4 +44,31 @@
     <dimen name="text_view_sign_in_text_size_sign_in_width1">94dp</dimen>
     <dimen name="text_view_sign_in_text_size_sign_in_height1">39dp</dimen>
 
+    <!-- Admin/Waiter/Barista/Chef Account Activity -->
+
+    <dimen name="card_view_size">150dp</dimen>
+    <dimen name="card_view_margin_start">45dp</dimen>
+    <dimen name="card_view_margin_start_2nd_column">215dp</dimen>
+    <dimen name="card_view_margin_horizontal">16dp</dimen>
+    <dimen name="card_view_margin_top">-80dp</dimen>
+    <dimen name="image_size">80dp</dimen>
+    <dimen name="text_size">18sp</dimen>
+    <dimen name="welcome_text_size">30sp</dimen>
+    <dimen name="log_out_layout_marginLeft">265dp</dimen>
+    <dimen name="log_out_text_size">22sp</dimen>
+
+    <dimen name="card_margin_left_enterprise_settings">45dp</dimen>
+    <dimen name="card_margin_top_enterprise_settings">16dp</dimen>
+
+    <dimen name="card_view_messages_margin_left">210dp</dimen>
+    <dimen name="card_view_messages_margin_top">16dp</dimen>
+    <dimen name="messages_image_size">80dp</dimen>
+    <dimen name="messages_text_size">18sp</dimen>
+
+    <dimen name="cardview_supplies_width">150dp</dimen>
+    <dimen name="cardview_supplies_height">150dp</dimen>
+    <dimen name="cardview_supplies_margin_left">45dp</dimen>
+    <dimen name="cardview_supplies_margin_top">16dp</dimen>
+    <dimen name="supplies_image_size">80dp</dimen>
+
 </resources>
