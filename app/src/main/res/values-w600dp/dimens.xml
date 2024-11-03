@@ -21,7 +21,7 @@
     <dimen name="card_margin_top">24dp</dimen>
     <dimen name="card_margin_end">48dp</dimen>
     <dimen name="card_corner_radius">16dp</dimen>
-    <dimen name="card_width">550dp</dimen>
+
     <dimen name="card_height">600dp</dimen>
     <dimen name="edit_text_width">350dp</dimen>
     <dimen name="edit_text_height">56dp</dimen>
@@ -36,6 +36,7 @@
     <dimen name="edit_text_sign_in_email_password_text_size">18sp</dimen>
 
     <!-- Sign Up Activity -->
+
     <dimen name="form_field_vertical_padding">200dp</dimen>
     <dimen name="text_view_sign_in_text_size_sign_in_width1">100dp</dimen>
     <dimen name="text_view_sign_in_text_size_sign_in_height1">45dp</dimen>
@@ -52,20 +53,137 @@
     <dimen name="welcome_text_size">36sp</dimen>
     <dimen name="log_out_layout_marginLeft">620dp</dimen>
     <dimen name="log_out_text_size">25sp</dimen>
-
     <dimen name="card_margin_left_enterprise_settings">60dp</dimen>
     <dimen name="card_margin_top_enterprise_settings">24dp</dimen>
-
     <dimen name="card_view_messages_margin_left">250dp</dimen>
     <dimen name="card_view_messages_margin_top">20dp</dimen>
     <dimen name="messages_image_size">100dp</dimen>
     <dimen name="messages_text_size">20sp</dimen>
-
     <dimen name="cardview_supplies_width">200dp</dimen>
     <dimen name="cardview_supplies_height">200dp</dimen>
     <dimen name="cardview_supplies_margin_left">100dp</dimen>
     <dimen name="cardview_supplies_margin_top">24dp</dimen>
     <dimen name="supplies_image_size">100dp</dimen>
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- Admin/Waiter/Barista/Chef Account Settings Activity -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <!-- first card view elements -->
+
+    <dimen name="card_view_height">550dp</dimen>
+    <dimen name="card_margin_start1">32dp</dimen>
+    <dimen name="card_margin_end1">32dp</dimen>
+    <dimen name="card_view_margin_top_2">610dp</dimen>
+    <dimen name="card_view_margin_top_3">1170dp</dimen>
+
+    <!-- button select image -->
+
+    <dimen name="button_select_image_width">160dp</dimen>
+    <dimen name="button_select_image_height">60dp</dimen>
+    <dimen name="button_margin_start">115dp</dimen>
+    <dimen name="button_margin_top">450dp</dimen>
+    <dimen name="button_margin_end">120dp</dimen>
+    <dimen name="button_margin_bottom">32dp</dimen>
+    <dimen name="button_select_size">23sp</dimen>
+
+    <!-- change image description -->
+
+    <dimen name="text_view_choose_image_description_text_size">19sp</dimen>
+    <dimen name="textview_profile_picture_width">332dp</dimen>
+    <dimen name="textview_profile_picture_margin_left">180dp</dimen>
+    <dimen name="textview_profile_picture_margin_top">340dp</dimen>
+
+    <!-- change image position -->
+
+    <dimen name="image_profile_picture_margin_left">50dp</dimen>
+    <dimen name="image_profile_picture_margin_top">330dp</dimen>
+
+    <!-- change profile picture position -->
+
+    <dimen name="text_view_choose_image_text_size">28sp</dimen>
+    <dimen name="textview_choose_image_margin_start">120dp</dimen>
+    <dimen name="textview_choose_image_margin_top">265dp</dimen>
+
+    <!-- edit text position -->
+
+    <dimen name="edit_text_change_username_margin_start">80dp</dimen>
+    <dimen name="edit_text_change_username_margin_top">85dp</dimen>
+
+    <!-- Authenticate button -->
+
+    <dimen name="button_authenticate_width">230dp</dimen>
+    <dimen name="button_authenticate_height">60dp</dimen>
+    <dimen name="button_authenticate_margin_start">140dp</dimen>
+    <dimen name="button_authenticate_margin_top">175dp</dimen>
+    <dimen name="button_authenticate_margin_end">111dp</dimen>
+    <dimen name="button_authenticate_margin_bottom">29dp</dimen>
+    <dimen name="button_authenticate_select_size">20sp</dimen>
+
+    <!-- text view change username -->
+
+    <dimen name="textview_change_username_margin_start">140dp</dimen>
+
+
+    <!-- Second card view elements -->
+
+    <!-- Authenticate button -->
+
+    <dimen name="button_authenticate_margin_top2">450dp</dimen>
+
+    <!-- Edit text position -->
+
+    <dimen name="edit_text_pin_margin_top">355dp</dimen>
+
+    <!-- button send email -->
+
+    <dimen name="button_send_margin_top">265dp</dimen>
+    <dimen name="button_send_margin_start">170dp</dimen>
+
+    <!-- change email description -->
+
+    <dimen name="textview_change_email_margin_start">70dp</dimen>
+    <dimen name="textview_change_email_margin_top">170dp</dimen>
+    <dimen name="textview_change_email_width">430dp</dimen>
+
+    <!-- edit text email -->
+
+    <dimen name="edit_text_set_email_margin_top">80dp</dimen>
+
+    <!-- text view change email -->
+
+    <dimen name="textview_changeemail_margin_start">160dp</dimen>
+    <dimen name="textview_changeemail_margin_top">16dp</dimen>
+    <dimen name="textview_width">350dp</dimen>
+
+
+    <!-- Third card view elements -->
+
+    <dimen name="third_card_view_height">450dp</dimen>
+
+    <!-- Change password text view -->
+
+    <dimen name="textview_change_password_margin_start">135dp</dimen>
+    <dimen name="textview_change_password_margin_top">25dp</dimen>
+    <dimen name="textview_change_password_width">380dp</dimen>
+
+    <!-- Authenticate button password-->
+
+    <dimen name="button_authenticate_margin_top3">350dp</dimen>
+    <dimen name="button_authenticate_password_margin_start">145dp</dimen>
+
+    <!-- repeat password -->
+
+    <dimen name="edit_text_margin_start">80dp</dimen>
+    <dimen name="edit_text_repeat_password_margin_top">260dp</dimen>
+
+    <!-- set new password -->
+
+    <dimen name="edit_text_set_new_password_margin_top">180dp</dimen>
+
+    <!-- enter current password -->
+
+    <dimen name="edit_text_enter_current_password_margin_top">100dp</dimen>
 
 
 </resources>
