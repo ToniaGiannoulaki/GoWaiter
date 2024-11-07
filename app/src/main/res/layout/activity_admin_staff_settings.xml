@@ -14,43 +14,32 @@
         android:background="@drawable/background2"
         tools:context=".Admin.Admin_Account_Settings">
 
+        <!-- First Card view -->
+
         <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="390dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginStart="@dimen/card_margin_start"
             android:layout_marginTop="48dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Add Employee"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
-            <Button
-                android:id="@+id/button_add_employee"
-                android:layout_width="148dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="300dp"
-                android:layout_marginEnd="111dp"
-                android:layout_marginBottom="29dp"
-                android:backgroundTint="#C835ED"
-                android:text="Add"
-                android:textSize="20sp" />
 
 
             <TextView
                 android:id="@+id/textView_add_employee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="110dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/textview_add_employee_margin_start"
+                android:layout_marginTop="@dimen/textview_add_employee_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Add Employee"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -58,10 +47,10 @@
 
             <EditText
                 android:id="@+id/editText_enter_employees_email"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="160dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/edit_text_enter_employees_email_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -77,27 +66,22 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-
             <TextView
-                android:id="@+id/textView_profile_picture_description"
-                android:layout_width="316dp"
+                android:id="@+id/textView_add_employee_description"
+                android:layout_width="@dimen/textview_add_employee_description_width"
                 android:layout_height="wrap_content"
-                android:text="To add an employee, please enter their email address in the designated field and select their profession. An invitation will then be automatically sent to the employee's inbox."
-                android:layout_marginTop="70dp"
-                android:layout_marginLeft="30dp"
-                android:textColor="@color/black"
-                app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"/>
+                android:layout_marginStart="@dimen/textview_add_employee_description_margin_start"
+                android:layout_marginTop="@dimen/textview_add_employee_description_margin_top"
+                android:layout_marginEnd="154dp"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:text="To add an employee, please enter their email address in the designated field and select their profession. An invitation will then be automatically sent to the employee's inbox."/>
 
             <Spinner
                 android:id="@+id/spinner_select_role_add"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="230dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/spinner_select_role_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -108,29 +92,41 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 
+            <Button
+                android:id="@+id/button_add_employee"
+                android:layout_width="@dimen/button_select_image_width"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="@dimen/button_add_margin_start"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:backgroundTint="#C835ED"
+                android:text="Add"
+                android:textSize="@dimen/button_select_size" />
 
         </androidx.cardview.widget.CardView>
 
+        <!-- Second Card view -->
+
         <androidx.cardview.widget.CardView
-            android:layout_width="0dp"
-            android:layout_height="370dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="460dp"
-            android:layout_marginEnd="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="@dimen/card_view_margin_top_2"
+            android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Delete Employee"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/editText_employees_email"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="165dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/edit_text_employees_email_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -150,12 +146,12 @@
                 android:id="@+id/textView_delete_employee"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginStart="@dimen/textview_delete_employee_margin_start"
+                android:layout_marginTop="@dimen/text_view_delete_employee_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Delete Employee"
                 android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -163,10 +159,10 @@
 
             <EditText
                 android:id="@+id/editText_employees_username"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="100dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/edit_text_username_employees_email_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="378dp"
                 android:background="@drawable/custom_input"
@@ -182,19 +178,20 @@
 
             <TextView
                 android:id="@+id/textView_delete_employee_description"
-                android:layout_width="316dp"
+                android:layout_width="@dimen/textview_delete_employee_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="60dp"
+                android:layout_marginStart="@dimen/textview_delete_employee_description_margin_start"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:layout_marginTop="@dimen/text_view_delete_employee_description_margin_top"
                 android:layout_marginEnd="154dp"
                 android:text="To delete an employee, fill the designated fields." />
 
             <Spinner
                 android:id="@+id/spinner_select_role_delete"
-                android:layout_width="298dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="230dp"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/spinner_select_role_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -207,15 +204,15 @@
 
             <Button
                 android:id="@+id/button_delete_employee"
-                android:layout_width="148dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="112dp"
-                android:layout_marginTop="300dp"
-                android:layout_marginEnd="111dp"
-                android:layout_marginBottom="29dp"
+                android:layout_width="@dimen/button_select_image_width"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="@dimen/button_add_margin_start"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="#C835ED"
-                android:text="Modify tables"
-                android:textSize="20sp"/>
+                android:text="Delete"
+                android:textSize="@dimen/button_select_size"/>
 
         </androidx.cardview.widget.CardView>
 

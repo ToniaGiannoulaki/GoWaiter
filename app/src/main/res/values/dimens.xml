@@ -191,4 +191,101 @@
 
     <dimen name="edit_text_enter_current_password_margin_top">75dp</dimen>
 
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- ///////// Admin Staff Settings Activity /////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <!-- card view add employee -->
+
+    <dimen name="card_view_add_employee_margin_start">16dp</dimen>
+
+    <!-- button add employee -->
+
+    <dimen name="button_add_margin_start">115dp</dimen>
+
+    <!-- spinner select role -->
+
+    <dimen name="spinner_select_role_margin_top">230dp</dimen>
+
+    <!-- edit text enter employees email -->
+
+    <dimen name="edit_text_enter_employees_email_margin_top">160dp</dimen>
+
+    <!-- text view add employee description -->
+
+    <dimen name="textview_add_employee_description_margin_start">35dp</dimen>
+    <dimen name="textview_add_employee_description_margin_top">60dp</dimen>
+    <dimen name="textview_add_employee_description_width">316dp</dimen>
+
+    <!-- text view add employee -->
+
+    <dimen name="textview_add_employee_margin_start">100dp</dimen>
+    <dimen name="textview_add_employee_margin_top">16dp</dimen>
+
+    <!-- edit text employee's email -->
+
+    <dimen name="edit_text_employees_email_margin_top">165dp</dimen>
+
+    <!-- edit text employee's username -->
+
+    <dimen name="edit_text_username_employees_email_margin_top">100dp</dimen>
+
+    <!-- textview description delete employee -->
+
+    <dimen name="text_view_delete_employee_description_margin_top">60dp</dimen>
+    <dimen name="textview_delete_employee_description_margin_start">30dp</dimen>
+    <dimen name="textview_delete_employee_width">316dp</dimen>
+
+    <!-- textview delete employee -->
+
+    <dimen name="text_view_delete_employee_margin_top">16dp</dimen>
+    <dimen name="textview_delete_employee_margin_start">100dp</dimen>
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- //////// Admin Enterprise Settings Activity /////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="card_view_height_enterprise_settings">500dp</dimen>
+
+    <!-- buttons sizes -->
+
+    <dimen name="button_width">240dp</dimen>
+    <dimen name="button_height">51dp</dimen>
+    <dimen name="button__margin_start">85dp</dimen>
+
+    <!-- button Modify Menu -->
+
+    <dimen name="button_modify_menu_margin_top">390dp</dimen>
+
+    <!-- button Modify Menu -->
+
+    <dimen name="button_modify_tables_margin_top">320dp</dimen>
+
+    <!-- button Apply Change  -->
+
+    <dimen name="button_apply_change_margin_top">190dp</dimen>
+
+    <!-- edit text -->
+
+    <dimen name="edit_text__size">24sp</dimen>
+    <dimen name="edit_text_the_new_name_margin_top">120dp</dimen>
+    <dimen name="edit_text_the_new_name_margin_start">40dp</dimen>
+
+    <!-- text view Tables & Menu -->
+
+    <dimen name="text_view_tables_menu_margin_top">270dp</dimen>
+    <dimen name="text_view_tables_menu_margin_start">100dp</dimen>
+
+    <!-- textview description -->
+
+    <dimen name="text_view_description_margin_top">70dp</dimen>
+    <dimen name="textview_description_margin_start">30dp</dimen>
+    <dimen name="textview_description_width">316dp</dimen>
+
+    <!-- text view Change Enterprise name -->
+
+    <dimen name="text_view_enterprise_name_margin_top">16dp</dimen>
+    <dimen name="text_view_enterprise_name_margin_start">50dp</dimen>
+
 </resources>
