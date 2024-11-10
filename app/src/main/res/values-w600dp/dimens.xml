@@ -281,4 +281,68 @@
     <dimen name="text_view_enterprise_name_margin_top">29dp</dimen>
     <dimen name="text_view_enterprise_name_margin_start">70dp</dimen>
 
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- ////////// Admin Modify Tables Activity /////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="card_view_height_Add_delete_tables">650dp</dimen>
+    <dimen name="card_view_indoor_tables_margin_top">720dp</dimen>
+    <dimen name="card_view_outdoor_tables_margin_top">830dp</dimen>
+
+    <dimen name="text_view_size">24sp</dimen>
+    <dimen name="text_view_add_tables_margin_start">180dp</dimen>
+    <dimen name="text_view_delete_tables_margin_start">160dp</dimen>
+
+    <dimen name="text_view_Indoor_tables_margin_start">260dp</dimen>
+    <dimen name="text_view_Outdoor_tables_margin_start">250dp</dimen>
+
+    <!-- Button Delete table -->
+
+    <dimen name="button_height_delete">56dp</dimen>
+    <dimen name="button_width_delete">170dp</dimen>
+    <dimen name="button_delete_table_margin_top">520dp</dimen>
+    <dimen name="button_delete_table_margin_start">250dp</dimen>
+
+    <!-- Text view description delete table -->
+
+    <dimen name="text_delete_table_description_margin_top">450dp</dimen>
+    <dimen name="text_delete_table_description_width">390dp</dimen>
+
+    <!-- Text view delete table -->
+
+    <dimen name="text_delete_table_margin_top">370dp</dimen>
+
+    <!-- Text view add tables description -->
+
+    <dimen name="text_add_table_description_margin_top">100dp</dimen>
+    <dimen name="text_add_table_description_margin_start">60dp</dimen>
+    <dimen name="text_add_table_description_width">390dp</dimen>
+
+    <!-- Button Add tables -->
+
+    <dimen name="button_width_add">150dp</dimen>
+    <dimen name="button_height_add">55dp</dimen>
+    <dimen name="button_add_tables_margin_top">280dp</dimen>
+
+    <!-- Radio Group -->
+
+    <dimen name="radio_group_margin_top">210dp</dimen>
+
+    <!-- Edit text delete/add tables width -->
+
+    <dimen name="edit_text_width_add_delete_tables">180dp</dimen>
+
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////// Admin Modify Menu Activity //////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="text_add_category_description_width">290dp</dimen>
+    <dimen name="card_view_height_category">250dp</dimen>
+    <dimen name="image_button_add_margin_top">90dp</dimen>
+    <dimen name="image_button_add_margin_start">330dp</dimen>
+    <dimen name="text_view_add_margin_top">100dp</dimen>
+    <dimen name="text_view_add_categories_margin_start">150dp</dimen>
+
 </resources>
