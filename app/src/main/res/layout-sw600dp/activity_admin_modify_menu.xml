@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background2"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".Admin.Admin_Account_Settings">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_view_add_categories"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_view_height_category"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Add tables"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_add_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_view_add_categories_margin_start"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Add categories"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_add_categories_description"
+                android:layout_width="@dimen/text_add_category_description_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="@dimen/text_view_add_margin_top"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:text="Click on the button to add a menu category. Once the category is created, click on it to add specific items."
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic" />
+
+            <ImageButton
+                android:id="@+id/imageButton_add_menu_category"
+                android:layout_width="90dp"
+                android:layout_height="97dp"
+                android:layout_marginStart="@dimen/image_button_add_margin_start"
+                android:layout_marginTop="@dimen/image_button_add_margin_top"
+                android:layout_marginEnd="111dp"
+                android:background="@color/white"
+                android:contentDescription="Add menu category"
+                app:srcCompat="@drawable/add_button_icon" />
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/back_button_modify_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Back"
+            android:onClick="onBackPressed"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

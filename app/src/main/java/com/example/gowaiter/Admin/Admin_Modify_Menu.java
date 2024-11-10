@@ -5,27 +5,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.gowaiter.R;
 
 public class Admin_Modify_Menu extends AppCompatActivity {
 
+    Button tables, menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_modify_menu);
-
-        ImageButton buttonShowDialog = findViewById(R.id.imageButton_add_menu_category);
-        buttonShowDialog.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                showInputDialog();
-            }
-        });
     }
 
     private void showInputDialog() {
@@ -52,5 +48,6 @@ public class Admin_Modify_Menu extends AppCompatActivity {
                     }
                 })
                 .show();
+
     }
 }

@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -71,6 +74,7 @@ public class Admin_Staff_Settings extends AppCompatActivity {
                     // Do something with the selected role
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Another interface callback
@@ -91,6 +95,7 @@ public class Admin_Staff_Settings extends AppCompatActivity {
                     // Do something with the selected role
                 }
             }
+
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Another interface callback

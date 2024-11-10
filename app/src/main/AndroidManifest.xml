@@ -66,9 +66,6 @@
             android:name=".Admin.Admin_Payments"
             android:exported="false" />
         <activity
-            android:name=".Admin.Admin_selected_messages"
-            android:exported="false" />
-        <activity
             android:name=".Admin.Admin_Statistics"
             android:exported="false" />
         <activity
