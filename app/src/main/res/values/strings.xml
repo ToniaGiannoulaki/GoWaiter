@@ -6,6 +6,19 @@
         <item>Barista/Barman/Barwoman</item>
         <item>Cook/Chef</item>
     </string-array>
+
+    <string-array name="content_options">
+        <item>Total orders</item>
+        <item>Total earnings</item>
+    </string-array>
+
+    <string-array name="filter_options">
+        <item>Today</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+        <item>Annually</item>
+    </string-array>
+
     <string name="title_activity_admin_account">Admin_Account</string>
     <string name="large_text">
         "Material is the metaphor.\n\n"
