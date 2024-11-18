@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".Admin.Admin_Statistics">
+    tools:context=".BaristaBarman.Barista_Barman_Statistics">
 
     <androidx.cardview.widget.CardView
         android:layout_width="wrap_content"
@@ -27,7 +26,7 @@
             android:padding="16dp">
 
             <androidx.cardview.widget.CardView
-                android:id="@+id/card_view_show_statistics"
+                android:id="@+id/card_view_show_statistics_barista_barman"
                 android:layout_width="@dimen/card_view_width_show_statistics"
                 android:layout_height="@dimen/card_view_height_show_statistics"
                 android:layout_marginStart="@dimen/card_view_show_statistics_margin_start"
@@ -45,7 +44,7 @@
                 app:layout_constraintVertical_bias="0.294" />
 
             <TextView
-                android:id="@+id/text_view_statistics_admin"
+                android:id="@+id/text_view_statistics_barista_barman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Statistics"
@@ -55,10 +54,10 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintBottom_toTopOf="@id/text_view_statistics_description_admin" />
+                app:layout_constraintBottom_toTopOf="@id/text_view_statistics_description_barista_barman" />
 
             <TextView
-                android:id="@+id/text_view_statistics_description_admin"
+                android:id="@+id/text_view_statistics_description_barista_barman"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
@@ -69,10 +68,10 @@
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/text_view_statistics_admin" />
+                app:layout_constraintTop_toBottomOf="@id/text_view_statistics_barista_barman" />
 
             <Spinner
-                android:id="@+id/spinner_content_admin"
+                android:id="@+id/spinner_content_barista_barman"
                 android:layout_width="@dimen/spinner_content_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="32dp"
@@ -89,7 +88,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Spinner
-                android:id="@+id/spinner_filters_admin"
+                android:id="@+id/spinner_filters_barista_barman"
                 android:layout_width="@dimen/spinner_content_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="197dp"
@@ -106,7 +105,7 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
-                android:id="@+id/button_show_statistics_admin"
+                android:id="@+id/button_show_statistics_barista_barman"
                 android:layout_width="@dimen/button_show_width"
                 android:layout_height="@dimen/button_select_image_height"
                 android:layout_marginStart="112dp"
@@ -124,5 +123,17 @@
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/back_button_barista_barman_statistics"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:onClick="onBackPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

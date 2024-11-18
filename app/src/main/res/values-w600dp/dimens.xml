@@ -333,7 +333,6 @@
 
     <dimen name="edit_text_width_add_delete_tables">180dp</dimen>
 
-
     <!-- /////////////////////////////////////////////////// -->
     <!-- /////////// Admin Modify Menu Activity //////////// -->
     <!-- /////////////////////////////////////////////////// -->
@@ -344,5 +343,22 @@
     <dimen name="image_button_add_margin_start">330dp</dimen>
     <dimen name="text_view_add_margin_top">100dp</dimen>
     <dimen name="text_view_add_categories_margin_start">150dp</dimen>
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////// Admin Statistics Activity ///////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="card_view_height_statistics">750dp</dimen>
+    <dimen name="card_view_height_show_statistics">300dp</dimen>
+    <dimen name="card_view_width_show_statistics">450dp</dimen>
+    <dimen name="card_view_show_statistics_margin_start">10dp</dimen>
+    <dimen name="card_view_show_statistics_marginHorizontal">25dp</dimen>
+    <dimen name="text_view_statistics_margin_top">20dp</dimen>
+    <dimen name="text_view_statistics_description_margin_top">90dp</dimen>
+    <dimen name="button_show_margin_top">520dp</dimen>
+    <dimen name="button_show_width">190dp</dimen>
+    <dimen name="spinner_content_margin_top">500dp</dimen>
+    <dimen name="spinner_content_width">170dp</dimen>
+    <dimen name="spinner_content_margin_start">25dp</dimen>
 
 </resources>

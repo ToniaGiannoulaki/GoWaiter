@@ -44,7 +44,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_view_add_tables_margin_start"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/text_view_statistics_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Add tables"
                 android:textColor="@color/black"

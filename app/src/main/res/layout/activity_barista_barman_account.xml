@@ -110,7 +110,7 @@
     <!-- Third CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_payments_barista_barman"
+        android:id="@+id/card_view_statistics_barista_barman"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_marginStart="@dimen/card_view_margin_start"
@@ -126,20 +126,20 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_payments_barista_barman"
+                android:id="@+id/image_view_statistics_barista_barman"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/payment_icon"
+                android:src="@drawable/statistics_chart_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Payments"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_payments_barista_barman"
+                android:id="@+id/textView_statistics_barista_barman"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Payments"
+                android:text="Statistics"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -170,7 +170,7 @@
                 android:id="@+id/image_view_training_support_barista_barman"
                 android:layout_width="@dimen/messages_image_size"
                 android:layout_height="@dimen/messages_image_size"
-                android:src="@drawable/drink_beverage_recipes_icon"
+                android:src="@drawable/training_and_support_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Training &amp; Support"
                 android:clickable="true"
@@ -195,7 +195,7 @@
         android:id="@+id/card_view_supplies_barista_barman"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
-        android:layout_below="@id/card_view_payments_barista_barman"
+        android:layout_below="@id/card_view_statistics_barista_barman"
         android:layout_marginLeft="@dimen/cardview_supplies_margin_left"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
         android:layout_marginStart="@dimen/card_view_margin_start"

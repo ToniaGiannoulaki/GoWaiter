@@ -20,8 +20,8 @@ public class Admin_Statistics extends AppCompatActivity {
         setContentView(R.layout.activity_admin_statistics);
 
         // Find the Spinners
-        spinnerContent = findViewById(R.id.spinner_content);
-        spinnerFilters = findViewById(R.id.spinner_filters);
+        spinnerContent = findViewById(R.id.spinner_content_admin);
+        spinnerFilters = findViewById(R.id.spinner_filters_admin);
 
         // Set up the adapter for spinnerContent with "content_options" array
         ArrayAdapter<CharSequence> contentAdapter = ArrayAdapter.createFromResource(
