@@ -10,7 +10,7 @@ import com.example.gowaiter.R;
 
 public class Waiter_Account extends AppCompatActivity {
 
-    CardView takeOrder, changeOrder, messages, account_settings;
+    CardView takeOrder, changeOrder, notifications, account_settings, payments, supplies;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,12 +18,16 @@ public class Waiter_Account extends AppCompatActivity {
 
         takeOrder = findViewById(R.id.card_view_take_order);
         changeOrder = findViewById(R.id.card_view_change_order);
-        messages = findViewById(R.id.card_view_messages_waiter);
+        notifications = findViewById(R.id.card_view_notifications_waiter);
         account_settings = findViewById(R.id.card_view_account_settings_waiter);
+        payments = findViewById(R.id.card_view_payments_waiter);
+        supplies = findViewById(R.id.card_view_supplies_waiter);
 
         takeOrder.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Take_Order.class)));
         changeOrder.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Change_Order.class)));
-        messages.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Notifications.class)));
+        notifications.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Notifications.class)));
         account_settings.setOnClickListener(v -> startActivity(new Intent(Waiter_Account.this, Waiter_Account_Settings.class)));
+        payments.setOnClickListener(v -> {startActivity(new Intent(Waiter_Account.this, Waiter_Payments.class));});
+        supplies.setOnClickListener(v -> {startActivity(new Intent(Waiter_Account.this, Waiter_Supplies.class));});
     }
 }

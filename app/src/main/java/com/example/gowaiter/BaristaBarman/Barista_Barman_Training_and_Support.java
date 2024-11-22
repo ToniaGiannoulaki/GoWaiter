@@ -1,4 +1,4 @@
-package com.example.gowaiter.ChefCook;
+package com.example.gowaiter.BaristaBarman;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,11 +6,11 @@ import android.os.Bundle;
 
 import com.example.gowaiter.R;
 
-public class Chef_Cook_selected_messages extends AppCompatActivity {
+public class Barista_Barman_Training_and_Support extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_chef_cook_selected_messages2);
+        setContentView(R.layout.activity_barista_barman_training_and_support);
     }
 }
