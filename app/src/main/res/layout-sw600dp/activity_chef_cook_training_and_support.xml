@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background2"
-    tools:context=".BaristaBarman.Barista_Barman_Training_and_Support">
+    tools:context=".ChefCook.Chef_Cook_Training_and_Support">
 
     <!-- Card for Instructions -->
     <androidx.cardview.widget.CardView
@@ -43,7 +43,7 @@
                 android:layout_width="@dimen/text_view_description_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="To view the PDF training guide, click the button below. Packed with valuable insights for Baristas and Barmen. Ensure you have a PDF reader installed."
+                android:text="To view the PDF training guide, click the button below. Packed with valuable insights for Cooks and Chefs. Ensure you have a PDF reader installed."
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -55,7 +55,7 @@
 
     <!-- Card for Barista Guide -->
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_barista_guide"
+        android:id="@+id/card_chef_guide"
         android:layout_width="@dimen/card_view_pdfs"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -86,14 +86,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Barista Training Guide"
+                    android:text="Chef Training Guide"
                     android:textSize="@dimen/text_view_size_pdfs"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A training guide for Baristas"
+                    android:text="A training guide for Chefs"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="@dimen/text_view_choose_image_description_text_size" />
 
@@ -109,7 +109,7 @@
         android:layout_margin="16dp"
         app:cardElevation="8dp"
         app:cardCornerRadius="16dp"
-        app:layout_constraintTop_toBottomOf="@id/card_barista_guide"
+        app:layout_constraintTop_toBottomOf="@id/card_chef_guide"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
@@ -134,17 +134,30 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Barman Training Guide"
+                    android:text="Chef Training Guide"
                     android:textSize="@dimen/text_view_size_pdfs"
                     android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="A training guide for Barmen"
+                    android:text="A training guide for Chefs"
                     android:textColor="@android:color/darker_gray"
                     android:textSize="@dimen/text_view_choose_image_description_text_size" />
             </LinearLayout>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
+
+    <ImageButton
+        android:id="@+id/back_button_training_and_support_chef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/back_button"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:onClick="onBackPressed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_margin="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

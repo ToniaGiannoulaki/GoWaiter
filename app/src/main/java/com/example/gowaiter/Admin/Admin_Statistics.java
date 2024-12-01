@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 
 import com.example.gowaiter.R;
@@ -18,6 +19,10 @@ public class Admin_Statistics extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_statistics);
+
+        ImageButton backButton = findViewById(R.id.back_button_admin_statistics);
+        backButton.setOnClickListener(v -> onBackPressed());
+
 
         // Find the Spinners
         spinnerContent = findViewById(R.id.spinner_content_admin);
@@ -68,6 +73,5 @@ public class Admin_Statistics extends AppCompatActivity {
             }
         });
     }
-
 
 }

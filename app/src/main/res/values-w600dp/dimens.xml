@@ -361,4 +361,14 @@
     <dimen name="spinner_content_width">170dp</dimen>
     <dimen name="spinner_content_margin_start">25dp</dimen>
 
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- /////////// Barista Recipes Activity ////////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="card_view_description">500dp</dimen>
+    <dimen name="card_view_height_recipes">230dp</dimen>
+    <dimen name="text_view_description_width">450dp</dimen>
+    <dimen name="text_view_size_pdfs">20sp</dimen>
+    <dimen name="card_view_pdfs">500dp</dimen>
+
 </resources>

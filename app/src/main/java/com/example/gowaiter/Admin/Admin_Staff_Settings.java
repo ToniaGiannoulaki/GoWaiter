@@ -29,6 +29,9 @@ public class Admin_Staff_Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_staff_settings);
 
+        ImageButton backButton = findViewById(R.id.back_button_staff_settings);
+        backButton.setOnClickListener(v -> onBackPressed());
+
         spinner_add = findViewById(R.id.spinner_select_role_add);
         spinner_delete = findViewById(R.id.spinner_select_role_delete);
 

@@ -19,6 +19,9 @@ public class Admin_Modify_Tables extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_modify_tables);
 
+        ImageButton backButton = findViewById(R.id.back_button_modify_tables);
+        backButton.setOnClickListener(v -> onBackPressed());
+
         indoor = findViewById(R.id.radioButton_indoor);
         outdoor = findViewById(R.id.radioButton_outdoor);
 
