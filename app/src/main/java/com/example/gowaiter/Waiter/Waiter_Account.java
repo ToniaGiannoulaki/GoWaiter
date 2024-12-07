@@ -16,9 +16,9 @@ public class Waiter_Account extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter_account);
 
-        takeOrder = findViewById(R.id.card_view_take_order);
+        takeOrder = findViewById(R.id.card_view_orders_waiter);
         changeOrder = findViewById(R.id.card_view_change_order);
-        notifications = findViewById(R.id.card_view_notifications_waiter);
+        notifications = findViewById(R.id.card_view_statistics_waiter);
         account_settings = findViewById(R.id.card_view_account_settings_waiter);
         payments = findViewById(R.id.card_view_payments_waiter);
         supplies = findViewById(R.id.card_view_supplies_waiter);
