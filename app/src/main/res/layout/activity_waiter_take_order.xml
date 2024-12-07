@@ -12,13 +12,46 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background2"
-        tools:context=".Admin.Admin_Account_Settings">
+        tools:context=".Waiter.Waiter_Take_Order">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F3F2F2"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            tools:layout_editor_absoluteX="-16dp">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_take_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Take Order" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_change_order"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Order" />
+        </com.google.android.material.tabs.TabLayout>
+
+    </androidx.appcompat.widget.Toolbar>
 
         <TextView
             android:id="@+id/textView_choose_table"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="75dp"
             android:fontFamily="sans-serif-black"
             android:text="Choose a table to take an order"
             android:textColor="@color/white"

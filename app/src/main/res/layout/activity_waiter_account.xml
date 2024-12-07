@@ -26,7 +26,7 @@
     <!-- First CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_take_order"
+        android:id="@+id/card_view_orders_waiter"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
@@ -44,20 +44,20 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_take_order"
+                android:id="@+id/image_view_orders_waiter"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
                 android:src="@drawable/take_order_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Take order"
+                android:contentDescription="Orders"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_take_order"
+                android:id="@+id/textView_take_orders_waiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Take Order"
+                android:text="Orders"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -73,7 +73,7 @@
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
-        android:layout_toRightOf="@id/card_view_take_order"
+        android:layout_toRightOf="@id/card_view_orders_waiter"
         android:layout_marginLeft="@dimen/card_view_margin_horizontal"
         android:layout_marginTop="@dimen/card_view_margin_top"
         app:cardCornerRadius="15dp"
@@ -88,7 +88,7 @@
                 android:id="@+id/image_view_change_order"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/change_order_icon"
+                android:src="@drawable/message_icon"
                 android:layout_gravity="center_horizontal"
                 android:contentDescription="Change Order"
                 android:clickable="true"
@@ -98,7 +98,7 @@
                 android:id="@+id/textView_change_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Change Order"
+                android:text="       Order\nNotifications"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -114,7 +114,7 @@
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_marginStart="@dimen/card_view_margin_start"
-        android:layout_below="@id/card_view_take_order"
+        android:layout_below="@id/card_view_orders_waiter"
         android:layout_marginLeft="@dimen/card_margin_left_enterprise_settings"
         android:layout_marginTop="@dimen/card_margin_top_enterprise_settings"
         app:cardCornerRadius="15dp"
@@ -151,7 +151,7 @@
     <!-- Fourth CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_notifications_waiter"
+        android:id="@+id/card_view_statistics_waiter"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/card_view_change_order"
@@ -167,20 +167,20 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_notifications_waiter"
+                android:id="@+id/image_view_statistics_waiter"
                 android:layout_width="@dimen/messages_image_size"
                 android:layout_height="@dimen/messages_image_size"
-                android:src="@drawable/message_icon"
+                android:src="@drawable/statistics_chart_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Messages"
+                android:contentDescription="Statistics"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_notifications_waiter"
+                android:id="@+id/textView_statistics_waiter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Notifications"
+                android:text="Statistics"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
@@ -236,7 +236,7 @@
         android:id="@+id/card_view_account_settings_waiter"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
-        android:layout_below="@id/card_view_notifications_waiter"
+        android:layout_below="@id/card_view_statistics_waiter"
         android:layout_marginLeft="210dp"
         android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
