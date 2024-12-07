@@ -55,7 +55,7 @@
             android:name=".Waiter.Waiter_Notifications"
             android:exported="false" />
         <activity
-            android:name=".Waiter.Waiter_Change_Order"
+            android:name=".Waiter.Waiter_Statistics"
             android:exported="false" />
         <activity
             android:name=".BaristaBarman.Barista_Barman_Account_Settings"
