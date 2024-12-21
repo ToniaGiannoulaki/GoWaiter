@@ -1,9 +1,418 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".Admin.Admin_Supplies">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".Admin.Admin_Supplies">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_supplies_admin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_manage_supplies"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage Supplies" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_requests"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Requests" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_add_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="380dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="16dp"
+            android:contentDescription="Add supplies"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/button_add_supply"
+                android:layout_width="@dimen/button_width_add"
+                android:layout_height="@dimen/button_height_add"
+                android:layout_marginStart="125dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Add"
+                android:textSize="@dimen/button_select_size" />
+
+            <TextView
+                android:id="@+id/textView_add_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="@dimen/text_view_statistics_margin_top"
+                android:fontFamily="sans-serif-black"
+                android:text="Add Supply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_add_tables_description"
+                android:layout_width="@dimen/text_add_table_description_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="@dimen/text_add_table_description_margin_top"
+                android:text="To add a new supply, write the supply name, quantity and the designated person responsible for managing it. Then, click the 'Add' button to complete the process."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic" />
+
+            <EditText
+                android:id="@+id/editText_supply_name"
+                android:layout_width="325dp"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="170dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Supply name"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextNumber_quantity"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:paddingStart="10dp" />
+
+            <Spinner
+                android:id="@+id/spinner_role"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_remove_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="480dp"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Remove Supply"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_view_delete_tables_margin_start"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Remove Supply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_remove_supply_description"
+                android:layout_width="@dimen/text_delete_table_description_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="80dp"
+                android:text="To remove a supply, select the item from the drop down menu and then click the 'Remove' button."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_items"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_remove_supply"
+                android:layout_width="@dimen/button_width_delete"
+                android:layout_height="@dimen/button_height_delete"
+                android:layout_marginStart="@dimen/button_delete_table_margin_start"
+                android:layout_marginTop="140dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Remove"
+                android:textSize="@dimen/button_select_size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_update_supply"
+            android:layout_width="wrap_content"
+            android:layout_height="390dp"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="755dp"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Update Supply"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_update_supply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/text_view_delete_tables_margin_start"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Update Supply"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_supply_update_description"
+                android:layout_width="@dimen/text_delete_table_description_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="80dp"
+                android:text="To update a supply, please choose the specific item you want to update. Afterwards, write the quantity number of the product."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_item_update"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_role_update"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="225dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextNumber_quantity_update"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Quantity"
+                android:inputType="number"
+                android:paddingStart="10dp" />
+
+            <Button
+                android:id="@+id/button_update_supply"
+                android:layout_width="@dimen/button_width_delete"
+                android:layout_height="@dimen/button_height_delete"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="300dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Update"
+                android:textSize="@dimen/button_select_size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_low_stock_notification"
+            android:layout_width="wrap_content"
+            android:layout_height="300dp"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="1173dp"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Low stock notification"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_low_stock_notification"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Low Stock Notification"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_low_stock_description"
+                android:layout_width="@dimen/text_delete_table_description_width"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="80dp"
+                android:text="Set notification alert for low stocking. Select a specific item to set a custom alert level or apply alerts to all items at once."
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <Spinner
+                android:id="@+id/spinner_item_low_stock_notification"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editTextNumber_low_stock_number"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="160dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="Minimum Stock"
+                android:inputType="number"
+                android:paddingStart="10dp" />
+
+            <Button
+                android:id="@+id/button_low_stock"
+                android:layout_width="@dimen/button_width_delete"
+                android:layout_height="@dimen/button_height_delete"
+                android:layout_marginStart="130dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="Set"
+                android:textSize="@dimen/button_select_size" />
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
+
+

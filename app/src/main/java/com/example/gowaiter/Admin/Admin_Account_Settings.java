@@ -12,8 +12,6 @@ import com.example.gowaiter.R;
 
 public class Admin_Account_Settings extends AppCompatActivity {
 
-    private ProgressBar loadingIndicator;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
