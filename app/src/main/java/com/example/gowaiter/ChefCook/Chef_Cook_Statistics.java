@@ -14,7 +14,5 @@ public class Chef_Cook_Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_cook_statistics);
 
-        ImageButton backButton = findViewById(R.id.back_button_chef_cook_statistics);
-        backButton.setOnClickListener(v -> onBackPressed());
     }
 }

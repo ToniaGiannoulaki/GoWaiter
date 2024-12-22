@@ -20,10 +20,6 @@ public class Admin_Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_statistics);
 
-        ImageButton backButton = findViewById(R.id.back_button_admin_statistics);
-        backButton.setOnClickListener(v -> onBackPressed());
-
-
         // Find the Spinners
         spinnerContent = findViewById(R.id.spinner_content_admin);
         spinnerFilters = findViewById(R.id.spinner_filters_admin);

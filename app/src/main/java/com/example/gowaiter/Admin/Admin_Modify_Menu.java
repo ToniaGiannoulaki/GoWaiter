@@ -23,8 +23,6 @@ public class Admin_Modify_Menu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_modify_menu);
 
-        ImageButton backButton = findViewById(R.id.back_button_modify_menu);
-        backButton.setOnClickListener(v -> onBackPressed());
     }
 
     private void showInputDialog() {

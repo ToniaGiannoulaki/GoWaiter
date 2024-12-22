@@ -15,8 +15,5 @@ public class Barista_Barman_Training_and_Support extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barista_barman_training_and_support);
 
-        ImageButton backButton = findViewById(R.id.back_button_training_and_support_barista);
-        backButton.setOnClickListener(v -> onBackPressed());
-
     }
 }

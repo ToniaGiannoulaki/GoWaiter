@@ -17,7 +17,5 @@ public class Admin_Account_Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_account_settings);
 
-        ImageButton backButton = findViewById(R.id.back_button_account_settings);
-        backButton.setOnClickListener(v -> onBackPressed());
     }
 }

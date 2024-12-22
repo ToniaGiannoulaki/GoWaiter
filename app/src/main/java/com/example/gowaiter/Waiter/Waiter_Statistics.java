@@ -21,9 +21,6 @@ public class Waiter_Statistics extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter_statistics);
 
-        ImageButton backButton = findViewById(R.id.back_button_waiter_statistics);
-        backButton.setOnClickListener(v -> onBackPressed());
-
         // Find the Spinners
         spinnerContent = findViewById(R.id.spinner_content_waiter);
         spinnerFilters = findViewById(R.id.spinner_filters_waiter);

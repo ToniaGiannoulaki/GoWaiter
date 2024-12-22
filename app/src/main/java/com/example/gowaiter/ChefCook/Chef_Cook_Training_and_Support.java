@@ -14,7 +14,5 @@ public class Chef_Cook_Training_and_Support extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_cook_training_and_support);
 
-        ImageButton backButton = findViewById(R.id.back_button_training_and_support_chef);
-        backButton.setOnClickListener(v -> onBackPressed());
     }
 }

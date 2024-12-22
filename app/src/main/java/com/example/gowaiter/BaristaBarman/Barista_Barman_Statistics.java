@@ -13,8 +13,5 @@ public class Barista_Barman_Statistics extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_barista_barman_statistics);
-
-        ImageButton backButton = findViewById(R.id.back_button_barista_barman_statistics);
-        backButton.setOnClickListener(v -> onBackPressed());
     }
 }

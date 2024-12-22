@@ -1,9 +1,188 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background2"
     tools:context=".Waiter.Waiter_Supplies">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".Waiter.Waiter_Supplies">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_supplies_waiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabGravity="fill"
+            app:tabMode="fixed">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_view_supplies_waiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View Supplies" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tab_low_stock_notifications_waiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Low Stock Notifications" />
+
+        </com.google.android.material.tabs.TabLayout>
+
+        <!-- View Supplies -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_view_supplies_waiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout_supplies_waiter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Category -->
+                <TextView
+                    android:id="@+id/textView_category_waiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category: "
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+
+                <!-- Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/textView_view_item_waiter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Item:"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_view_quantity_waiter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Quantity:"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- RecyclerView -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_view_supplies_waiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:scrollbars="vertical" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Low Stock Notifications -->
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardView_low_stock_waiter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            android:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@id/tabLayout_supplies_waiter"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Category -->
+                <TextView
+                    android:id="@+id/textView_low_stock_category_waiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Category: "
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:textStyle="bold"
+                    android:paddingBottom="8dp" />
+
+                <!-- Header Row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="8dp">
+
+                    <TextView
+                        android:id="@+id/textView_low_stock_item_waiter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Item:"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/textView_low_stock_quantity_waiter"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Quantity:"
+                        android:textAppearance="?attr/textAppearanceBody1"
+                        android:textStyle="bold"
+                        android:gravity="end" />
+                </LinearLayout>
+
+                <!-- RecyclerView for Low Stock Items -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerView_low_stock_waiter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="8dp"
+                    android:scrollbars="vertical" />
+
+                <!-- Request Button -->
+                <Button
+                    android:id="@+id/button_low_stock_waiter"
+                    android:layout_width="@dimen/button_width_delete"
+                    android:layout_height="@dimen/button_height_delete"
+                    android:layout_marginStart="110dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginEnd="111dp"
+                    android:layout_marginBottom="29dp"
+                    android:backgroundTint="#C835ED"
+                    android:text="Request"
+                    android:textSize="@dimen/button_select_size" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

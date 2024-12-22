@@ -2,9 +2,12 @@ package com.example.gowaiter.Admin;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -22,6 +25,7 @@ public class Admin_Supplies extends AppCompatActivity {
     private EditText supplyNameInput, supplyQuantityInput;
     private Spinner roleSpinner;
     private Button addSupplyButton;
+    private RecyclerView requestsRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,26 +33,58 @@ public class Admin_Supplies extends AppCompatActivity {
         setContentView(R.layout.activity_admin_supplies);
 
         TabLayout tabLayout = findViewById(R.id.tabLayout_supplies_admin);
+        requestsRecyclerView = findViewById(R.id.recyclerView_supplies);
 
         View cardViewAdd = findViewById(R.id.cardView_add_supply);
         View cardViewRemove = findViewById(R.id.cardView_remove_supply);
         View cardViewUpdate = findViewById(R.id.cardView_update_supply);
         View cardViewLowStock = findViewById(R.id.cardView_low_stock_notification);
+        View cardViewSupplies =  findViewById(R.id.cardView_view_supplies_admin);
+
+        // Set up RecyclerView
+        setupRecyclerView();
+
+        // Initialize UI for the default tab (View Supplies)
+        cardViewSupplies.setVisibility(View.VISIBLE);
+        cardViewAdd.setVisibility(View.GONE);
+        cardViewRemove.setVisibility(View.GONE);
+        cardViewUpdate.setVisibility(View.GONE);
+        cardViewLowStock.setVisibility(View.GONE);
+        requestsRecyclerView.setVisibility(View.GONE);
+
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(@NonNull TabLayout.Tab tab) {
-                if (tab.getText().equals("Requests")) {
+                if(tab.getText().equals("View Supplies")){
+                    // Hide CardViews
+                    cardViewSupplies.setVisibility(View.VISIBLE);
+                    cardViewAdd.setVisibility(View.GONE);
+                    cardViewRemove.setVisibility(View.GONE);
+                    cardViewUpdate.setVisibility(View.GONE);
+                    cardViewLowStock.setVisibility(View.GONE);
+
+                    // Show RecyclerView
+                    requestsRecyclerView.setVisibility(View.GONE);
+                } else if (tab.getText().equals("Requests")) {
                     // Hide CardViews
                     cardViewAdd.setVisibility(View.GONE);
                     cardViewRemove.setVisibility(View.GONE);
                     cardViewUpdate.setVisibility(View.GONE);
                     cardViewLowStock.setVisibility(View.GONE);
+                    cardViewSupplies.setVisibility(View.GONE);
+
+                    // Show RecyclerView
+                    requestsRecyclerView.setVisibility(View.VISIBLE);
                 } else if (tab.getText().equals("Manage Supplies")) {
                     // Show CardViews
                     cardViewAdd.setVisibility(View.VISIBLE);
                     cardViewRemove.setVisibility(View.VISIBLE);
                     cardViewUpdate.setVisibility(View.VISIBLE);
                     cardViewLowStock.setVisibility(View.VISIBLE);
+                    cardViewSupplies.setVisibility(View.GONE);
+
+                    // Hide RecyclerView
+                    requestsRecyclerView.setVisibility(View.GONE);
                 }
             }
 
@@ -58,6 +94,39 @@ public class Admin_Supplies extends AppCompatActivity {
             @Override
             public void onTabReselected(@NonNull TabLayout.Tab tab) {}
         });
+    }
+
+    private void setupRecyclerView() {
+        // Initialize RecyclerView
+        requestsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        requestsRecyclerView.setVisibility(View.GONE); // Initially hidden
+
+        // Sample data for RecyclerView
+        List<String> sampleRequests = new ArrayList<>();
+        sampleRequests.add("Request 1");
+        sampleRequests.add("Request 2");
+        sampleRequests.add("Request 3");
+
+        // Set adapter
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, sampleRequests);
+        RecyclerView.Adapter recyclerAdapter = new RecyclerView.Adapter() {
+            @NonNull
+            @Override
+            public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+                return null;
+            }
+
+            @Override
+            public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
+
+            }
+
+            @Override
+            public int getItemCount() {
+                return 0;
+            }
+        };
+        requestsRecyclerView.setAdapter(recyclerAdapter);
     }
 
         /**

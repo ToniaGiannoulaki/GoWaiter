@@ -21,9 +21,6 @@ public class Admin_Enterprise_Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_enterprise_settings);
 
-        ImageButton backButton = findViewById(R.id.back_button_enterprise_settings);
-        backButton.setOnClickListener(v -> onBackPressed());
-
         tables = findViewById(R.id.button_modify_tables);
         menu = findViewById(R.id.button_modify_menu);
 

@@ -13,6 +13,7 @@ import com.example.gowaiter.BaristaBarman.Barista_Barman_Orders;
 import com.example.gowaiter.ChefCook.Chef_Cook_Account;
 import com.example.gowaiter.R;
 import com.example.gowaiter.Waiter.Waiter_Account;
+import com.example.gowaiter.Waiter.Waiter_Supplies;
 import com.example.gowaiter.Waiter.Waiter_selected_table_payment;
 import com.example.gowaiter.Waiter.Waiter_selected_table_take_order;
 
