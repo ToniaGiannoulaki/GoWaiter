@@ -1,6 +1,7 @@
 package com.example.gowaiter.MainMenu;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,7 +11,9 @@ import android.widget.ImageButton;
 import com.example.gowaiter.Admin.Admin_Account;
 import com.example.gowaiter.BaristaBarman.Barista_Barman_Account;
 import com.example.gowaiter.BaristaBarman.Barista_Barman_Orders;
+import com.example.gowaiter.BaristaBarman.Barista_Barman_Supplies;
 import com.example.gowaiter.ChefCook.Chef_Cook_Account;
+import com.example.gowaiter.ChefCook.Chef_Cook_Supplies;
 import com.example.gowaiter.R;
 import com.example.gowaiter.Waiter.Waiter_Account;
 import com.example.gowaiter.Waiter.Waiter_Supplies;
@@ -24,10 +27,13 @@ public class Sign_in extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_in);
 
+        // Follow system-wide dark mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
+
         sign_up = findViewById(R.id.button_sign_up);
         sign_in = findViewById(R.id.button_sign_in);
 
         sign_up.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Sign_up.class)));
-        sign_in.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Admin_Account.class)));
+        sign_in.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Waiter_Supplies.class)));
     }
 }

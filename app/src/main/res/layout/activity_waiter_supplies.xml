@@ -65,7 +65,8 @@
                     android:text="Category: "
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textStyle="bold"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="8dp"
+                    android:textSize="@dimen/button_select_size"/>
 
                 <!-- Header Row -->
                 <LinearLayout
@@ -81,7 +82,8 @@
                         android:layout_weight="1"
                         android:text="Item:"
                         android:textAppearance="?attr/textAppearanceBody1"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_view_items"/>
 
                     <TextView
                         android:id="@+id/textView_view_quantity_waiter"
@@ -91,7 +93,8 @@
                         android:text="Quantity:"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
-                        android:gravity="end" />
+                        android:gravity="end"
+                        android:textSize="@dimen/text_view_items"/>
                 </LinearLayout>
 
                 <!-- RecyclerView -->
@@ -132,7 +135,8 @@
                     android:text="Category: "
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textStyle="bold"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="8dp"
+                    android:textSize="@dimen/button_select_size"/>
 
                 <!-- Header Row -->
                 <LinearLayout
@@ -148,7 +152,8 @@
                         android:layout_weight="1"
                         android:text="Item:"
                         android:textAppearance="?attr/textAppearanceBody1"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_view_items"/>
 
                     <TextView
                         android:id="@+id/textView_low_stock_quantity_waiter"
@@ -158,7 +163,8 @@
                         android:text="Quantity:"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
-                        android:gravity="end" />
+                        android:gravity="end"
+                        android:textSize="@dimen/text_view_items"/>
                 </LinearLayout>
 
                 <!-- RecyclerView for Low Stock Items -->
@@ -174,7 +180,7 @@
                     android:id="@+id/button_low_stock_waiter"
                     android:layout_width="@dimen/button_width_delete"
                     android:layout_height="@dimen/button_height_delete"
-                    android:layout_marginStart="110dp"
+                    android:layout_marginStart="@dimen/button_request_margin_start"
                     android:layout_marginTop="140dp"
                     android:layout_marginEnd="111dp"
                     android:layout_marginBottom="29dp"

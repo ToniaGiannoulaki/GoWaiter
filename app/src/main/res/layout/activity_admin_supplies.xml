@@ -28,18 +28,21 @@
                 android:id="@+id/tab_view_supplies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/toolbar_text_size"
                 android:text="View Supplies" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_manage_supplies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/toolbar_text_size"
                 android:text="Manage Supplies" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_requests"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textSize="@dimen/toolbar_text_size"
                 android:text="Requests" />
 
         </com.google.android.material.tabs.TabLayout>
@@ -71,7 +74,8 @@
                     android:text="Category: "
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textStyle="bold"
-                    android:paddingBottom="8dp" />
+                    android:paddingBottom="8dp"
+                    android:textSize="@dimen/button_select_size"/>
 
                 <!-- Header Row -->
                 <LinearLayout
@@ -87,7 +91,8 @@
                         android:layout_weight="1"
                         android:text="Item:"
                         android:textAppearance="?attr/textAppearanceBody1"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        android:textSize="@dimen/text_view_items"/>
 
                     <TextView
                         android:id="@+id/textView_view_quantity_admin"
@@ -97,7 +102,8 @@
                         android:text="Quantity:"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
-                        android:gravity="end" />
+                        android:gravity="end"
+                        android:textSize="@dimen/text_view_items"/>
                 </LinearLayout>
 
                 <!-- RecyclerView -->
@@ -126,8 +132,8 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_add_supply"
             android:layout_width="wrap_content"
-            android:layout_height="380dp"
-            android:layout_marginStart="16dp"
+            android:layout_height="@dimen/card_view_height_add_supply"
+            android:layout_marginStart="@dimen/textView_margin_start"
             android:layout_marginTop="75dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="Add supplies"
@@ -141,8 +147,8 @@
                 android:id="@+id/button_add_supply"
                 android:layout_width="@dimen/button_width_add"
                 android:layout_height="@dimen/button_height_add"
-                android:layout_marginStart="125dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginStart="@dimen/button_add_supply_margin_start"
+                android:layout_marginTop="@dimen/button_add_supply_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
@@ -153,8 +159,8 @@
                 android:id="@+id/textView_add_supply"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="140dp"
-                android:layout_marginTop="@dimen/text_view_statistics_margin_top"
+                android:layout_marginStart="@dimen/textView_add_supply_margin_start"
+                android:layout_marginTop="@dimen/textView_add_supply_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Add Supply"
                 android:textColor="@color/black"
@@ -170,7 +176,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
                 android:layout_marginTop="@dimen/text_add_table_description_margin_top"
-                android:text="To add a new supply, write the supply name, quantity and the designated person responsible for managing it. Then, click the 'Add' button to complete the process."
+                android:text="To add a new supply, choose or add a category, write the supply name, quantity and the designated person responsible for managing it."
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -179,12 +185,28 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic" />
 
+            <Spinner
+                android:id="@+id/spinner_category"
+                android:layout_width="@dimen/editText_supply_width"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/editText_supply_name_margin_start"
+                android:layout_marginTop="@dimen/category_add_supply_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <EditText
                 android:id="@+id/editText_supply_name"
-                android:layout_width="325dp"
+                android:layout_width="@dimen/editText_supply_width"
                 android:layout_height="@dimen/edit_text_height"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="170dp"
+                android:layout_marginStart="@dimen/editText_supply_name_margin_start"
+                android:layout_marginTop="@dimen/editText_supply_name_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -202,8 +224,8 @@
                 android:id="@+id/editTextNumber_quantity"
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
-                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="230dp"
+                android:layout_marginStart="@dimen/editText_quantity_margin_start"
+                android:layout_marginTop="@dimen/fields_add_supply_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -217,8 +239,8 @@
                 android:id="@+id/spinner_role"
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="230dp"
+                android:layout_marginStart="@dimen/spinner_role_margin_start"
+                android:layout_marginTop="@dimen/fields_add_supply_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -234,9 +256,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_remove_supply"
             android:layout_width="wrap_content"
-            android:layout_height="250dp"
+            android:layout_height="@dimen/card_view_height_remove_supply"
             android:layout_marginStart="@dimen/card_margin_start"
-            android:layout_marginTop="480dp"
+            android:layout_marginTop="@dimen/card_view_remove_supply_margin_top"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Remove Supply"
             app:cardCornerRadius="12dp"
@@ -247,9 +269,9 @@
 
             <TextView
                 android:id="@+id/textView_remove"
-                android:layout_width="wrap_content"
+                android:layout_width="355dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/text_view_delete_tables_margin_start"
+                android:layout_marginStart="@dimen/textView_remove_supply_margin_start"
                 android:layout_marginTop="30dp"
                 android:fontFamily="sans-serif-black"
                 android:text="Remove Supply"
@@ -262,10 +284,10 @@
 
             <TextView
                 android:id="@+id/textView_remove_supply_description"
-                android:layout_width="@dimen/text_delete_table_description_width"
+                android:layout_width="@dimen/remove_supply_description_width"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="80dp"
+                android:layout_marginStart="@dimen/textView_remove_supply_description_margin_left"
+                android:layout_marginTop="@dimen/textView_remove_supply_description_margin_top"
                 android:text="To remove a supply, select the item from the drop down menu and then click the 'Remove' button."
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
@@ -278,8 +300,8 @@
                 android:id="@+id/spinner_items"
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
-                android:layout_marginStart="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="140dp"
+                android:layout_marginStart="@dimen/spinner_remove_supply_margin_start"
+                android:layout_marginTop="@dimen/button_and_editText_remove_supply_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -294,8 +316,8 @@
                 android:id="@+id/button_remove_supply"
                 android:layout_width="@dimen/button_width_delete"
                 android:layout_height="@dimen/button_height_delete"
-                android:layout_marginStart="@dimen/button_delete_table_margin_start"
-                android:layout_marginTop="140dp"
+                android:layout_marginStart="@dimen/button_remove_supply_margin_start"
+                android:layout_marginTop="@dimen/button_remove_supply_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
@@ -307,9 +329,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_update_supply"
             android:layout_width="wrap_content"
-            android:layout_height="390dp"
+            android:layout_height="@dimen/card_view_height_update_supply"
             android:layout_marginStart="@dimen/card_margin_start"
-            android:layout_marginTop="755dp"
+            android:layout_marginTop="@dimen/card_view_update_supply_margin_top"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Update Supply"
             app:cardCornerRadius="12dp"
@@ -323,7 +345,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_view_delete_tables_margin_start"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="@dimen/textView_update_supply_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Update Supply"
                 android:textColor="@color/black"
@@ -338,7 +360,7 @@
                 android:layout_width="@dimen/text_delete_table_description_width"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="@dimen/textView_update_supply_description_margin_top"
                 android:text="To update a supply, please choose the specific item you want to update. Afterwards, write the quantity number of the product."
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
@@ -352,23 +374,7 @@
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
                 android:layout_marginStart="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="160dp"
-                android:layout_marginEnd="62dp"
-                android:layout_marginBottom="250dp"
-                android:background="@drawable/custom_input"
-                android:paddingStart="10dp"
-                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Spinner
-                android:id="@+id/spinner_role_update"
-                android:layout_width="@dimen/edit_text_width_add_delete_tables"
-                android:layout_height="52dp"
-                android:layout_marginStart="115dp"
-                android:layout_marginTop="225dp"
+                android:layout_marginTop="@dimen/spinner_and_editText_fields_update_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -383,8 +389,8 @@
                 android:id="@+id/editTextNumber_quantity_update"
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="160dp"
+                android:layout_marginStart="@dimen/editText_quantity_update_margin_start"
+                android:layout_marginTop="@dimen/spinner_and_editText_fields_update_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -394,12 +400,28 @@
                 android:inputType="number"
                 android:paddingStart="10dp" />
 
+            <Spinner
+                android:id="@+id/spinner_role_update"
+                android:layout_width="@dimen/edit_text_width_add_delete_tables"
+                android:layout_height="52dp"
+                android:layout_marginStart="@dimen/spinner_update_margin_start"
+                android:layout_marginTop="@dimen/spinner_role_update_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="250dp"
+                android:background="@drawable/custom_input"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <Button
                 android:id="@+id/button_update_supply"
                 android:layout_width="@dimen/button_width_delete"
                 android:layout_height="@dimen/button_height_delete"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="300dp"
+                android:layout_marginStart="@dimen/button_update_supply_margin_start"
+                android:layout_marginTop="@dimen/button_update_supply_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
@@ -411,9 +433,9 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/cardView_low_stock_notification"
             android:layout_width="wrap_content"
-            android:layout_height="300dp"
+            android:layout_height="@dimen/card_view_height_low_stock_notification"
             android:layout_marginStart="@dimen/card_margin_start"
-            android:layout_marginTop="1173dp"
+            android:layout_marginTop="@dimen/card_view_low_stock_notification_margin_top"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Low stock notification"
             app:cardCornerRadius="12dp"
@@ -426,8 +448,8 @@
                 android:id="@+id/textView_low_stock_notification"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="80dp"
-                android:layout_marginTop="30dp"
+                android:layout_marginStart="@dimen/textView_low_stock_supply_margin_start"
+                android:layout_marginTop="@dimen/textView_update_supply_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="Low Stock Notification"
                 android:textColor="@color/black"
@@ -442,7 +464,7 @@
                 android:layout_width="@dimen/text_delete_table_description_width"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="80dp"
+                android:layout_marginTop="@dimen/textView_update_supply_description_margin_top"
                 android:text="Set notification alert for low stocking. Select a specific item to set a custom alert level or apply alerts to all items at once."
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
@@ -456,7 +478,7 @@
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
                 android:layout_marginStart="@dimen/text_add_table_description_margin_start"
-                android:layout_marginTop="160dp"
+                android:layout_marginTop="@dimen/spinner_and_editText_fields_low_stock_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -471,8 +493,8 @@
                 android:id="@+id/editTextNumber_low_stock_number"
                 android:layout_width="@dimen/edit_text_width_add_delete_tables"
                 android:layout_height="52dp"
-                android:layout_marginStart="200dp"
-                android:layout_marginTop="160dp"
+                android:layout_marginStart="@dimen/editText_minimum_stock_margin_start"
+                android:layout_marginTop="@dimen/spinner_and_editText_fields_low_stock_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -486,8 +508,8 @@
                 android:id="@+id/button_low_stock"
                 android:layout_width="@dimen/button_width_delete"
                 android:layout_height="@dimen/button_height_delete"
-                android:layout_marginStart="130dp"
-                android:layout_marginTop="230dp"
+                android:layout_marginStart="@dimen/button_low_stock_supply_margin_start"
+                android:layout_marginTop="@dimen/button_low_stock_supply_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"

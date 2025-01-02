@@ -73,8 +73,6 @@
     <!-- Admin/Waiter/Barista/Chef Account Settings Activity -->
     <!-- /////////////////////////////////////////////////// -->
 
-
-
     <!-- first card view elements -->
 
     <dimen name="card_view_height">430dp</dimen>
@@ -377,4 +375,50 @@
     <dimen name="text_view_description_width">325dp</dimen>
     <dimen name="text_view_size_pdfs">18sp</dimen>
     <dimen name="card_view_pdfs">0dp</dimen>
+
+    <!-- Admin View Supplies -->
+
+    <dimen name="text_view_items">16sp</dimen>
+    <dimen name="card_view_height_add_supply">450dp</dimen>
+    <dimen name="card_view_height_remove_supply">250dp</dimen>
+    <dimen name="card_view_height_update_supply">390dp</dimen>
+    <dimen name="card_view_height_low_stock_notification">300dp</dimen>
+    <dimen name="card_view_remove_supply_margin_top">550dp</dimen>
+    <dimen name="card_view_update_supply_margin_top">830dp</dimen>
+    <dimen name="card_view_low_stock_notification_margin_top">1250dp</dimen>
+    <dimen name="button_add_supply_margin_top">375dp</dimen>
+    <dimen name="fields_add_supply_margin_top">290dp</dimen>
+    <dimen name="category_add_supply_margin_top">160dp</dimen>
+    <dimen name="editText_supply_name_margin_top">225dp</dimen>
+    <dimen name="textView_add_supply_margin_top">32dp</dimen>
+    <dimen name="button_add_supply_margin_start">125dp</dimen>
+    <dimen name="button_update_supply_margin_top">300dp</dimen>
+    <dimen name="editText_quantity_margin_start">30dp</dimen>
+    <dimen name="textView_margin_start">16dp</dimen>
+    <dimen name="editText_supply_width">325dp</dimen>
+    <dimen name="spinner_role_margin_start">200dp</dimen>
+    <dimen name="editText_supply_name_margin_start">30dp</dimen>
+    <dimen name="textView_add_supply_margin_start">140dp</dimen>
+    <dimen name="button_and_editText_remove_supply_margin_top">140dp</dimen>
+    <dimen name="button_remove_supply_margin_start">200dp</dimen>
+    <dimen name="spinner_remove_supply_margin_start">30dp</dimen>
+    <dimen name="textView_remove_supply_description_margin_left">30dp</dimen>
+    <dimen name="textView_remove_supply_description_margin_top">80dp</dimen>
+    <dimen name="button_remove_supply_margin_top">140dp</dimen>
+    <dimen name="remove_supply_description_width">316dp</dimen>
+    <dimen name="textView_remove_supply_margin_start">120dp</dimen>
+    <dimen name="spinner_role_update_margin_top">225dp</dimen>
+    <dimen name="spinner_and_editText_fields_update_margin_top">160dp</dimen>
+    <dimen name="textView_update_supply_description_margin_top">80dp</dimen>
+    <dimen name="textView_update_supply_margin_top">30dp</dimen>
+    <dimen name="editText_quantity_update_margin_start">200dp</dimen>
+    <dimen name="button_update_supply_margin_start">120dp</dimen>
+    <dimen name="spinner_update_margin_start">115dp</dimen>
+    <dimen name="button_low_stock_supply_margin_top">230dp</dimen>
+    <dimen name="spinner_and_editText_fields_low_stock_margin_top">160dp</dimen>
+    <dimen name="editText_minimum_stock_margin_start">200dp</dimen>
+    <dimen name="textView_low_stock_supply_margin_start">80dp</dimen>
+    <dimen name="button_low_stock_supply_margin_start">130dp</dimen>
+    <dimen name="toolbar_text_size">16sp</dimen>
+    <dimen name="button_request_margin_start">110dp</dimen>
 </resources>
