@@ -40,7 +40,7 @@
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="#C835ED"
                 android:layout_centerInParent="true"
-                android:text="Select"
+                android:text="@string/select"
                 android:textSize="@dimen/button_select_size" />
 
 
@@ -56,7 +56,7 @@
                 android:drawableStart="@drawable/username_icon"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Change Username"
+                android:hint="@string/change_username"
                 android:inputType="textEmailAddress"
                 android:paddingStart="10dp"
                 android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
@@ -72,7 +72,7 @@
                 android:layout_marginStart="@dimen/textview_change_username_margin_start"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Change Username"
+                android:text="@string/change_username"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
@@ -89,7 +89,7 @@
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="#C835ED"
-                android:text="Authenticate"
+                android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size" />
 
             <TextView
@@ -99,7 +99,7 @@
                 android:layout_marginStart="@dimen/textview_choose_image_margin_start"
                 android:layout_marginTop="@dimen/textview_choose_image_margin_top"
                 android:fontFamily="sans-serif-black"
-                android:text="Change Profile Picture"
+                android:text="@string/change_profile_picture"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
@@ -125,7 +125,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/textview_profile_picture_margin_left"
                 android:layout_marginTop="@dimen/textview_profile_picture_margin_top"
-                android:text="Choose an image from the gallery \nor choose the camera option \nto take a picture."
+                android:text="@string/choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -164,7 +164,7 @@
                 android:drawableStart="@drawable/email_icon_purple"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Set New Email"
+                android:hint="@string/set_new_email"
                 android:inputType="textEmailAddress"
                 android:paddingStart="10dp"
                 android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
@@ -180,7 +180,7 @@
                 android:layout_marginStart="@dimen/textview_changeemail_margin_start"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Change Email"
+                android:text="@string/change_email"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
@@ -195,7 +195,7 @@
                 android:layout_marginStart="@dimen/textview_change_email_margin_start"
                 android:layout_marginTop="@dimen/textview_change_email_margin_top"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
-                android:text="To confirm your email, click on the send button. Afterwards, fill the PIN field to authenticate your new email address." />
+                android:text="@string/to_confirm_your_email_click_on_the_send_button_afterwards_fill_the_pin_field_to_authenticate_your_new_email_address" />
 
             <Button
                 android:id="@+id/button_send"
@@ -207,7 +207,7 @@
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="#C835ED"
                 android:layout_centerInParent="true"
-                android:text="Send"
+                android:text="@string/send"
                 android:textSize="@dimen/button_select_size"/>
 
             <EditText
@@ -240,7 +240,7 @@
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
-                android:text="Authenticate"
+                android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size" />
 
         </androidx.cardview.widget.CardView>
@@ -267,7 +267,7 @@
                 android:layout_marginStart="@dimen/textview_change_password_margin_start"
                 android:layout_marginTop="@dimen/textview_change_password_margin_top"
                 android:fontFamily="sans-serif-black"
-                android:text="Change Password"
+                android:text="@string/change_password"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
@@ -288,7 +288,7 @@
                 android:drawableStart="@drawable/lock_icon_purple"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Enter your current password"
+                android:hint="@string/enter_your_current_password"
                 android:paddingStart="10dp"
                 android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -308,7 +308,7 @@
                 android:drawableStart="@drawable/lock_icon_purple"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Set your new password"
+                android:hint="@string/set_your_new_password"
                 android:inputType="textPassword"
                 android:paddingStart="10dp"
                 android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
@@ -329,7 +329,7 @@
                 android:drawableStart="@drawable/lock_icon_purple"
                 android:drawablePadding="10dp"
                 android:ems="10"
-                android:hint="Repeat Password"
+                android:hint="@string/repeat_password"
                 android:inputType="textPassword"
                 android:paddingStart="10dp"
                 android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
@@ -347,11 +347,8 @@
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
                 android:backgroundTint="#C835ED"
-                android:text="Authenticate"
+                android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size"/>
-
         </androidx.cardview.widget.CardView>
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-
 </ScrollView>

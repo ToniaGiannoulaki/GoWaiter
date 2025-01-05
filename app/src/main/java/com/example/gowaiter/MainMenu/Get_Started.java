@@ -28,5 +28,6 @@ public class Get_Started extends AppCompatActivity {
 
         //click Get started button
         getStarted.setOnClickListener(v -> startActivity(new Intent(Get_Started.this, Sign_in.class)));
+
     }
 }

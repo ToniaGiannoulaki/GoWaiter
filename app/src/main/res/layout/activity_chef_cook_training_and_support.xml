@@ -28,7 +28,7 @@
                 android:id="@+id/training_support_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Training and Support Guide"
+                android:text="@string/training_and_support_guide"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/edit_text__size"
                 android:textStyle="bold"
@@ -43,7 +43,7 @@
                 android:layout_width="@dimen/text_view_description_width"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="To view the PDF training guide, click the button below. Packed with valuable insights for Cooks and Chefs. Ensure you have a PDF reader installed."
+                android:text="@string/to_view_the_pdf_training_guide_click_the_button_below_packed_with_valuable_insights_for_cooks_and_chefs_ensure_you_have_a_pdf_reader_installed"
                 android:textColor="@android:color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -86,7 +86,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chef Training Guide"
+                    android:text="@string/chef_training_guide"
                     android:textSize="@dimen/text_view_size_pdfs"
                     android:textStyle="bold" />
 

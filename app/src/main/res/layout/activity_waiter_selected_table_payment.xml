@@ -41,7 +41,7 @@
                     android:id="@+id/payment_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Payment"
+                    android:text="@string/payment"
                     android:textSize="20sp"
                     android:textStyle="bold"
                     android:textColor="@android:color/black"
@@ -52,7 +52,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Select the items you want to pay for separately, or press the All button. Then, choose the payment method (cash or card)."
+                    android:text="@string/select_the_items_you_want_to_pay_for_separately_or_press_the_all_button_then_choose_the_payment_method_cash_or_card"
                     android:textSize="14sp"
                     android:textColor="@android:color/black"
                     android:paddingTop="8dp"
@@ -76,7 +76,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:paddingTop="8dp"
-                    android:text="Total: 00.00€"
+                    android:text="@string/total_00_00"
                     android:textColor="@android:color/black"
                     android:textSize="18sp"
                     android:textStyle="bold" />
@@ -93,19 +93,19 @@
                         android:id="@+id/all_option"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="All"/>
+                        android:text="@string/all"/>
 
                     <RadioButton
                         android:id="@+id/credit_card_option"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Credit Card"/>
+                        android:text="@string/credit_card"/>
 
                     <RadioButton
                         android:id="@+id/cash_option"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Cash"
+                        android:text="@string/cash"
                         android:checked="true"
                         android:layout_marginStart="16dp"/>
                 </RadioGroup>
@@ -124,7 +124,7 @@
                         android:id="@+id/card_number"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:hint="Card Number"
+                        android:hint="@string/card_number"
                         android:inputType="number"
                         android:maxLength="16"
                         android:padding="12dp"
@@ -143,7 +143,7 @@
                             android:layout_width="0dp"
                             android:layout_weight="1"
                             android:layout_height="wrap_content"
-                            android:hint="MM/YY"
+                            android:hint="@string/mm_yy"
                             android:inputType="text"
                             android:maxLength="5"
                             android:padding="12dp"
@@ -171,7 +171,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
                     android:backgroundTint="#C835ED"
-                    android:text="Payment"
+                    android:text="@string/payment"
                     android:layout_gravity="center"
                     android:textColor="@android:color/white" />
             </LinearLayout>

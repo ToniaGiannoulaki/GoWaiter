@@ -36,13 +36,13 @@
                 android:id="@+id/tab_take_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Take Order" />
+                android:text="@string/take_order" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_change_order"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Change Order" />
+                android:text="@string/change_order" />
         </com.google.android.material.tabs.TabLayout>
 
     </androidx.appcompat.widget.Toolbar>
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
             android:fontFamily="sans-serif-black"
-            android:text="Choose a table to take an order"
+            android:text="@string/choose_a_table_to_take_an_order"
             android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="normal"
@@ -82,7 +82,7 @@
                 android:layout_marginStart="110dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Indoor tables"
+                android:text="@string/indoor_tables"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -114,7 +114,7 @@
                 android:layout_marginStart="100dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
-                android:text="Outdoor tables"
+                android:text="@string/outdoor_tables"
                 android:textColor="@color/black"
                 android:textSize="24sp"
                 android:textStyle="bold"

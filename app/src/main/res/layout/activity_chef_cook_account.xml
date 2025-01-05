@@ -57,7 +57,7 @@
                 android:id="@+id/textView_orders_chef_cook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Orders"
+                android:text="@string/orders"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -98,7 +98,7 @@
                 android:id="@+id/textView_food_recipes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Food recipes"
+                android:text="@string/food_recipes"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -131,7 +131,7 @@
                 android:layout_height="@dimen/image_size"
                 android:src="@drawable/statistics_chart_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Payments"
+                android:contentDescription="Statistics"
                 android:clickable="true"
                 android:focusable="true"/>
 
@@ -139,7 +139,7 @@
                 android:id="@+id/textView_statistics_chef_cook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Statistics"
+                android:text="@string/statistics"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
                 android:textColor="@color/black"/>
@@ -180,7 +180,7 @@
                 android:id="@+id/textView_training_support_chef_cook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Training &amp;\n  Support"
+                android:text="@string/training_amp_support"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
@@ -221,7 +221,7 @@
                 android:id="@+id/textView_supplies_chef_cook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Supplies"
+                android:text="@string/supplies"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
@@ -262,7 +262,7 @@
                 android:id="@+id/textView_account_settings_chef_cook"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Account\nSettings"
+                android:text="@string/account_nsettings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
@@ -276,7 +276,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
-        android:text="Welcome"
+        android:text="@string/welcome"
         android:textColor="@color/white"
         android:textSize="@dimen/welcome_text_size"
         android:layout_marginTop="40dp"
@@ -313,7 +313,7 @@
         android:layout_marginTop="4dp"
         android:layout_marginLeft="@dimen/log_out_layout_marginLeft"
         android:fontFamily="sans-serif-light"
-        android:text="Log Out"
+        android:text="@string/log_out"
         android:textColor="@color/white"
         android:textSize="@dimen/log_out_text_size" />
 

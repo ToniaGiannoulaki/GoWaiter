@@ -37,6 +37,9 @@
             android:name=".BaristaBarman.Barista_Barman_Orders"
             android:exported="false" />
         <activity
+            android:name=".ChefCook.Chef_Cook_Orders"
+            android:exported="false" />
+        <activity
             android:name=".Waiter.Waiter_selected_table_payment"
             android:exported="false" />
         <activity

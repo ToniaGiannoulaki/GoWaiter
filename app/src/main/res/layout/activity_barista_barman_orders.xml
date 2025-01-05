@@ -27,25 +27,25 @@
                 android:id="@+id/tab_new_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Orders" />
+                android:text="@string/new_orders" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_prepared_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Prepared Orders" />
+                android:text="@string/prepared_orders" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_completed_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Completed Orders" />
+                android:text="@string/completed_orders" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_rejected_orders"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rejected Orders" />
+                android:text="@string/rejected_orders" />
         </com.google.android.material.tabs.TabLayout>
     </androidx.appcompat.widget.Toolbar>
 

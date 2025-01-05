@@ -28,13 +28,13 @@
                 android:id="@+id/tab_view_supplies_chef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="View Supplies" />
+                android:text="@string/view_supplies" />
 
             <com.google.android.material.tabs.TabItem
                 android:id="@+id/tab_low_stock_notifications_chef"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Low Stock Notifications" />
+                android:text="@string/low_stock_notification" />
 
         </com.google.android.material.tabs.TabLayout>
 
@@ -62,7 +62,7 @@
                     android:id="@+id/textView_category_chef"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category: "
+                    android:text="@string/category"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textStyle="bold"
                     android:paddingBottom="8dp"
@@ -80,7 +80,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Item:"
+                        android:text="@string/item"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
                         android:textSize="@dimen/text_view_items"/>
@@ -90,7 +90,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Quantity:"
+                        android:text="@string/quantity"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
                         android:gravity="end"
@@ -132,7 +132,7 @@
                     android:id="@+id/textView_low_stock_category_chef"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Category: "
+                    android:text="@string/category"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:textStyle="bold"
                     android:paddingBottom="8dp"
@@ -150,7 +150,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Item:"
+                        android:text="@string/item"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
                         android:textSize="@dimen/text_view_items"/>
@@ -160,7 +160,7 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Quantity:"
+                        android:text="@string/item"
                         android:textAppearance="?attr/textAppearanceBody1"
                         android:textStyle="bold"
                         android:gravity="end"
@@ -185,7 +185,7 @@
                     android:layout_marginEnd="111dp"
                     android:layout_marginBottom="29dp"
                     android:backgroundTint="#C835ED"
-                    android:text="Request"
+                    android:text="@string/request"
                     android:textSize="@dimen/button_select_size" />
 
             </LinearLayout>

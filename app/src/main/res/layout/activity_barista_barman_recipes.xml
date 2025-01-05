@@ -41,7 +41,7 @@
                     android:layout_gravity="center"
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-black"
-                    android:text="Add a Recipe"
+                    android:text="@string/add_a_recipe"
                     android:textColor="@color/black"
                     android:textSize="24sp"
                     android:textStyle="bold" />
@@ -62,7 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Click on the button to add a recipe. Once it is added, click on a specific recipe to modify or delete it."
+                android:text="@string/click_on_the_button_to_add_a_recipe_once_it_is_added_click_on_a_specific_recipe_to_modify_or_delete_it"
                 android:textColor="@android:color/black"
                 android:textSize="16sp"
                 android:layout_gravity="center_vertical"/>
@@ -82,7 +82,7 @@
                     android:layout_marginTop="0dp"
                     android:layout_marginEnd="31dp"
                     android:layout_marginBottom="9dp"
-                    android:hint="Search a chat"
+                    android:hint="@string/search_a_recipe"
                     android:background="#F0F0F0"
                     android:paddingLeft="10dp"
                     app:cardCornerRadius="20dp"

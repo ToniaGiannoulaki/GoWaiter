@@ -102,7 +102,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:text="Take Order of"
+                android:text="@string/take_order_of"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -113,7 +113,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:layout_marginTop="5dp"
-                android:text="table"
+                android:text="@string/table"
                 android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:gravity="center"
-                android:text="Choose a category above. The selected items will appear here:"
+                android:text="@string/choose_a_category_above_the_selected_items_will_appear_here"
                 android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
@@ -143,7 +143,7 @@
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:hint="Add any notes"
+                android:hint="@string/add_any_notes"
                 android:minLines="3"
                 android:maxLines="5"
                 android:inputType="textMultiLine"
@@ -159,7 +159,7 @@
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#C835ED"
-                android:text="Add Order"
+                android:text="@string/add_order"
                 android:textSize="20sp"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
