@@ -41,7 +41,7 @@
 
             <TextView
                 android:id="@+id/textView_sign_up"
-                android:layout_width="@dimen/text_view_sign_in_text_size_sign_in_width1"
+                android:layout_width="wrap_content"
                 android:layout_height="@dimen/text_view_sign_in_text_size_sign_in_height1"
                 android:layout_marginStart="152dp"
                 android:layout_marginTop="25dp"

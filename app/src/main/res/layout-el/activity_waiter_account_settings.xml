@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/background2"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background2"
+        tools:context=".Waiter.Waiter_Account_Settings">
+
+        <!-- First Card View -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginTop="48dp"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Username and profile picture"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <Button
+                android:id="@+id/button_select_image"
+                android:layout_width="@dimen/button_select_image_width"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="@dimen/button_margin_start"
+                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_gravity="center_horizontal"
+                android:backgroundTint="#C835ED"
+                android:layout_centerInParent="true"
+                android:text="@string/select"
+                android:textSize="@dimen/button_select_size" />
+
+
+            <EditText
+                android:id="@+id/editText_change_username"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/edit_text_change_username_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/username_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/change_username"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_new_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/change_username"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_authenticate_username"
+                android:layout_width="236dp"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="@dimen/button_authenticate_margin_top"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:backgroundTint="#C835ED"
+                android:text="@string/authenticate"
+                android:textSize="@dimen/button_select_size" />
+
+            <TextView
+                android:id="@+id/textView_profile_pic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textview_choose_image_margin_start"
+                android:layout_marginTop="@dimen/textview_choose_image_margin_top"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/change_profile_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageView_profile_pic"
+                android:layout_width="@dimen/messages_image_size"
+                android:layout_height="@dimen/messages_image_size"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/image_profile_picture_margin_top"
+                android:layout_marginLeft="30dp"
+                android:contentDescription="Profile Picture"
+                android:src="@drawable/username_icon"
+                app:layout_constraintDimensionRatio="1:1"
+                app:shapeAppearanceOverlay="@style/CircleImageView" />
+
+            <TextView
+                android:id="@+id/textView_profile_picture_description"
+                android:layout_width="265dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="120dp"
+                android:layout_marginTop="270dp"
+                android:text="@string/choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic" />
+
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Second Card View -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/card_view_height"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="@dimen/card_view_margin_top_2"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Email card view"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/editText_new_email_address"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="65dp"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/email_icon_purple"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/set_new_email"
+                android:inputType="textEmailAddress"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_change_email"
+                android:layout_width="160dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textview_changeemail_margin_start"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/change_email"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView_email_description"
+                android:layout_width="@dimen/textview_change_email_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/textview_change_email_margin_start"
+                android:layout_marginTop="130dp"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:text="@string/to_confirm_your_email_click_on_the_send_button_afterwards_fill_the_pin_field_to_authenticate_your_new_email_address" />
+
+            <Button
+                android:id="@+id/button_send"
+                android:layout_width="160dp"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="115dp"
+                android:layout_marginTop="@dimen/button_send_margin_top"
+                android:layout_marginEnd="@dimen/button_margin_end"
+                android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:backgroundTint="#C835ED"
+                android:layout_centerInParent="true"
+                android:text="@string/send"
+                android:textSize="@dimen/button_select_size"/>
+
+            <EditText
+                android:id="@+id/editText_pin"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
+                android:layout_marginTop="@dimen/edit_text_pin_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/pin_icon"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="PIN"
+                android:inputType="text"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_authenticate_email"
+                android:layout_width="236dp"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="@dimen/button_authenticate_margin_top2"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="@string/authenticate"
+                android:textSize="@dimen/button_select_size" />
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Third Card View -->
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/third_card_view_height"
+            android:layout_marginStart="@dimen/card_margin_start"
+            android:layout_marginTop="@dimen/card_view_margin_top_3"
+            android:layout_marginEnd="@dimen/card_margin_end"
+            android:contentDescription="Email card view"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/textView_change_password"
+                android:layout_width="@dimen/textview_change_password_width"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/change_password"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_view_choose_image_text_size"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_current_password"
+                android:inputType="textPassword"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginTop="@dimen/edit_text_enter_current_password_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/lock_icon_purple"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/enter_your_current_password"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <EditText
+                android:id="@+id/editText_change_password"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginTop="@dimen/edit_text_set_new_password_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/lock_icon_purple"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/set_your_new_password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/editText_repeat_password"
+                android:layout_width="@dimen/edit_text_width"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginTop="@dimen/edit_text_repeat_password_margin_top"
+                android:layout_marginEnd="62dp"
+                android:layout_marginBottom="281dp"
+                android:background="@drawable/custom_input"
+                android:drawableStart="@drawable/lock_icon_purple"
+                android:drawablePadding="10dp"
+                android:ems="10"
+                android:hint="@string/repeat_password"
+                android:inputType="textPassword"
+                android:paddingStart="10dp"
+                android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/button_authenticate_password"
+                android:layout_width="236dp"
+                android:layout_height="@dimen/button_select_image_height"
+                android:layout_marginStart="85dp"
+                android:layout_marginTop="@dimen/button_authenticate_margin_top3"
+                android:layout_marginEnd="111dp"
+                android:layout_marginBottom="29dp"
+                android:backgroundTint="#C835ED"
+                android:text="@string/authenticate"
+                android:textSize="@dimen/button_select_size"/>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

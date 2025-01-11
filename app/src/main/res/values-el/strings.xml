@@ -19,7 +19,7 @@
     <string name="welcome">Καλως ήρθες</string>
     <string name="log_out">Αποσύνδεση</string>
     <string name="select">Επιλογή</string>
-    <string name="change_username">Αλλαγή ονόματος χρήστη</string>
+    <string name="change_username">Αλλαγή Ονόματος Χρήστη</string>
     <string name="authenticate">Αυθεντικοποίηση</string>
     <string name="change_profile_picture">Αλλαγή Εικόνας Προφίλ</string>
     <string name="choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture">Επιλέξτε μια εικόνα από τη συλλογή φωτογραφιών ή επιλέξτε την επιλογή κάμερας για να τραβήξετε μια φωτογραφία.</string>
@@ -28,8 +28,8 @@
     <string name="to_confirm_your_email_click_on_the_send_button_afterwards_fill_the_pin_field_to_authenticate_your_new_email_address">Για να επιβεβαιώσετε το email σας, κάντε κλικ στο κουμπί Aποστολή. Στη συνέχεια, συμπληρώστε το πεδίο PIN για να επαληθεύσετε τη νέα σας διεύθυνση email.</string>
     <string name="send">Αποστολή</string>
     <string name="change_password">Αλλαγή Κωδικού Πρόσβασης</string>
-    <string name="enter_your_current_password">Εισάγετε τον τρέχοντα κωδικό πρόσβασής σας</string>
-    <string name="set_your_new_password">Ορίστε τον νέο σας κωδικό πρόσβασης</string>
+    <string name="enter_your_current_password">Εισάγετε τον τρέχοντα κωδικό πρόσβασής</string>
+    <string name="set_your_new_password">Ορίστε τον νέο κωδικό πρόσβασης</string>
     <string name="repeat_password">Επανάληψη κωδικού πρόσβασης</string>
     <string name="apply_change">Εφαρμογή</string>
     <string name="change_enterprise_name">Αλλαγή Ονόματος Επιχείρησης</string>
@@ -47,10 +47,10 @@
     <string name="outdoor">Εξωτερικά</string>
     <string name="total_tables">Συνολικός αριθμός τραπεζιών</string>
     <string name="delete_tables">Διαγραφή Τραπεζιών</string>
-    <string name="to_delete_a_table_please_enter_the_name_of_the_table">Για να διαγράψετε έναν πίνακα, εισαγάγετε το όνομα του πίνακα.</string>
+    <string name="to_delete_a_table_please_enter_the_name_of_the_table">Για να διαγράψετε ένα τραπέζι, εισαγάγετε το όνομα του πίνακα.</string>
     <string name="delete_table">Διαγραφή τραπεζιού</string>
-    <string name="indoor_tables">Εσωτερικά Τραπεζοκαθίσματα</string>
-    <string name="outdoor_tables">Εξωτερικά Τραπεζοκαθίσματα</string>
+    <string name="indoor_tables">Εσωτερικά Τραπέζια</string>
+    <string name="outdoor_tables">Εξωτερικά Τραπέζια</string>
     <string name="order_number">Αριθμός Παραγγελίας:</string>
     <string name="category">Κατηγορία</string>
     <string name="click_on_the_button_to_add_items">Κάντε κλικ στο κουμπί για να προσθέσετε στοιχεία.</string>
@@ -81,11 +81,11 @@
     <string name="minimum_stock">Ελάχιστο απόθεμα</string>
     <string name="set">Εφαρμογή</string>
     <string name="orders">Παραγγελίες</string>
-    <string name="drink_beverage_recipes">Συνταγές Ποτών/Ροφημάτων</string>
+    <string name="drink_beverage_recipes">Συνταγές Ποτών και Ροφημάτων</string>
     <string name="training_amp_support"><![CDATA[Εκπαίδευση & Υποστήριξη]]></string>
     <string name="new_orders">Νέες Παραγγελίες</string>
     <string name="prepared_orders">Έτοιμες Παραγγελίες</string>
-    <string name="completed_orders">Ολοκληρωμένες Παραγγελίες</string>
+    <string name="completed_orders">Ολοκλήρωση Παραγγελιών</string>
     <string name="rejected_orders">Απορριφθείσες Παραγγελίες</string>
     <string name="add_a_recipe">Προσθήκη Συνταγής</string>
     <string name="click_on_the_button_to_add_a_recipe_once_it_is_added_click_on_a_specific_recipe_to_modify_or_delete_it">Κάντε κλικ στο κουμπί για να προσθέσετε μια συνταγή. Μόλις προστεθεί, κάντε κλικ σε μια συγκεκριμένη συνταγή για να την τροποποιήσετε ή να τη διαγράψετε.</string>
@@ -97,7 +97,7 @@
     <string name="barman_training_guide">Οδηγός Εκπαίδευσης για Barmen</string>
     <string name="food_recipes">Γαστρονομικές Συνταγές</string>
     <string name="to_view_the_pdf_training_guide_click_the_button_below_packed_with_valuable_insights_for_cooks_and_chefs_ensure_you_have_a_pdf_reader_installed">Για να δείτε τον εκπαιδευτικό οδηγό PDF, κάντε κλικ στο κουμπί παρακάτω. Γεμάτο με πολύτιμες γνώσεις για Μάγειρες και Σεφ. Βεβαιωθείτε ότι έχετε εγκαταστήσει ένα πρόγραμμα ανάγνωσης PDF.</string>
-    <string name="chef_training_guide">Οδηγός Εκπαίδευσης για Chefs</string>
+    <string name="chef_training_guide">Οδηγός Εκπαίδευσης για Σεφ</string>
     <string name="order_nnotifications">Ειδοποιήσεις Παραγγελιών</string>
     <string name="account_settings">Ρυθμίσεις Λογαριασμού</string>
     <string name="sent_orders">Απεσταλμένες Παραγγελίες</string>
@@ -124,4 +124,6 @@
     <string name="selected_category">Επιλεγμένη Κατηγορία</string>
     <string name="category_name">Όνομα Κατηγορίας</string>
     <string name="choose_the_items_and_once_you_are_done_click_on_the_button_add_item">Επιλέξτε τα αντικείμενα που θέλετε και μόλις τελειώσετε, κάντε κλικ στο κουμπί Προσθήκη αντικειμένου.</string>
+    <string name="choose_table_take_order">Επιλέξτε ένα τραπέζι για να πάρετε παραγγελία</string>
+    <string name="choose_table_change_order">Επιλέξτε ένα τραπέζι για να αλλάξετε παραγγελία</string>
 </resources>

@@ -280,4 +280,6 @@
     <string name="selected_category">Selected Category:</string>
     <string name="category_name">category name</string>
     <string name="choose_the_items_and_once_you_are_done_click_on_the_button_add_item">Choose the items and once you are done, click on the button Add item.</string>
+    <string name="choose_table_take_order">Choose a table to take an order</string>
+    <string name="choose_table_change_order">Choose a table to change an order</string>
 </resources>

@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BaristaBarman.Barista_Barman_Account">
+    tools:context=".Admin.Admin_Account">
 
     <View
         android:id="@+id/top_view"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:background="@drawable/background_view"/>
+        android:background="@drawable/background_view" />
 
     <GridLayout
         android:id="@+id/grid_layout"
@@ -26,17 +26,18 @@
     <!-- First CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_orders_barista_barman"
+        android:id="@+id/card_view_account_settings_admin"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
         android:layout_marginStart="@dimen/card_view_margin_start"
         android:layout_columnWeight="1"
         android:layout_marginTop="@dimen/card_view_margin_top"
+        app:cardCornerRadius="15dp"
         android:layout_row="1"
         android:layout_column="0"
-        app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,22 +45,23 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_orders_barista_barman"
+                android:id="@+id/image_view_account_settings_admin"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/change_order_icon"
+                android:src="@drawable/account_settings_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Orders"
+                android:contentDescription="Account Settings"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_order_barista_barman"
+                android:id="@+id/textView_account_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/orders"
+                android:text="@string/account_nsettings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
+                android:layout_marginLeft="15dp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -69,15 +71,16 @@
     <!-- Second CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_drink_beverage_recipes"
+        android:id="@+id/card_view_staff_settings"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
-        android:layout_toRightOf="@id/card_view_orders_barista_barman"
+        android:layout_toRightOf="@id/card_view_account_settings_admin"
         android:layout_marginLeft="@dimen/card_view_margin_horizontal"
         android:layout_marginTop="@dimen/card_view_margin_top"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,21 +88,22 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_drink_beverage_recipes"
+                android:id="@+id/image_view_staff_settings"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/drink_beverage_recipes_icon"
+                android:src="@drawable/staff_settings_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Drink and Beverage Recipes"
+                android:contentDescription="Staff Setting"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_daily_tasks_barista_barman"
-                android:layout_width="133dp"
+                android:id="@+id/textView_staff_settings"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:text="@string/drink_beverage_recipes"
+                android:layout_marginLeft="15dp"
+                android:text="@string/staff_settings"
                 android:textColor="@color/black"
                 android:textSize="@dimen/text_size" />
 
@@ -110,15 +114,16 @@
     <!-- Third CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_statistics_barista_barman"
+        android:id="@+id/card_view_enterprise_settings"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
         android:layout_marginStart="@dimen/card_view_margin_start"
-        android:layout_below="@id/card_view_orders_barista_barman"
+        android:layout_below="@id/card_view_account_settings_admin"
         android:layout_marginLeft="@dimen/card_margin_left_enterprise_settings"
         android:layout_marginTop="@dimen/card_margin_top_enterprise_settings"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -126,22 +131,23 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_statistics_barista_barman"
+                android:id="@+id/image_view_enterprise_settings"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/statistics_chart_icon"
+                android:src="@drawable/restaurant_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Statistics"
+                android:contentDescription="Enterprise Settings"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_statistics_barista_barman"
+                android:id="@+id/textView_enterprise_settings"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/statistics"
+                android:text="@string/enterprise_n_settings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
+                android:layout_marginLeft="15dp"
                 android:textColor="@color/black"/>
 
         </LinearLayout>
@@ -151,15 +157,16 @@
     <!-- Fourth CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_training_support_barista_barman"
+        android:id="@+id/card_view_statistics"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
-        android:layout_below="@id/card_view_drink_beverage_recipes"
+        android:layout_below="@id/card_view_staff_settings"
         android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
         android:layout_marginLeft="@dimen/card_view_messages_margin_left"
         android:layout_marginTop="@dimen/card_view_messages_margin_top"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -167,40 +174,41 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_training_support_barista_barman"
+                android:id="@+id/image_view_statistics"
                 android:layout_width="@dimen/messages_image_size"
                 android:layout_height="@dimen/messages_image_size"
-                android:src="@drawable/training_and_support_icon"
+                android:src="@drawable/statistics_chart_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/training_amp_support"
+                android:contentDescription="Statistics"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_training_support_barista_barman"
+                android:id="@+id/textView_statistics"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/training_amp_support"
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/messages_text_size"
-                android:textColor="@color/black"/>
+                android:text="@string/statistics"
+                android:textColor="@color/black"
+                android:textSize="@dimen/messages_text_size" />
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Fifth CardView -->
+    <!-- Fifth Cardview -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_supplies_barista_barman"
+        android:id="@+id/card_view_supplies"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
-        android:layout_below="@id/card_view_statistics_barista_barman"
+        android:layout_below="@id/card_view_enterprise_settings"
         android:layout_marginLeft="@dimen/cardview_supplies_margin_left"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
         android:layout_marginStart="@dimen/card_view_margin_start"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -208,7 +216,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_supplies_barista_barman"
+                android:id="@+id/image_view_supplies"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
                 android:src="@drawable/shopping_cart_icon"
@@ -218,7 +226,7 @@
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_supplies_barista_barman"
+                android:id="@+id/textView_supplies"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/supplies"
@@ -227,21 +235,21 @@
                 android:textColor="@color/black"/>
 
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 
     <!-- Sixth CardView -->
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_view_account_settings_barista_barman"
+        android:id="@+id/card_view_payments"
         android:layout_width="@dimen/card_view_size"
         android:layout_height="@dimen/card_view_size"
-        android:layout_below="@id/card_view_training_support_barista_barman"
-        android:layout_marginLeft="210dp"
+        android:layout_below="@id/card_view_statistics"
         android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
+        android:layout_marginLeft="210dp"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
         app:cardCornerRadius="15dp"
-        app:cardElevation="12dp">
+        app:cardElevation="12dp"
+        android:layout_gravity="center">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -249,20 +257,20 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/image_view_account_settings_barista_barman"
+                android:id="@+id/image_view_payments"
                 android:layout_width="@dimen/image_size"
                 android:layout_height="@dimen/image_size"
-                android:src="@drawable/account_settings_icon"
+                android:src="@drawable/payment_icon"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="Account Settings"
+                android:contentDescription="Payments"
                 android:clickable="true"
                 android:focusable="true"/>
 
             <TextView
-                android:id="@+id/textView_account_settings_barista_barman"
+                android:id="@+id/textView_payments"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/account_nsettings"
+                android:text="@string/payments"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
                 android:textColor="@color/black"/>
@@ -275,23 +283,23 @@
         android:id="@+id/textView_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/welcome"
         android:textColor="@color/white"
-        android:textSize="@dimen/welcome_text_size"
-        android:layout_marginTop="40dp"
-        android:layout_marginLeft="70dp"/>
+        android:textSize="@dimen/welcome_text_size" />
 
     <TextView
         android:id="@+id/textView_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Barman/Barista"
-        android:textColor="@color/white"
-        android:textSize="@dimen/welcome_text_size"
+        android:layout_marginLeft="80dp"
         android:layout_marginTop="80dp"
-        android:layout_marginLeft="35dp"/>
+        android:fontFamily="sans-serif-light"
+        android:text="Admin"
+        android:textColor="@color/white"
+        android:textSize="@dimen/welcome_text_size" />
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageView_profile_pic"
@@ -310,8 +318,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView_profile_pic"
+        android:layout_marginLeft="235dp"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="@dimen/log_out_layout_marginLeft"
         android:fontFamily="sans-serif-light"
         android:text="@string/log_out"
         android:textColor="@color/white"

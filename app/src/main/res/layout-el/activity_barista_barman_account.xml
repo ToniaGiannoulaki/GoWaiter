@@ -101,7 +101,8 @@
                 android:layout_gravity="center_horizontal"
                 android:text="@string/drink_beverage_recipes"
                 android:textColor="@color/black"
-                android:textSize="@dimen/text_size" />
+                android:textSize="@dimen/text_size"
+                android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
 
@@ -183,7 +184,8 @@
                 android:text="@string/training_amp_support"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
 
@@ -265,7 +267,8 @@
                 android:text="@string/account_nsettings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/messages_text_size"
-                android:textColor="@color/black"/>
+                android:textColor="@color/black"
+                android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
 
@@ -280,7 +283,7 @@
         android:textColor="@color/white"
         android:textSize="@dimen/welcome_text_size"
         android:layout_marginTop="40dp"
-        android:layout_marginLeft="70dp"/>
+        android:layout_marginLeft="40dp"/>
 
     <TextView
         android:id="@+id/textView_username"
@@ -311,7 +314,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/imageView_profile_pic"
         android:layout_marginTop="4dp"
-        android:layout_marginLeft="@dimen/log_out_layout_marginLeft"
+        android:layout_marginLeft="235dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/log_out"
         android:textColor="@color/white"

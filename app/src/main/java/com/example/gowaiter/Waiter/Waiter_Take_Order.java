@@ -8,7 +8,6 @@ import android.widget.TextView;
 import com.google.android.material.tabs.TabLayout;
 import com.example.gowaiter.R;
 
-
 public class Waiter_Take_Order extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +18,7 @@ public class Waiter_Take_Order extends AppCompatActivity {
         TextView textViewChooseTable = findViewById(R.id.textView_choose_table);
 
         // Set the default text for the "Take Order" tab
-        textViewChooseTable.setText("Choose a table to take an order");
+        textViewChooseTable.setText(getString(R.string.choose_table_take_order));
 
         // Listener for tab changes
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
@@ -27,10 +26,10 @@ public class Waiter_Take_Order extends AppCompatActivity {
             public void onTabSelected(TabLayout.Tab tab) {
                 switch (tab.getPosition()) {
                     case 0: // Take Order tab
-                        textViewChooseTable.setText("Choose a table to take an order");
+                        textViewChooseTable.setText(getString(R.string.choose_table_take_order));
                         break;
                     case 1: // Change Order tab
-                        textViewChooseTable.setText("Choose a table to change an order");
+                        textViewChooseTable.setText(getString(R.string.choose_table_change_order));
                         break;
                 }
             }
