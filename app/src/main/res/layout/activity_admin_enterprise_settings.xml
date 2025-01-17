@@ -14,6 +14,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="Change Enterprise name"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,7 +29,7 @@
             android:layout_marginTop="@dimen/button_apply_change_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
+            android:backgroundTint="@color/button_background"
             android:text="@string/apply_change"
             android:textSize="@dimen/button_select_size"/>
 
@@ -40,7 +41,6 @@
             android:layout_marginTop="@dimen/text_view_enterprise_name_margin_top"
             android:fontFamily="sans-serif-black"
             android:text="@string/change_enterprise_name"
-            android:textColor="@color/black"
             android:textSize="@dimen/edit_text__size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -54,7 +54,6 @@
             android:text="@string/to_make_any_changes_to_your_business_s_name_fill_the_designated_field"
             android:layout_marginTop="@dimen/text_view_description_margin_top"
             android:layout_marginStart="@dimen/textview_description_margin_start"
-            android:textColor="@color/black"
             android:textSize="@dimen/text_view_choose_image_description_text_size"
             app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +88,6 @@
             android:layout_marginTop="@dimen/text_view_tables_menu_margin_top"
             android:fontFamily="sans-serif-black"
             android:text="@string/tables_amp_menu"
-            android:textColor="@color/black"
             android:textSize="@dimen/edit_text__size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,7 +102,7 @@
             android:layout_marginTop="@dimen/button_modify_tables_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
+            android:backgroundTint="@color/button_background"
             android:text="@string/modify_tables"
             android:textSize="@dimen/button_select_size"/>
 
@@ -116,7 +114,7 @@
             android:layout_marginTop="@dimen/button_modify_menu_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
+            android:backgroundTint="@color/button_background"
             android:text="@string/modify_menu"
             android:textSize="@dimen/button_select_size" />
 

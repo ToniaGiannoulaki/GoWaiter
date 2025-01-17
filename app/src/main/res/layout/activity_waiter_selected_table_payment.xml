@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"
             android:layout_margin="16dp"
             android:backgroundTint="@android:color/white"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp">
 
             <!-- Payment Card (white background inside the CardView) -->
@@ -33,7 +34,6 @@
                     android:text="Table Name"
                     android:textStyle="bold"
                     android:textSize="20sp"
-                    android:textColor="@android:color/black"
                     android:gravity="center_horizontal"
                     android:layout_gravity="center_horizontal"/>
 
@@ -44,7 +44,6 @@
                     android:text="@string/payment"
                     android:textSize="20sp"
                     android:textStyle="bold"
-                    android:textColor="@android:color/black"
                     android:gravity="center_horizontal"
                     android:layout_gravity="center_horizontal"/>
 
@@ -54,7 +53,6 @@
                     android:layout_height="wrap_content"
                     android:text="@string/select_the_items_you_want_to_pay_for_separately_or_press_the_all_button_then_choose_the_payment_method_cash_or_card"
                     android:textSize="14sp"
-                    android:textColor="@android:color/black"
                     android:paddingTop="8dp"
                     android:layout_gravity="center_horizontal"/>
 
@@ -170,7 +168,7 @@
                     android:layout_width="158dp"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="24dp"
-                    android:backgroundTint="#C835ED"
+                    android:backgroundTint="@color/button_background"
                     android:text="@string/payment"
                     android:layout_gravity="center"
                     android:textColor="@android:color/white" />

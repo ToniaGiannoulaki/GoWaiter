@@ -23,6 +23,7 @@
             android:layout_marginStart="@dimen/card_margin_start"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Username and profile picture"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,7 @@
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:layout_gravity="center_horizontal"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:layout_centerInParent="true"
                 android:text="@string/select"
                 android:textSize="@dimen/button_select_size" />
@@ -73,7 +74,6 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_username"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +88,7 @@
                 android:layout_marginTop="@dimen/button_authenticate_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size" />
 
@@ -100,7 +100,6 @@
                 android:layout_marginTop="@dimen/textview_choose_image_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_profile_picture"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -126,7 +125,6 @@
                 android:layout_marginLeft="@dimen/textview_profile_picture_margin_left"
                 android:layout_marginTop="@dimen/textview_profile_picture_margin_top"
                 android:text="@string/choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -146,6 +144,7 @@
             android:layout_marginTop="@dimen/card_view_margin_top_2"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Email card view"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -181,7 +180,6 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_email"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -205,7 +203,7 @@
                 android:layout_marginTop="@dimen/button_send_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:layout_centerInParent="true"
                 android:text="@string/send"
                 android:textSize="@dimen/button_select_size"/>
@@ -239,7 +237,7 @@
                 android:layout_marginTop="@dimen/button_authenticate_margin_top2"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size" />
 
@@ -254,6 +252,7 @@
             android:layout_marginTop="@dimen/card_view_margin_top_3"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Email card view"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -268,7 +267,6 @@
                 android:layout_marginTop="@dimen/textview_change_password_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_password"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -346,7 +344,7 @@
                 android:layout_marginTop="@dimen/button_authenticate_margin_top3"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/authenticate"
                 android:textSize="@dimen/button_select_size"/>
         </androidx.cardview.widget.CardView>

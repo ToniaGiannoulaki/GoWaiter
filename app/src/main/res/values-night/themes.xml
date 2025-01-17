@@ -2,6 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.GoWaiter" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
+        <item name="colorOnPrimary">#FFFFFF</item>
+        <item name="colorOnBackground">#000000</item>
+        <item name="cardBackgroundColor">#332F34</item>
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
     </style>
 </resources>

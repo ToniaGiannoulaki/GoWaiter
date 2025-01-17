@@ -106,7 +106,7 @@
     <!-- change profile picture position -->
 
     <dimen name="text_view_choose_image_text_size">23sp</dimen>
-    <dimen name="textview_choose_image_margin_start">70dp</dimen>
+    <dimen name="textview_choose_image_margin_start">90dp</dimen>
     <dimen name="textview_choose_image_margin_top">220dp</dimen>
 
     <!-- edit text position and width -->
@@ -126,8 +126,7 @@
 
     <!-- text view change username -->
 
-    <dimen name="textview_change_username_margin_start">90dp</dimen>
-
+    <dimen name="textview_change_username_margin_start">110dp</dimen>
 
     <!-- Second card view elements -->
 
@@ -167,7 +166,7 @@
 
     <!-- Change password text view -->
 
-    <dimen name="textview_change_password_margin_start">90dp</dimen>
+    <dimen name="textview_change_password_margin_start">110dp</dimen>
     <dimen name="textview_change_password_margin_top">16dp</dimen>
     <dimen name="textview_change_password_width">320dp</dimen>
 
@@ -178,7 +177,7 @@
 
     <!-- repeat password -->
 
-    <dimen name="edit_text_margin_start">45dp</dimen>
+    <dimen name="edit_text_margin_start">50dp</dimen>
     <dimen name="edit_text_repeat_password_margin_top">205dp</dimen>
 
     <!-- set new password -->
@@ -200,7 +199,7 @@
 
     <!-- button add employee -->
 
-    <dimen name="button_add_margin_start">115dp</dimen>
+    <dimen name="button_add_margin_start">130dp</dimen>
 
     <!-- spinner select role -->
 
@@ -212,13 +211,13 @@
 
     <!-- text view add employee description -->
 
-    <dimen name="textview_add_employee_description_margin_start">35dp</dimen>
+    <dimen name="textview_add_employee_description_margin_start">45dp</dimen>
     <dimen name="textview_add_employee_description_margin_top">60dp</dimen>
     <dimen name="textview_add_employee_description_width">316dp</dimen>
 
     <!-- text view add employee -->
 
-    <dimen name="textview_add_employee_margin_start">100dp</dimen>
+    <dimen name="textview_add_employee_margin_start">130dp</dimen>
     <dimen name="textview_add_employee_margin_top">16dp</dimen>
 
     <!-- edit text employee's email -->
@@ -232,13 +231,13 @@
     <!-- textview description delete employee -->
 
     <dimen name="text_view_delete_employee_description_margin_top">60dp</dimen>
-    <dimen name="textview_delete_employee_description_margin_start">30dp</dimen>
+    <dimen name="textview_delete_employee_description_margin_start">50dp</dimen>
     <dimen name="textview_delete_employee_width">316dp</dimen>
 
     <!-- textview delete employee -->
 
     <dimen name="text_view_delete_employee_margin_top">16dp</dimen>
-    <dimen name="textview_delete_employee_margin_start">100dp</dimen>
+    <dimen name="textview_delete_employee_margin_start">120dp</dimen>
 
     <!-- /////////////////////////////////////////////////// -->
     <!-- //////// Admin Enterprise Settings Activity /////// -->
@@ -268,23 +267,23 @@
 
     <dimen name="edit_text__size">24sp</dimen>
     <dimen name="edit_text_the_new_name_margin_top">120dp</dimen>
-    <dimen name="edit_text_the_new_name_margin_start">40dp</dimen>
+    <dimen name="edit_text_the_new_name_margin_start">50dp</dimen>
 
     <!-- text view Tables & Menu -->
 
     <dimen name="text_view_tables_menu_margin_top">270dp</dimen>
-    <dimen name="text_view_tables_menu_margin_start">100dp</dimen>
+    <dimen name="text_view_tables_menu_margin_start">120dp</dimen>
 
     <!-- textview description -->
 
     <dimen name="text_view_description_margin_top">70dp</dimen>
-    <dimen name="textview_description_margin_start">30dp</dimen>
+    <dimen name="textview_description_margin_start">45dp</dimen>
     <dimen name="textview_description_width">316dp</dimen>
 
     <!-- text view Change Enterprise name -->
 
     <dimen name="text_view_enterprise_name_margin_top">16dp</dimen>
-    <dimen name="text_view_enterprise_name_margin_start">50dp</dimen>
+    <dimen name="text_view_enterprise_name_margin_start">65dp</dimen>
 
     <!-- /////////////////////////////////////////////////// -->
     <!-- ////////// Admin Modify Tables Activity /////////// -->
@@ -295,8 +294,8 @@
     <dimen name="card_view_outdoor_tables_margin_top">690dp</dimen>
 
     <dimen name="text_view_size">20sp</dimen>
-    <dimen name="text_view_add_tables_margin_start">130dp</dimen>
-    <dimen name="text_view_delete_tables_margin_start">120dp</dimen>
+    <dimen name="text_view_add_tables_margin_start">150dp</dimen>
+    <dimen name="text_view_delete_tables_margin_start">140dp</dimen>
 
 
     <dimen name="text_view_Indoor_tables_margin_start">110dp</dimen>
@@ -307,7 +306,7 @@
     <dimen name="button_height_delete">51dp</dimen>
     <dimen name="button_width_delete">148dp</dimen>
     <dimen name="button_delete_table_margin_top">390dp</dimen>
-    <dimen name="button_delete_table_margin_start">200dp</dimen>
+    <dimen name="button_delete_table_margin_start">230dp</dimen>
 
     <!-- Text view description delete table -->
 
@@ -321,7 +320,7 @@
     <!-- Text view add tables description -->
 
     <dimen name="text_add_table_description_margin_top">80dp</dimen>
-    <dimen name="text_add_table_description_margin_start">30dp</dimen>
+    <dimen name="text_add_table_description_margin_start">45dp</dimen>
     <dimen name="text_add_table_description_width">316dp</dimen>
 
     <!-- Button Add tables -->
@@ -345,9 +344,9 @@
     <dimen name="text_add_category_description_width">210dp</dimen>
     <dimen name="card_view_height_category">200dp</dimen>
     <dimen name="image_button_add_margin_top">60dp</dimen>
-    <dimen name="image_button_add_margin_start">250dp</dimen>
+    <dimen name="image_button_add_margin_start">260dp</dimen>
     <dimen name="text_view_add_margin_top">80dp</dimen>
-    <dimen name="text_view_add_categories_margin_start">100dp</dimen>
+    <dimen name="text_view_add_categories_margin_start">120dp</dimen>
 
     <!-- /////////////////////////////////////////////////// -->
     <!-- /////////// Admin Statistics Activity ///////////// -->
@@ -393,16 +392,15 @@
     <dimen name="textView_add_supply_margin_top">32dp</dimen>
     <dimen name="button_add_supply_margin_start">125dp</dimen>
     <dimen name="button_update_supply_margin_top">300dp</dimen>
-    <dimen name="editText_quantity_margin_start">30dp</dimen>
     <dimen name="textView_margin_start">16dp</dimen>
     <dimen name="editText_supply_width">325dp</dimen>
-    <dimen name="spinner_role_margin_start">200dp</dimen>
-    <dimen name="editText_supply_name_margin_start">30dp</dimen>
+    <dimen name="spinner_role_margin_start">215dp</dimen>
+    <dimen name="editText_supply_name_margin_start">45dp</dimen>
     <dimen name="textView_add_supply_margin_start">140dp</dimen>
     <dimen name="button_and_editText_remove_supply_margin_top">140dp</dimen>
-    <dimen name="button_remove_supply_margin_start">200dp</dimen>
+    <dimen name="button_remove_supply_margin_start">220dp</dimen>
     <dimen name="spinner_remove_supply_margin_start">30dp</dimen>
-    <dimen name="textView_remove_supply_description_margin_left">30dp</dimen>
+    <dimen name="textView_remove_supply_description_margin_left">45dp</dimen>
     <dimen name="textView_remove_supply_description_margin_top">80dp</dimen>
     <dimen name="button_remove_supply_margin_top">140dp</dimen>
     <dimen name="remove_supply_description_width">316dp</dimen>
@@ -411,14 +409,15 @@
     <dimen name="spinner_and_editText_fields_update_margin_top">160dp</dimen>
     <dimen name="textView_update_supply_description_margin_top">80dp</dimen>
     <dimen name="textView_update_supply_margin_top">30dp</dimen>
-    <dimen name="editText_quantity_update_margin_start">200dp</dimen>
+    <dimen name="editText_quantity_update_margin_start">205dp</dimen>
     <dimen name="button_update_supply_margin_start">120dp</dimen>
-    <dimen name="spinner_update_margin_start">115dp</dimen>
+    <dimen name="spinner_update_margin_start">125dp</dimen>
     <dimen name="button_low_stock_supply_margin_top">230dp</dimen>
     <dimen name="spinner_and_editText_fields_low_stock_margin_top">160dp</dimen>
     <dimen name="editText_minimum_stock_margin_start">200dp</dimen>
-    <dimen name="textView_low_stock_supply_margin_start">80dp</dimen>
+    <dimen name="textView_low_stock_supply_margin_start">90dp</dimen>
     <dimen name="button_low_stock_supply_margin_start">130dp</dimen>
     <dimen name="toolbar_text_size">16sp</dimen>
     <dimen name="button_request_margin_start">110dp</dimen>
+    <dimen name="text_view_update_supply_margin_start">130dp</dimen>
 </resources>

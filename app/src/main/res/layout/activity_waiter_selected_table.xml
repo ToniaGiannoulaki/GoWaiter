@@ -30,7 +30,6 @@
                 android:layout_height="wrap_content"
                 android:text="Drinks"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
                 android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -43,7 +42,6 @@
                 android:layout_height="wrap_content"
                 android:text="Beverages"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
                 android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -56,7 +54,6 @@
                 android:layout_height="wrap_content"
                 android:text="Branch"
                 android:textStyle="bold"
-                android:textColor="@android:color/black"
                 android:padding="16dp"
                 android:clickable="true"
                 android:focusable="true"
@@ -84,6 +81,7 @@
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
         android:backgroundTint="@android:color/white"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:layout_constraintTop_toBottomOf="@+id/toolbar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +101,6 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="@string/take_order_of"
-                android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -114,7 +111,6 @@
                 android:gravity="center"
                 android:layout_marginTop="5dp"
                 android:text="@string/table"
-                android:textColor="@android:color/black"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -125,7 +121,6 @@
                 android:layout_marginTop="8dp"
                 android:gravity="center"
                 android:text="@string/choose_a_category_above_the_selected_items_will_appear_here"
-                android:textColor="@android:color/black"
                 android:textSize="16sp" />
 
             <androidx.cardview.widget.CardView
@@ -134,6 +129,7 @@
                 android:layout_height="250dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="#F3F2F2"
+                app:cardBackgroundColor="?attr/cardBackgroundColor"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="4dp"/>
 

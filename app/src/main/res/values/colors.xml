@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="white_background">#FFFFFFFF</color>
+    <color name="cardview_statistics">#FFFFFFFF</color>
+    <color name="edit_text_input">#FFFFFFFF</color>
     <color name="status_bar_color">#C835ED</color>
+    <color name="button_background">#C835ED</color>
+    <color name="deep_purple">#3E044D</color>
+    <color name="black">#FF000000</color>
 </resources>

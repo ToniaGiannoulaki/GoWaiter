@@ -14,7 +14,6 @@
         android:background="@drawable/background2"
         tools:context=".Waiter.Waiter_Take_Order">
 
-
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayout"
             android:layout_width="match_parent"

@@ -21,6 +21,7 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="Add tables"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -35,7 +36,7 @@
                 android:layout_marginTop="@dimen/button_add_tables_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/add"
                 android:textSize="@dimen/button_select_size"/>
 
@@ -47,7 +48,6 @@
                 android:layout_marginTop="@dimen/text_view_statistics_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/add_tables"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,6 @@
                 android:text="@string/to_input_the_total_number_of_table_seats_first_specify_whether_the_tables_are_located_indoors_or_outdoors_then_enter_the_seat_count_in_the_provided_field"
                 android:layout_marginTop="@dimen/text_add_table_description_margin_top"
                 android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
                 app:layout_constraintStart_toStartOf="parent"
@@ -85,16 +84,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
-                android:text="@string/indoor"
-                android:textColor="@color/black" />
+                android:text="@string/indoor" />
 
             <RadioButton
                 android:id="@+id/radioButton_outdoor"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
-                android:text="@string/outdoor"
-                android:textColor="@color/black"/>
+                android:text="@string/outdoor" />
         </RadioGroup>
 
             <EditText
@@ -121,7 +118,6 @@
                 android:layout_marginTop="@dimen/text_delete_table_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/delete_tables"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -135,7 +131,6 @@
                 android:text="@string/to_delete_a_table_please_enter_the_name_of_the_table"
                 android:layout_marginTop="@dimen/text_delete_table_description_margin_top"
                 android:layout_marginLeft="@dimen/text_add_table_description_margin_start"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -166,7 +161,7 @@
                 android:layout_marginTop="@dimen/button_delete_table_margin_top"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="Delete"
                 android:textSize="@dimen/button_select_size"/>
 
@@ -180,6 +175,7 @@
             android:layout_marginTop="@dimen/card_view_indoor_tables_margin_top"
             android:layout_marginEnd="16dp"
             android:contentDescription="Indoor tables"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -194,7 +190,6 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/indoor_tables"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -210,6 +205,7 @@
             android:layout_marginTop="@dimen/card_view_outdoor_tables_margin_top"
             android:layout_marginEnd="16dp"
             android:contentDescription="Outdoor tables"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -226,7 +222,6 @@
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/outdoor_tables"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
