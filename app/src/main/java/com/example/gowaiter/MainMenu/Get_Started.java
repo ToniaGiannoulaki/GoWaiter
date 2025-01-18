@@ -13,15 +13,14 @@ import com.example.gowaiter.R;
 
 public class Get_Started extends AppCompatActivity {
 
-    TextView text_GoWaiter;
-    ImageButton getStarted;
+    TextView text_GoWaiter, getStarted;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_get_started);
 
         text_GoWaiter = findViewById(R.id.textView_GoWaiter);
-        getStarted = findViewById(R.id.imageButton_getStarted);
+        getStarted = findViewById(R.id.button_get_started);
 
         //Show movement in Welcome to GoWaiter text when the app starts
         YoYo.with(Techniques.Landing).duration(3000).repeat(0).playOn(text_GoWaiter);

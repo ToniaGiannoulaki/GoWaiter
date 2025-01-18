@@ -44,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="75dp"
             android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
             android:text="@string/choose_a_table_to_take_an_order"
             android:textSize="24sp"
             android:textStyle="normal"

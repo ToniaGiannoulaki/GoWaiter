@@ -33,6 +33,7 @@
     <dimen name="button_sign_in_sign_in_width">190dp</dimen>
     <dimen name="button_sign_in_sign_in_height">55dp</dimen>
     <dimen name="button_sign_in_sign_in_text_size">24sp</dimen>
+    <dimen name="button_get_started_text_size">26sp</dimen>
     <dimen name="edit_text_sign_in_email_password_text_size">18sp</dimen>
 
     <!-- Sign Up Activity -->

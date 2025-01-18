@@ -14,6 +14,7 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="Change Enterprise name"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="12dp"
         app:cardElevation="12dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -28,8 +29,8 @@
             android:layout_marginTop="@dimen/button_apply_change_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
-            android:text="Apply change"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/apply_change"
             android:textSize="@dimen/button_select_size"/>
 
         <TextView
@@ -39,8 +40,7 @@
             android:layout_marginStart="@dimen/text_view_enterprise_name_margin_start"
             android:layout_marginTop="@dimen/text_view_enterprise_name_margin_top"
             android:fontFamily="sans-serif-black"
-            android:text="Change Enterprise Name"
-            android:textColor="@color/black"
+            android:text="@string/change_enterprise_name"
             android:textSize="@dimen/edit_text__size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -51,10 +51,9 @@
             android:id="@+id/textView_change_enterprise_name_description"
             android:layout_width="@dimen/textview_description_width"
             android:layout_height="wrap_content"
-            android:text="To make any changes to your business's name, fill the designated field."
+            android:text="@string/to_make_any_changes_to_your_business_s_name_fill_the_designated_field"
             android:layout_marginTop="@dimen/text_view_description_margin_top"
             android:layout_marginStart="@dimen/textview_description_margin_start"
-            android:textColor="@color/black"
             android:textSize="@dimen/text_view_choose_image_description_text_size"
             app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
             app:layout_constraintStart_toStartOf="parent"
@@ -72,7 +71,7 @@
             android:layout_marginBottom="378dp"
             android:background="@drawable/custom_input"
             android:ems="10"
-            android:hint="Enter the new name"
+            android:hint="@string/enter_the_new_name"
             android:inputType="text"
             android:paddingStart="10dp"
             android:textSize="@dimen/edit_text_sign_in_email_password_text_size"
@@ -88,8 +87,7 @@
             android:layout_marginStart="@dimen/text_view_tables_menu_margin_start"
             android:layout_marginTop="@dimen/text_view_tables_menu_margin_top"
             android:fontFamily="sans-serif-black"
-            android:text="Tables &amp; Menu"
-            android:textColor="@color/black"
+            android:text="@string/tables_amp_menu"
             android:textSize="@dimen/edit_text__size"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
@@ -104,8 +102,8 @@
             android:layout_marginTop="@dimen/button_modify_tables_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
-            android:text="Modify tables"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/modify_tables"
             android:textSize="@dimen/button_select_size"/>
 
         <Button
@@ -116,22 +114,10 @@
             android:layout_marginTop="@dimen/button_modify_menu_margin_top"
             android:layout_marginEnd="111dp"
             android:layout_marginBottom="29dp"
-            android:backgroundTint="#C835ED"
-            android:text="Modify Menu"
+            android:backgroundTint="@color/button_background"
+            android:text="@string/modify_menu"
             android:textSize="@dimen/button_select_size" />
 
     </androidx.cardview.widget.CardView>
-
-    <ImageButton
-        android:id="@+id/back_button_enterprise_settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/back_button"
-        android:background="?attr/selectableItemBackgroundBorderless"
-        android:contentDescription="Back"
-        android:onClick="onBackPressed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:layout_margin="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

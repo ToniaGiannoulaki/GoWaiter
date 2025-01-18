@@ -23,6 +23,7 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="Add Employee"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -38,7 +39,6 @@
                 android:layout_marginTop="25dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/add_employee"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -100,7 +100,7 @@
                 android:layout_marginTop="340dp"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/add"
                 android:textSize="@dimen/button_select_size" />
 
@@ -115,6 +115,7 @@
             android:layout_marginTop="@dimen/card_view_margin_top_2"
             android:layout_marginEnd="@dimen/card_margin_end"
             android:contentDescription="@string/delete_employee"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -150,7 +151,6 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/delete_employee"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -180,7 +180,8 @@
                 android:id="@+id/textView_delete_employee_description"
                 android:layout_width="@dimen/textview_delete_employee_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"                android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:layout_marginStart="45dp"
+                android:textSize="@dimen/text_view_choose_image_description_text_size"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="154dp"
                 android:text="@string/to_delete_an_employee_fill_the_designated_fields" />
@@ -209,7 +210,7 @@
                 android:layout_marginTop="@dimen/button_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
-                android:backgroundTint="#C835ED"
+                android:backgroundTint="@color/button_background"
                 android:text="@string/delete"
                 android:textSize="@dimen/button_select_size"/>
 

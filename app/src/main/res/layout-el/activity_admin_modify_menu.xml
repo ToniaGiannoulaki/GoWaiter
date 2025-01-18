@@ -22,6 +22,7 @@
             android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="Add tables"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -36,7 +37,6 @@
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/add_categories"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_text_size"
                 android:textStyle="bold"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -50,7 +50,6 @@
                 android:layout_marginLeft="50dp"
                 android:layout_marginTop="70dp"
                 android:text="@string/click_on_the_button_to_add_a_menu_category_once_the_category_is_created_click_on_it_to_add_specific_items"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +64,7 @@
                 android:layout_marginStart="270dp"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="111dp"
-                android:background="@color/white"
+                android:background="@android:color/transparent"
                 android:contentDescription="Add menu category"
                 app:srcCompat="@drawable/add_button_icon" />
 

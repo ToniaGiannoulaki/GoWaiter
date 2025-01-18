@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="get_started_background">#FFFFFFFF</color>
+    <color name="get_started_text">#C835ED</color>
     <color name="white">#FFFFFFFF</color>
     <color name="white_background">#FFFFFFFF</color>
     <color name="cardview_statistics">#FFFFFFFF</color>

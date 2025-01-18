@@ -33,6 +33,7 @@
         android:layout_marginStart="@dimen/card_view_margin_start"
         android:layout_columnWeight="1"
         android:layout_marginTop="@dimen/card_view_margin_top"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="15dp"
         android:layout_row="1"
         android:layout_column="0"
@@ -61,8 +62,7 @@
                 android:text="@string/account_nsettings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
-                android:layout_marginLeft="15dp"
-                android:textColor="@color/black"/>
+                android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
 
@@ -76,6 +76,7 @@
         android:layout_height="@dimen/card_view_size"
         android:layout_below="@id/top_view"
         android:layout_toRightOf="@id/card_view_account_settings_admin"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         android:layout_marginLeft="@dimen/card_view_margin_horizontal"
         android:layout_marginTop="@dimen/card_view_margin_top"
         app:cardCornerRadius="15dp"
@@ -104,7 +105,6 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginLeft="15dp"
                 android:text="@string/staff_settings"
-                android:textColor="@color/black"
                 android:textSize="@dimen/text_size" />
 
         </LinearLayout>
@@ -121,6 +121,7 @@
         android:layout_below="@id/card_view_account_settings_admin"
         android:layout_marginLeft="@dimen/card_margin_left_enterprise_settings"
         android:layout_marginTop="@dimen/card_margin_top_enterprise_settings"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp"
         android:layout_gravity="center">
@@ -147,8 +148,7 @@
                 android:text="@string/enterprise_n_settings"
                 android:layout_gravity="center_horizontal"
                 android:textSize="@dimen/text_size"
-                android:layout_marginLeft="15dp"
-                android:textColor="@color/black"/>
+                android:layout_marginLeft="15dp"/>
 
         </LinearLayout>
 
@@ -164,6 +164,7 @@
         android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
         android:layout_marginLeft="@dimen/card_view_messages_margin_left"
         android:layout_marginTop="@dimen/card_view_messages_margin_top"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp"
         android:layout_gravity="center">
@@ -189,7 +190,6 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:text="@string/statistics"
-                android:textColor="@color/black"
                 android:textSize="@dimen/messages_text_size" />
 
         </LinearLayout>
@@ -206,6 +206,7 @@
         android:layout_marginLeft="@dimen/cardview_supplies_margin_left"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
         android:layout_marginStart="@dimen/card_view_margin_start"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp"
         android:layout_gravity="center">
@@ -231,8 +232,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/supplies"
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/messages_text_size"
-                android:textColor="@color/black"/>
+                android:textSize="@dimen/messages_text_size"/>
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -247,6 +247,7 @@
         android:layout_marginStart="@dimen/card_view_margin_start_2nd_column"
         android:layout_marginLeft="210dp"
         android:layout_marginTop="@dimen/cardview_supplies_margin_top"
+        app:cardBackgroundColor="?attr/cardBackgroundColor"
         app:cardCornerRadius="15dp"
         app:cardElevation="12dp"
         android:layout_gravity="center">
@@ -272,8 +273,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/payments"
                 android:layout_gravity="center_horizontal"
-                android:textSize="@dimen/messages_text_size"
-                android:textColor="@color/black"/>
+                android:textSize="@dimen/messages_text_size"/>
 
         </LinearLayout>
 
