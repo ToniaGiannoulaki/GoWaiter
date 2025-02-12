@@ -293,28 +293,35 @@
         android:layout_marginTop="80dp"
         android:layout_marginLeft="62dp"/>
 
-    <com.google.android.material.imageview.ShapeableImageView
-        android:id="@+id/imageView_profile_pic"
-        android:layout_width="@dimen/image_size"
-        android:layout_height="@dimen/image_size"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="40dp"
-        android:layout_marginRight="55dp"
-        android:contentDescription="Profile Picture"
-        android:src="@drawable/profile_pic_icon"
-        app:layout_constraintDimensionRatio="1:1"
-        app:shapeAppearanceOverlay="@style/CircleImageView" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/textView_log_out"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/imageView_profile_pic"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="@dimen/log_out_layout_marginLeft"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/log_out"
-        android:textColor="@color/white"
-        android:textSize="@dimen/log_out_text_size" />
+        <!-- Profile Image -->
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imageView_profile_pic"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="55dp"
+            android:contentDescription="Profile Picture"
+            android:src="@drawable/profile_pic_icon"
+            app:shapeAppearanceOverlay="@style/CircleImageView"/>
+
+        <!-- Log Out Text -->
+        <TextView
+            android:id="@+id/textView_log_out"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/imageView_profile_pic"
+            app:layout_constraintEnd_toEndOf="@id/imageView_profile_pic"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/log_out"
+            android:textColor="@color/white"
+            android:textSize="@dimen/log_out_text_size"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </RelativeLayout>
