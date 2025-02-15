@@ -417,4 +417,43 @@
     <dimen name="button_low_stock_supply_margin_start">160dp</dimen>
     <dimen name="toolbar_text_size">20sp</dimen>
     <dimen name="button_request_margin_start">280dp</dimen>
+
+
+    <!-- /////////////////////////////////////////////////// -->
+    <!-- ///////// GREEK CHARACTER APP ACTIVITIES ////////// -->
+    <!-- /////////////////////////////////////////////////// -->
+
+    <dimen name="get_started_text_view_gr">250dp</dimen>
+
+    <!-- /////////////// ACCOUNT SETTINGS ////////////////// -->
+
+    <!-- First Card View -->
+
+    <dimen name="text_card_view_gr">25dp</dimen>
+    <dimen name="text_change_profile_description_margin_left_gr">140dp</dimen>
+    <dimen name="text_change_profile_description_margin_top_gr">335dp</dimen>
+    <dimen name="text_change_profile_description_width_gr">300dp</dimen>
+    <dimen name="text_change_profile_margin_start_gr">85dp</dimen>
+    <dimen name="text_authenticate_margin_start_gr">120dp</dimen>
+    <dimen name="edit_text_change_name_margin_start_gr">57dp</dimen>
+    <dimen name="edit_text_change_name_margin_top_gr">85dp</dimen>
+
+    <!-- Third Card View -->
+    <dimen name="button_margin_start_gr">110dp</dimen>
+    <dimen name="edit_text_margin_start_gr">80dp</dimen>
+    <dimen name="textview_change_password_margin_start_gr">80dp</dimen>
+
+    <!-- /////////////// ENTERPRISE SETTINGS SETTINGS ////////////////// -->
+
+    <dimen name="button_change_tables_margin_top_gr">565dp</dimen>
+    <dimen name="button_change_tables_menu_width_gr">75dp</dimen>
+    <dimen name="button_apply_margin_top_gr">280dp</dimen>
+    <dimen name="edit_text_change_enterprise_name_margin_top_gr">190dp</dimen>
+    <dimen name="text_view_title_margin_top_gr">28dp</dimen>
+
+    <!-- /////////////// CHANGE MENU ////////////////// -->
+
+    <dimen name="card_view_height_category_gr">280dp</dimen>
+
+
 </resources>

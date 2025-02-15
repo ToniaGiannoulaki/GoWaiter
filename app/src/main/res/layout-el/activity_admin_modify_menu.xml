@@ -17,7 +17,7 @@
         <androidx.cardview.widget.CardView
             android:id="@+id/card_view_add_categories"
             android:layout_width="wrap_content"
-            android:layout_height="@dimen/card_view_height_category"
+            android:layout_height="@dimen/card_view_height_category_gr"
             android:layout_marginStart="16dp"
             android:layout_marginTop="48dp"
             android:layout_marginEnd="16dp"

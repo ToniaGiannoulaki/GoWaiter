@@ -38,6 +38,7 @@
                 android:layout_marginTop="@dimen/button_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
+                android:layout_below="@id/textView_profile_picture_description"
                 android:layout_gravity="center_horizontal"
                 android:backgroundTint="@color/button_background"
                 android:layout_centerInParent="true"
@@ -115,6 +116,7 @@
                 android:layout_marginLeft="@dimen/image_profile_picture_margin_left"
                 android:contentDescription="Profile Picture"
                 android:src="@drawable/username_icon"
+                android:layout_toLeftOf="@+id/textView_profile_picture_description"
                 app:layout_constraintDimensionRatio="1:1"
                 app:shapeAppearanceOverlay="@style/CircleImageView" />
 
@@ -126,6 +128,7 @@
                 android:layout_marginTop="@dimen/textview_profile_picture_margin_top"
                 android:text="@string/choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
+                android:layout_toRightOf="@id/imageView_profile_pic"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"

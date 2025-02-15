@@ -40,7 +40,7 @@
 
     <TextView
         android:id="@+id/textView_GoWaiter"
-        android:layout_width="210dp"
+        android:layout_width="@dimen/get_started_text_view_gr"
         android:layout_height="115dp"
         android:layout_marginStart="101dp"
         android:layout_marginTop="388dp"

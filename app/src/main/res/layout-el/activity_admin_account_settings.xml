@@ -44,13 +44,12 @@
                 android:text="@string/select"
                 android:textSize="@dimen/button_select_size" />
 
-
             <EditText
                 android:id="@+id/editText_change_username"
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
-                android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
-                android:layout_marginTop="@dimen/edit_text_change_username_margin_top"
+                android:layout_marginStart="@dimen/edit_text_change_name_margin_start_gr"
+                android:layout_marginTop="@dimen/edit_text_change_name_margin_top_gr"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -84,7 +83,7 @@
                 android:id="@+id/button_authenticate_username"
                 android:layout_width="236dp"
                 android:layout_height="@dimen/button_select_image_height"
-                android:layout_marginStart="85dp"
+                android:layout_marginStart="@dimen/text_authenticate_margin_start_gr"
                 android:layout_marginTop="@dimen/button_authenticate_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
@@ -96,7 +95,7 @@
                 android:id="@+id/textView_profile_pic"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/textview_choose_image_margin_start"
+                android:layout_marginStart="@dimen/text_change_profile_margin_start_gr"
                 android:layout_marginTop="@dimen/textview_choose_image_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_profile_picture"
@@ -120,10 +119,10 @@
 
             <TextView
                 android:id="@+id/textView_profile_picture_description"
-                android:layout_width="265dp"
+                android:layout_width="@dimen/text_change_profile_description_width_gr"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="120dp"
-                android:layout_marginTop="270dp"
+                android:layout_marginLeft="@dimen/text_change_profile_description_margin_left_gr"
+                android:layout_marginTop="@dimen/text_change_profile_description_margin_top_gr"
                 android:text="@string/choose_an_image_from_the_gallery_nor_choose_the_camera_option_nto_take_a_picture"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -156,7 +155,7 @@
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
-                android:layout_marginTop="65dp"
+                android:layout_marginTop="@dimen/edit_text_set_email_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -174,7 +173,7 @@
 
             <TextView
                 android:id="@+id/textView_change_email"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/textview_width"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/textview_changeemail_margin_start"
                 android:layout_marginTop="16dp"
@@ -191,22 +190,22 @@
                 android:layout_width="@dimen/textview_change_email_width"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/textview_change_email_margin_start"
-                android:layout_marginTop="130dp"
+                android:layout_marginTop="@dimen/textview_change_email_margin_top"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 android:text="@string/to_confirm_your_email_click_on_the_send_button_afterwards_fill_the_pin_field_to_authenticate_your_new_email_address" />
 
             <Button
                 android:id="@+id/button_send"
-                android:layout_width="160dp"
+                android:layout_width="@dimen/button_select_image_width"
                 android:layout_height="@dimen/button_select_image_height"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="115dp"
+                android:layout_marginStart="@dimen/button_send_margin_start"
                 android:layout_marginTop="@dimen/button_send_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="@color/button_background"
+                android:layout_centerInParent="true"
                 android:text="@string/send"
-                android:textSize="@dimen/button_select_size" />
+                android:textSize="@dimen/button_select_size"/>
 
             <EditText
                 android:id="@+id/editText_pin"
@@ -231,9 +230,9 @@
 
             <Button
                 android:id="@+id/button_authenticate_email"
-                android:layout_width="236dp"
+                android:layout_width="@dimen/button_authenticate_width"
                 android:layout_height="@dimen/button_select_image_height"
-                android:layout_marginStart="80dp"
+                android:layout_marginStart="@dimen/button_authenticate_margin_start"
                 android:layout_marginTop="@dimen/button_authenticate_margin_top2"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
@@ -263,8 +262,8 @@
                 android:id="@+id/textView_change_password"
                 android:layout_width="@dimen/textview_change_password_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="50dp"
-                android:layout_marginTop="20dp"
+                android:layout_marginStart="@dimen/textview_change_password_margin_start_gr"
+                android:layout_marginTop="@dimen/textview_change_password_margin_top"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/change_password"
                 android:textSize="@dimen/text_view_choose_image_text_size"
@@ -278,7 +277,7 @@
                 android:inputType="textPassword"
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
-                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginStart="@dimen/edit_text_margin_start_gr"
                 android:layout_marginTop="@dimen/edit_text_enter_current_password_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
@@ -298,7 +297,7 @@
                 android:id="@+id/editText_change_password"
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
-                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginStart="@dimen/edit_text_margin_start_gr"
                 android:layout_marginTop="@dimen/edit_text_set_new_password_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
@@ -319,7 +318,7 @@
                 android:id="@+id/editText_repeat_password"
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
-                android:layout_marginStart="@dimen/edit_text_margin_start"
+                android:layout_marginStart="@dimen/edit_text_margin_start_gr"
                 android:layout_marginTop="@dimen/edit_text_repeat_password_margin_top"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
@@ -338,9 +337,9 @@
 
             <Button
                 android:id="@+id/button_authenticate_password"
-                android:layout_width="236dp"
+                android:layout_width="@dimen/button_authenticate_width"
                 android:layout_height="@dimen/button_select_image_height"
-                android:layout_marginStart="85dp"
+                android:layout_marginStart="@dimen/button_authenticate_password_margin_start"
                 android:layout_marginTop="@dimen/button_authenticate_margin_top3"
                 android:layout_marginEnd="111dp"
                 android:layout_marginBottom="29dp"
