@@ -30,7 +30,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
-
             <TextView
                 android:id="@+id/textView_add_employee"
                 android:layout_width="wrap_content"
@@ -50,7 +49,7 @@
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
-                android:layout_marginTop="190dp"
+                android:layout_marginTop="@dimen/edit_text_add_role_margin_top_gr"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="281dp"
                 android:background="@drawable/custom_input"
@@ -68,7 +67,7 @@
 
             <TextView
                 android:id="@+id/textView_add_employee_description"
-                android:layout_width="@dimen/textview_add_employee_description_width"
+                android:layout_width="@dimen/text_view_add_employee_description_width_gr"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="80dp"
@@ -81,7 +80,7 @@
                 android:layout_width="@dimen/edit_text_width"
                 android:layout_height="@dimen/edit_text_height"
                 android:layout_marginStart="@dimen/edit_text_change_username_margin_start"
-                android:layout_marginTop="265dp"
+                android:layout_marginTop="@dimen/spinner_add_role_margin_top_gr"
                 android:layout_marginEnd="62dp"
                 android:layout_marginBottom="250dp"
                 android:background="@drawable/custom_input"
@@ -94,10 +93,10 @@
 
             <Button
                 android:id="@+id/button_add_employee"
-                android:layout_width="150dp"
-                android:layout_height="@dimen/button_select_image_height"
+                android:layout_width="@dimen/button_width_delete"
+                android:layout_height="@dimen/button_height_delete"
                 android:layout_marginStart="120dp"
-                android:layout_marginTop="340dp"
+                android:layout_marginTop="@dimen/button_add_employee_margin_top_gr"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="@color/button_background"
@@ -180,7 +179,7 @@
                 android:id="@+id/textView_delete_employee_description"
                 android:layout_width="@dimen/textview_delete_employee_width"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="45dp"
+                android:layout_marginStart="@dimen/text_view_description_delete_employee_margin_start_gr"
                 android:textSize="@dimen/text_view_choose_image_description_text_size"
                 android:layout_marginTop="70dp"
                 android:layout_marginEnd="154dp"
@@ -204,10 +203,10 @@
 
             <Button
                 android:id="@+id/button_delete_employee"
-                android:layout_width="150dp"
-                android:layout_height="@dimen/button_select_image_height"
+                android:layout_width="@dimen/button_width_delete"
+                android:layout_height="@dimen/button_height_delete"
                 android:layout_marginStart="120dp"
-                android:layout_marginTop="@dimen/button_margin_top"
+                android:layout_marginTop="@dimen/button_delete_employee_margin_top_gr"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"
                 android:backgroundTint="@color/button_background"

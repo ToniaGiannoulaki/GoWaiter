@@ -12,16 +12,16 @@
         android:layout_height="250dp"
         android:background="@drawable/background_view"/>
 
-    <GridLayout
+    <androidx.gridlayout.widget.GridLayout
         android:id="@+id/grid_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:columnCount="2"
-        android:rowCount="3"
         android:layout_marginLeft="@dimen/card_view_margin_horizontal"
         android:layout_marginRight="@dimen/card_view_margin_horizontal"
         android:layout_marginTop="@dimen/card_view_margin_top"
-        android:layout_below="@id/top_view" />
+        android:layout_below="@id/top_view"
+        app:columnCount="2"
+        app:rowCount="3" />
 
     <!-- First CardView -->
 

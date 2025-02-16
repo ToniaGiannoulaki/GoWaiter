@@ -438,10 +438,18 @@
     <dimen name="edit_text_change_name_margin_start_gr">57dp</dimen>
     <dimen name="edit_text_change_name_margin_top_gr">85dp</dimen>
 
+    <!-- Second Card View -->
+
+    <dimen name="textview_change_email_width_gr">380dp</dimen>
+    <dimen name="textview_change_email_title_width_gr">190dp</dimen>
+    <dimen name="text_view_change_email_description_margin_top_gr">160dp</dimen>
+    <dimen name="button_send_margin_start_gr">170dp</dimen>
+
     <!-- Third Card View -->
+
     <dimen name="button_margin_start_gr">110dp</dimen>
-    <dimen name="edit_text_margin_start_gr">80dp</dimen>
-    <dimen name="textview_change_password_margin_start_gr">80dp</dimen>
+    <dimen name="edit_text_margin_start_gr">70dp</dimen>
+    <dimen name="textview_change_password_margin_start_gr">70dp</dimen>
 
     <!-- /////////////// ENTERPRISE SETTINGS SETTINGS ////////////////// -->
 
@@ -451,9 +459,51 @@
     <dimen name="edit_text_change_enterprise_name_margin_top_gr">190dp</dimen>
     <dimen name="text_view_title_margin_top_gr">28dp</dimen>
 
+    <!-- /////////////// STAFF SETTINGS ////////////////// -->
+    <!-- First Card View -->
+
+    <dimen name="text_view_add_employee_description_width_gr">325dp</dimen>
+
+    <!-- Second Card View -->
+
+    <dimen name="text_view_description_delete_employee_margin_start_gr">60dp</dimen>
+
     <!-- /////////////// CHANGE MENU ////////////////// -->
 
     <dimen name="card_view_height_category_gr">280dp</dimen>
 
+    <!-- /////////////// CHANGE TABLES ////////////////// -->
+
+    <dimen name="edit_text_change_tables_margin_top_gr">530dp</dimen>
+    <dimen name="text_view_add_tables_margin_top_gr">440dp</dimen>
+    <dimen name="edit_text_add_tables_margin_top_gr">260dp</dimen>
+    <dimen name="radio_group_margin_top_gr">200dp</dimen>
+    <dimen name="text_view_add_tables_width_gr">430dp</dimen>
+    <dimen name="text_view_description_add_tables_margin_top_gr">80dp</dimen>
+    <dimen name="two_main_buttons_margin_start">250dp</dimen>
+    <dimen name="two_main_edit_text_margin_start">60dp</dimen>
+    <dimen name="text_view_title_delete_tables_margin_start">125dp</dimen>
+    <dimen name="text_view_title_add_tables_margin_start">120dp</dimen>
+    <dimen name="text_view_title_outside_tables">230dp</dimen>
+
+    <!-- /////////////// STAFF SETTINGS ////////////////// -->
+
+    <!-- Add Employee -->
+
+    <dimen name="button_add_employee_margin_top_gr">450dp</dimen>
+    <dimen name="spinner_add_role_margin_top_gr">365dp</dimen>
+    <dimen name="edit_text_add_role_margin_top_gr">280dp</dimen>
+
+    <!-- Delete Employee -->
+
+    <dimen name="button_delete_employee_margin_top_gr">400dp</dimen>
+    <dimen name="text_view_delete_employee_margin_start_gr">50dp</dimen>
+
+    <!-- /////////////// WAITER FUNCTIONALITIES ////////////////// -->
+
+    <!-- take order -->
+
+    <dimen name="text_view_tables_margin_start_gr">240dp</dimen>
+    <dimen name="text_view_indoor_tables_margin_start_gr">250dp</dimen>
 
 </resources>

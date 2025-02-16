@@ -12,40 +12,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/background2"
-        tools:context=".Waiter.Waiter_Take_Order">
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabLayout"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:tabGravity="fill"
-            app:tabMode="fixed">
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab_take_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/take_order" />
-
-            <com.google.android.material.tabs.TabItem
-                android:id="@+id/tab_change_order"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/change_order" />
-        </com.google.android.material.tabs.TabLayout>
+        tools:context=".Waiter.Waiter_Payments">
 
         <TextView
             android:id="@+id/textView_choose_table"
-            android:layout_width="372dp"
-            android:layout_height="59dp"
-            android:layout_marginTop="75dp"
-            android:layout_marginStart="16dp"
+            android:layout_width="369dp"
+            android:layout_height="61dp"
+            android:layout_marginTop="36dp"
             android:fontFamily="sans-serif-black"
-            android:text="@string/choose_a_table_to_take_an_order"
             android:textColor="@color/white"
+            android:text="@string/select_a_table_to_proceed_with_the_payment"
             android:textSize="24sp"
             android:textStyle="normal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -57,19 +33,20 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="120dp"
             android:layout_marginEnd="16dp"
             android:contentDescription="Indoor tables"
             app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
                 android:id="@+id/textView_Indoor_tables"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_view_indoor_tables_margin_start_gr"
                 android:layout_marginTop="16dp"
@@ -87,21 +64,22 @@
             android:layout_width="0dp"
             android:layout_height="100dp"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="270dp"
+            android:layout_marginTop="250dp"
             android:layout_marginEnd="16dp"
-            android:contentDescription="Outdoor tables"
+            android:contentDescription="@string/outdoor_tables"
             app:cardBackgroundColor="?attr/cardBackgroundColor"
             app:cardCornerRadius="12dp"
             app:cardElevation="12dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.0">
 
             <TextView
                 android:id="@+id/textView_outdoor_tables"
-                android:layout_width="250dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/text_view_tables_margin_start_gr"
                 android:layout_marginTop="16dp"
