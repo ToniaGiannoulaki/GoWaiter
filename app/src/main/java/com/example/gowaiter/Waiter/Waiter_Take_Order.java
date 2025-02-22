@@ -3,16 +3,25 @@ package com.example.gowaiter.Waiter;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.material.tabs.TabLayout;
 import com.example.gowaiter.R;
 
 public class Waiter_Take_Order extends AppCompatActivity {
+
+    ImageButton btnBack;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter_take_order);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         TabLayout tabLayout = findViewById(R.id.tabLayout);
         TextView textViewChooseTable = findViewById(R.id.textView_choose_table);

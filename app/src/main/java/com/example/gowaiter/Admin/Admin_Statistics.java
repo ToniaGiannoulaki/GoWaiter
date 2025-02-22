@@ -13,12 +13,19 @@ import com.example.gowaiter.R;
 
 public class Admin_Statistics extends AppCompatActivity {
 
+    ImageButton btnBack;
     private Spinner spinnerContent;
     private Spinner spinnerFilters;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_statistics);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         // Find the Spinners
         spinnerContent = findViewById(R.id.spinner_content_admin);

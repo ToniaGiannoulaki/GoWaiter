@@ -13,11 +13,18 @@ import com.example.gowaiter.R;
 
 public class Admin_Modify_Tables extends AppCompatActivity {
 
+    ImageButton btnBack;
     RadioButton indoor, outdoor;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_modify_tables);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         indoor = findViewById(R.id.radioButton_indoor);
         outdoor = findViewById(R.id.radioButton_outdoor);

@@ -14,12 +14,19 @@ import com.example.gowaiter.R;
 
 public class Admin_Enterprise_Settings extends AppCompatActivity {
 
+    ImageButton btnBack;
     Button tables, menu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_enterprise_settings);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         tables = findViewById(R.id.button_modify_tables);
         menu = findViewById(R.id.button_modify_menu);

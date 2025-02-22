@@ -15,11 +15,18 @@ public class Waiter_Statistics extends AppCompatActivity {
 
     private Spinner spinnerContent;
     private Spinner spinnerFilters;
+    ImageButton btnBack;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_waiter_statistics);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         // Find the Spinners
         spinnerContent = findViewById(R.id.spinner_content_waiter);

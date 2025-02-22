@@ -1,0 +1,191 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- CardView wrapping the payment card content -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:backgroundTint="@android:color/white"
+            app:cardBackgroundColor="?attr/cardBackgroundColor"
+            app:cardCornerRadius="12dp">
+
+            <!-- Payment Card (white background inside the CardView) -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:orientation="vertical">
+
+                <!-- Table Name and Payment Title -->
+                <TextView
+                    android:id="@+id/table_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Table Name"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"/>
+
+                <TextView
+                    android:id="@+id/payment_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/payment"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Instruction Text -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_the_items_you_want_to_pay_for_separately_or_press_the_all_button_then_choose_the_payment_method_cash_or_card"
+                    android:textSize="14sp"
+                    android:paddingTop="8dp"
+                    android:layout_gravity="center_horizontal"/>
+
+                <!-- Items List (Placeholder for the selected items) -->
+                <LinearLayout
+                    android:id="@+id/linear_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginTop="16dp"
+                    android:orientation="horizontal" />
+
+                <!-- Total Amount -->
+
+                <!-- Payment Method Radio Buttons -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:paddingTop="8dp"
+                    android:text="@string/total_00_00"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/payment_method_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="8dp">
+
+                    <!-- All Option -->
+                    <RadioButton
+                        android:id="@+id/all_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/all"/>
+
+                    <RadioButton
+                        android:id="@+id/credit_card_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/credit_card"/>
+
+                    <RadioButton
+                        android:id="@+id/cash_option"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/cash"
+                        android:checked="true"
+                        android:layout_marginStart="16dp"/>
+                </RadioGroup>
+
+                <!-- Credit Card Info Fields (Only show if Credit Card is selected) -->
+                <LinearLayout
+                    android:id="@+id/credit_card_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:layout_marginTop="16dp">
+
+                    <!-- Card Number -->
+                    <EditText
+                        android:id="@+id/card_number"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/card_number"
+                        android:inputType="number"
+                        android:maxLength="16"
+                        android:padding="12dp"
+                        android:background="@drawable/custom_input"/>
+
+                    <!-- Expiry Date and CVV -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="8dp">
+
+                        <!-- Expiry Date -->
+                        <EditText
+                            android:id="@+id/card_expiry"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/mm_yy"
+                            android:inputType="text"
+                            android:maxLength="5"
+                            android:padding="12dp"
+                            android:background="@drawable/custom_input"/>
+
+                        <!-- CVV -->
+                        <EditText
+                            android:id="@+id/card_cvv"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:hint="CVV"
+                            android:inputType="number"
+                            android:maxLength="3"
+                            android:padding="12dp"
+                            android:layout_marginStart="8dp"
+                            android:background="@drawable/custom_input"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Payment Button -->
+                <Button
+                    android:id="@+id/payment_button"
+                    android:layout_width="158dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:backgroundTint="@color/button_background"
+                    android:text="@string/payment"
+                    android:layout_gravity="center"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginBottom="32dp"
+            android:background="@android:color/transparent"
+            android:src="@drawable/back"
+            android:contentDescription="Back Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </LinearLayout>
+</ScrollView>

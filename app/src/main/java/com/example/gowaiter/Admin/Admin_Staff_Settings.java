@@ -22,12 +22,19 @@ import java.util.List;
 
 public class Admin_Staff_Settings extends AppCompatActivity {
 
+    ImageButton btnBack;
     Spinner spinner_add, spinner_delete;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_staff_settings);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         spinner_add = findViewById(R.id.spinner_select_role_add);
         spinner_delete = findViewById(R.id.spinner_select_role_delete);

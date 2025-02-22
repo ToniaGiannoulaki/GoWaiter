@@ -17,11 +17,18 @@ import com.example.gowaiter.R;
 
 public class Admin_Modify_Menu extends AppCompatActivity {
 
+    ImageButton btnBack;
     Button tables, menu;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_modify_menu);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
     }
 

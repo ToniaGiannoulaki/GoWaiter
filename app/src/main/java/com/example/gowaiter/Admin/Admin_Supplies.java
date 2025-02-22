@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -22,6 +23,7 @@ import java.util.List;
 
 public class Admin_Supplies extends AppCompatActivity {
 
+    ImageButton btnBack;
     private EditText supplyNameInput, supplyQuantityInput;
     private Spinner roleSpinner;
     private Button addSupplyButton;
@@ -31,6 +33,12 @@ public class Admin_Supplies extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_supplies);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         TabLayout tabLayout = findViewById(R.id.tabLayout_supplies_admin);
         requestsRecyclerView = findViewById(R.id.recyclerView_supplies);

@@ -7,6 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.gowaiter.BaristaBarman.Barista_Barman_Supplies;
@@ -15,6 +16,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class Chef_Cook_Supplies extends AppCompatActivity {
 
+    ImageButton btnBack;
     private TabLayout tabLayout;
     private RecyclerView recyclerViewSupplies;
     private CardView cardViewLowStock;
@@ -23,6 +25,12 @@ public class Chef_Cook_Supplies extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chef_cook_supplies);
+
+        // back button activity
+        btnBack = findViewById(R.id.btnBack);
+        if (btnBack != null) {
+            btnBack.setOnClickListener(view -> onBackPressed());
+        }
 
         // Initialize views
         tabLayout = findViewById(R.id.tabLayout_supplies_chef);
