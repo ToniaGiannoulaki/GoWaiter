@@ -472,10 +472,15 @@
     <!-- First Card View -->
 
     <dimen name="text_view_add_employee_description_width_gr">316dp</dimen>
+    <dimen name="text_view_add_employee_margin_start_gr">50dp</dimen>
+    <dimen name="button_add_margin_start_gr">120dp</dimen>
+    <dimen name="text_view_add_margin_start_gr">90dp</dimen>
 
     <!-- Second Card View -->
 
     <dimen name="text_view_description_delete_employee_margin_start_gr">45dp</dimen>
+    <dimen name="card_view_height_gr">430dp</dimen>
+    <dimen name="textview_delete_employee_width_gr">316dp</dimen>
 
     <!-- /////////////// CHANGE MENU ////////////////// -->
 
@@ -507,7 +512,9 @@
 
     <dimen name="button_delete_employee_margin_top_gr">350dp</dimen>
     <dimen name="text_view_delete_employee_margin_start_gr">45dp</dimen>
-
+    <dimen name="edit_text_delete_employee_margin_top_gr">130dp</dimen>
+    <dimen name="spinner_delete_employee_margin_top_gr">270dp</dimen>
+    <dimen name="text_view_username_delete_employee_margin_top_gr">200dp</dimen>
 
     <!-- /////////////// WAITER FUNCTIONALITIES ////////////////// -->
 
@@ -522,4 +529,6 @@
     <dimen name="card_view_height_train_and_support_gr">210dp</dimen>
     <dimen name="text_view_title_margin_start_gr">110dp</dimen>
     <dimen name="text_view_account_settings_margin_left_gr">15dp</dimen>
+
+
 </resources>
