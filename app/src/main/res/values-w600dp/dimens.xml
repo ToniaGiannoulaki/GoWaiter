@@ -506,4 +506,9 @@
     <dimen name="text_view_tables_margin_start_gr">240dp</dimen>
     <dimen name="text_view_indoor_tables_margin_start_gr">250dp</dimen>
 
+    <!-- /////// TRAINING AND SUPPORT FOR BARISTAS AND CHEF ///////// -->
+
+    <dimen name="card_view_height_train_and_support_gr">240dp</dimen>
+    <dimen name="text_view_title_margin_start_gr">10dp</dimen>
+    <dimen name="text_view_account_settings_margin_left_gr">25dp</dimen>
 </resources>

@@ -34,6 +34,6 @@ public class Sign_in extends AppCompatActivity {
         sign_in = findViewById(R.id.button_sign_in);
 
         sign_up.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Sign_up.class)));
-        sign_in.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Admin_Account.class)));
+        sign_in.setOnClickListener(v -> startActivity(new Intent(Sign_in.this, Chef_Cook_Account.class)));
     }
 }
