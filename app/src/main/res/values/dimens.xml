@@ -398,7 +398,7 @@
     <dimen name="spinner_role_margin_start">215dp</dimen>
     <dimen name="editText_supply_name_margin_start">45dp</dimen>
     <dimen name="textView_add_supply_margin_start">140dp</dimen>
-    <dimen name="button_and_editText_remove_supply_margin_top">140dp</dimen>
+    <dimen name="button_and_editText_remove_supply_margin_top">150dp</dimen>
     <dimen name="button_remove_supply_margin_start">220dp</dimen>
     <dimen name="spinner_remove_supply_margin_start">30dp</dimen>
     <dimen name="textView_remove_supply_description_margin_left">45dp</dimen>
@@ -446,15 +446,16 @@
     <!-- Second Card View -->
 
     <dimen name="textview_change_email_width_gr">316dp</dimen>
-    <dimen name="textview_change_email_title_width_gr">150dp</dimen>
+    <dimen name="textview_change_email_title_width_gr">190dp</dimen>
     <dimen name="text_view_change_email_description_margin_top_gr">140dp</dimen>
-    <dimen name="button_send_margin_start_gr">130dp</dimen>
+    <dimen name="button_send_margin_start_gr">120dp</dimen>
+    <dimen name="button_select_image_width_gr">150dp</dimen>
 
     <!-- Third Card View -->
 
     <dimen name="button_margin_start_gr">85dp</dimen>
     <dimen name="edit_text_margin_start_gr">50dp</dimen>
-    <dimen name="textview_change_password_margin_start_gr">110dp</dimen>
+    <dimen name="textview_change_password_margin_start_gr">50dp</dimen>
 
 
     <!-- /////////////// ADMIN FUNCTIONALITIES ////////////////// -->
@@ -523,6 +524,10 @@
     <dimen name="text_view_tables_margin_start_gr">100dp</dimen>
     <dimen name="text_view_indoor_tables_margin_start_gr">110dp</dimen>
 
+    <!-- payments -->
+
+    <dimen name="text_view_pay_title_width_gr">369dp</dimen>
+    <dimen name="text_view_indoor_margin_start_gr">110dp</dimen>
 
     <!-- /////// TRAINING AND SUPPORT FOR BARISTAS AND CHEF ///////// -->
 
@@ -530,5 +535,16 @@
     <dimen name="text_view_title_margin_start_gr">110dp</dimen>
     <dimen name="text_view_account_settings_margin_left_gr">15dp</dimen>
 
+    <!-- ///////////////////// ADMIN SUPPLIES ////////////////////// -->
+
+    <dimen name="textView_add_supply_margin_start_gr">95dp</dimen>
+    <dimen name="button_add_supply_margin_start_gr">120dp</dimen>
+    <dimen name="text_add_supply_margin_start_gr">120dp</dimen>
+    <dimen name="button_apply_width_gr">148dp</dimen>
+    <dimen name="button_apply_margin_start_gr">130dp</dimen>
+    <dimen name="text_view_update_supply_margin_start_gr">130dp</dimen>
+    <dimen name="edit_texts_margin_top_gr">160dp</dimen>
+    <dimen name="text_view_low_stock_margin_start_gr">90dp</dimen>
+    <dimen name="text_view_delete_supply_margin_start_gr">120dp</dimen>
 
 </resources>

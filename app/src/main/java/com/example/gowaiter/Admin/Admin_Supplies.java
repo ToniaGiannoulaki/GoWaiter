@@ -63,7 +63,7 @@ public class Admin_Supplies extends AppCompatActivity {
         tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(@NonNull TabLayout.Tab tab) {
-                if(tab.getText().equals("View Supplies")){
+                if(tab.getText().equals("View Supplies") || tab.getText().equals("Εμφάνιση Προμηθειών")){
                     // Hide CardViews
                     cardViewSupplies.setVisibility(View.VISIBLE);
                     cardViewAdd.setVisibility(View.GONE);
@@ -73,7 +73,7 @@ public class Admin_Supplies extends AppCompatActivity {
 
                     // Show RecyclerView
                     requestsRecyclerView.setVisibility(View.GONE);
-                } else if (tab.getText().equals("Requests")) {
+                } else if (tab.getText().equals("Requests") || tab.getText().equals("Αιτήματα")){
                     // Hide CardViews
                     cardViewAdd.setVisibility(View.GONE);
                     cardViewRemove.setVisibility(View.GONE);
@@ -83,7 +83,7 @@ public class Admin_Supplies extends AppCompatActivity {
 
                     // Show RecyclerView
                     requestsRecyclerView.setVisibility(View.VISIBLE);
-                } else if (tab.getText().equals("Manage Supplies")) {
+                } else if (tab.getText().equals("Manage Supplies") || tab.getText().equals("Διαχείρηση Προμηθειών")){
                     // Show CardViews
                     cardViewAdd.setVisibility(View.VISIBLE);
                     cardViewRemove.setVisibility(View.VISIBLE);

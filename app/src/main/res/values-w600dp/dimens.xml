@@ -444,6 +444,7 @@
     <dimen name="textview_change_email_title_width_gr">190dp</dimen>
     <dimen name="text_view_change_email_description_margin_top_gr">160dp</dimen>
     <dimen name="button_send_margin_start_gr">170dp</dimen>
+    <dimen name="button_select_image_width_gr">160dp</dimen>
 
     <!-- Third Card View -->
 
@@ -515,11 +516,27 @@
     <dimen name="text_view_tables_margin_start_gr">240dp</dimen>
     <dimen name="text_view_indoor_tables_margin_start_gr">250dp</dimen>
 
+    <!-- payments -->
+
+    <dimen name="text_view_pay_title_width_gr">700dp</dimen>
+    <dimen name="text_view_indoor_margin_start_gr">250dp</dimen>
+
     <!-- /////// TRAINING AND SUPPORT FOR BARISTAS AND CHEF ///////// -->
 
     <dimen name="card_view_height_train_and_support_gr">240dp</dimen>
     <dimen name="text_view_title_margin_start_gr">10dp</dimen>
     <dimen name="text_view_account_settings_margin_left_gr">25dp</dimen>
 
+    <!-- ///////////////////// ADMIN SUPPLIES ////////////////////// -->
+
+    <dimen name="textView_add_supply_margin_start_gr">100dp</dimen>
+    <dimen name="button_add_supply_margin_start_gr">155dp</dimen>
+    <dimen name="text_add_supply_margin_start_gr">120dp</dimen>
+    <dimen name="button_apply_width_gr">180dp</dimen>
+    <dimen name="button_apply_margin_start_gr">155dp</dimen>
+    <dimen name="text_view_update_supply_margin_start_gr">100dp</dimen>
+    <dimen name="edit_texts_margin_top_gr">265dp</dimen>
+    <dimen name="text_view_low_stock_margin_start_gr">40dp</dimen>
+    <dimen name="text_view_delete_supply_margin_start_gr">100dp</dimen>
 
 </resources>

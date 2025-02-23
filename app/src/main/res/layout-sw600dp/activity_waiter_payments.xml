@@ -16,7 +16,7 @@
 
         <TextView
             android:id="@+id/textView_choose_table"
-            android:layout_width="@dimen/text_view_pay_title_width_gr"
+            android:layout_width="500dp"
             android:layout_height="61dp"
             android:layout_marginTop="36dp"
             android:fontFamily="sans-serif-black"
@@ -48,7 +48,7 @@
                 android:id="@+id/textView_Indoor_tables"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/text_view_indoor_margin_start_gr"
+                android:layout_marginStart="290dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/indoor_tables"
@@ -81,7 +81,7 @@
                 android:id="@+id/textView_outdoor_tables"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="@dimen/text_view_tables_margin_start_gr"
+                android:layout_marginStart="280dp"
                 android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
                 android:text="@string/outdoor_tables"

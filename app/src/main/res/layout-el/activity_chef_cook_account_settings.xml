@@ -194,9 +194,9 @@
 
             <Button
                 android:id="@+id/button_send"
-                android:layout_width="@dimen/button_select_image_width"
+                android:layout_width="@dimen/button_select_image_width_gr"
                 android:layout_height="@dimen/button_select_image_height"
-                android:layout_marginStart="165dp"
+                android:layout_marginStart="@dimen/button_send_margin_start_gr"
                 android:layout_marginTop="@dimen/button_send_margin_top"
                 android:layout_marginEnd="@dimen/button_margin_end"
                 android:layout_marginBottom="@dimen/button_margin_bottom"

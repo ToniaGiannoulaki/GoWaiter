@@ -32,6 +32,9 @@ public class Barista_Barman_Supplies extends AppCompatActivity {
             btnBack.setOnClickListener(view -> onBackPressed());
         }
 
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.view_supplies)));
+        tabLayout.addTab(tabLayout.newTab().setText(getString(R.string.low_stock_notifications)));
+
         // Initialize views
         tabLayout = findViewById(R.id.tabLayout_supplies_barista);
         recyclerViewSupplies = findViewById(R.id.recyclerView_view_supplies);
