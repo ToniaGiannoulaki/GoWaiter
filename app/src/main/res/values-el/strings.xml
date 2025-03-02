@@ -1,11 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="app_name" translatable="false">GoWaiter</string>
+    <string-array name="dropdown_items">
+        <item>Διαχειριστής</item>
+        <item>Σερβιτόρος/Σερβιτόρα</item>
+        <item>Μπαριστα/Μπαρμαν/Μπαργουμαν</item>
+        <item>Μάγειρας/Μαγείρισσα/Αρχιμάγειρας</item>
+    </string-array>
+
+
     <string name="get_started">Ας Ξεκινήσουμε</string>
     <string name="welcome_to_n_gowaiter">Καλως ήρθες στο GoWaiter</string>
     <string name="sign_in">Σύνδεση</string>
     <string name="log_in">Σύνδεση</string>
     <string name="sign_up">Εγγραφή</string>
-    <string name="forgot_password">ξέχασα τον κωδικό πρόσβασης</string>
+    <string name="forgot_password">Ξεχάσατε τον κωδικό σας;</string>
     <string name="email">Διέυθ. Ηλεκτρ, Ταχυδρομείου</string>
     <string name="password">Κωδικός Πρόσβασης</string>
     <string name="name_of_enterprise">Όνομα Επιχείρησης</string>
@@ -126,4 +135,14 @@
     <string name="choose_the_items_and_once_you_are_done_click_on_the_button_add_item">Επιλέξτε τα αντικείμενα που θέλετε και μόλις τελειώσετε, κάντε κλικ στο κουμπί Προσθήκη αντικειμένου.</string>
     <string name="choose_table_take_order">Επιλέξτε ένα τραπέζι για να πάρετε παραγγελία</string>
     <string name="choose_table_change_order">Επιλέξτε ένα τραπέζι για να αλλάξετε παραγγελία</string>
+    <string name="please_fill_all_fields">Παρακαλώ συμπληρώστε όλα τα πεδία</string>
+    <string name="registration_successful">Η εγγραφή ήταν επιτυχής!</string>
+    <string name="error_weak_password">Ο κωδικός είναι πολύ αδύναμος.</string>
+    <string name="error_invalid_email">Το email δεν είναι έγκυρο.</string>
+    <string name="error_email_already_in_use">Το email χρησιμοποιείται ήδη.</string>
+    <string name="error_registration_failed">Η εγγραφή απέτυχε.</string>
+    <string name="error_storing_data">Αποτυχία αποθήκευσης στοιχείων χρήστη</string>
+    <string name="select_role_hint">Επιλέξτε ειδικότητα</string>
 </resources>
+
+
