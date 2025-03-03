@@ -290,4 +290,5 @@
     <string name="error_registration_failed">Registration failed.</string>
     <string name="error_storing_data">Failed to store user data</string>
     <string name="select_role_hint">Select role</string>
+    <string name="error_wrong_credentials">Email or password is wrong</string>
 </resources>
