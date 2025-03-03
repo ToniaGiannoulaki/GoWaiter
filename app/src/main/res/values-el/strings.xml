@@ -137,7 +137,7 @@
     <string name="choose_table_change_order">Επιλέξτε ένα τραπέζι για να αλλάξετε παραγγελία</string>
     <string name="please_fill_all_fields">Παρακαλώ συμπληρώστε όλα τα πεδία</string>
     <string name="registration_successful">Η εγγραφή ήταν επιτυχής!</string>
-    <string name="error_weak_password">Ο κωδικός είναι πολύ αδύναμος.</string>
+    <string name="error_weak_password">Ο κωδικός πρόσβασης πρέπει να είναι τουλάχιστον 6 χαρακτήρες.</string>
     <string name="error_invalid_email">Το email δεν είναι έγκυρο.</string>
     <string name="error_email_already_in_use">Το email χρησιμοποιείται ήδη.</string>
     <string name="error_registration_failed">Η εγγραφή απέτυχε.</string>

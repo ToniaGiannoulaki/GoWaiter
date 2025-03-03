@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
@@ -32,13 +33,14 @@ public class Sign_up extends AppCompatActivity {
     private Button sing_up;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
+    private boolean is_password_visible = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
-        // Initialize Elements
+        // Initialize Elements for DB
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -50,11 +52,40 @@ public class Sign_up extends AppCompatActivity {
         spinner = findViewById(R.id.spinner_role);
 
         // Sign up button click
-        sing_up.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                registerUser();
+        sing_up.setOnClickListener(view -> registerUser());
+
+        is_password_visible = false;
+
+        // Setup onTouchListener on the password EditText to toggle visibility
+        password.setOnTouchListener((v, event) -> {
+            final int DRAWABLE_LEFT = 0;  // index for drawableStart in LTR layouts
+            if (event.getAction() == MotionEvent.ACTION_UP) {
+                // Ensure the left drawable exists
+                if (password.getCompoundDrawables()[DRAWABLE_LEFT] != null) {
+                    // Get the width of the drawable
+                    int drawableWidth = password.getCompoundDrawables()[DRAWABLE_LEFT].getBounds().width();
+                    // event.getX() gives the X coordinate relative to the EditText
+                    if (event.getX() <= (drawableWidth + password.getPaddingStart())) {
+                        // Toggle password visibility
+                        if (!is_password_visible) {
+                            // Show password
+                            password.setTransformationMethod(null);
+                            // Change the drawable to open lock; note: the parameters are for left, top, right, bottom
+                            password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lock_open, 0, 0, 0);
+                            is_password_visible = true;
+                        } else {
+                            // Hide password
+                            password.setTransformationMethod(android.text.method.PasswordTransformationMethod.getInstance());
+                            password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lock_icon_purple, 0, 0, 0);
+                            is_password_visible = false;
+                        }
+                        // Move cursor to the end of the text
+                        password.setSelection(password.getText().length());
+                        return true; // event handled
+                    }
+                }
             }
+            return false;
         });
 
         // Create a list with the hint and the items
@@ -96,7 +127,6 @@ public class Sign_up extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position > 0) {
                     String selectedRole = parent.getItemAtPosition(position).toString();
-                    // Do something with the selected role if needed
                 }
             }
             @Override
@@ -129,6 +159,16 @@ public class Sign_up extends AppCompatActivity {
                     if (task.isSuccessful()) {
                         // User is created in Auth. We'll store details in the DB next.
                         FirebaseUser firebaseUser = mAuth.getCurrentUser();
+
+                        // Clear the fields
+                        username.setText("");
+                        enterprise_name.setText("");
+                        email.setText("");
+                        password.setText("");
+
+                        // Reset the spinner to the first item (the hint)
+                        spinner.setSelection(0);
+
                         if (firebaseUser != null) {
                             // Create a Map for user data
                             Map<String, Object> userMap = new HashMap<>();

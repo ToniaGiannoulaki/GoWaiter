@@ -284,7 +284,7 @@
     <string name="choose_table_change_order">Choose a table to change an order</string>
     <string name="please_fill_all_fields">Please fill in all fields</string>
     <string name="registration_successful">Registration successful!</string>
-    <string name="error_weak_password">The password is too weak.</string>
+    <string name="error_weak_password">The password should be at least 6 characters.</string>
     <string name="error_invalid_email">The email address is invalid.</string>
     <string name="error_email_already_in_use">The email address is already in use.</string>
     <string name="error_registration_failed">Registration failed.</string>
