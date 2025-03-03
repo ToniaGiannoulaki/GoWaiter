@@ -153,6 +153,12 @@ public class Sign_up extends AppCompatActivity {
             return;
         }
 
+        // Check if email contains any Greek characters (Unicode range for Greek and Coptic)
+        if (emailText.matches(".*[\\u0370-\\u03FF].*")) {
+            Toast.makeText(Sign_up.this, getString(R.string.email_no_greek_chars), Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         // Create user with email and password in Firebase Authentication
         mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(task -> {

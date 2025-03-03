@@ -144,6 +144,7 @@
     <string name="error_storing_data">Αποτυχία αποθήκευσης στοιχείων χρήστη</string>
     <string name="select_role_hint">Επιλέξτε ειδικότητα</string>
     <string name="error_wrong_credentials">Το email ή ο κωδικός είναι λανθασμένα</string>
+    <string name="email_no_greek_chars">Το email δεν μπορεί να περιέχει ελληνικούς χαρακτήρες</string>
 </resources>
 
 
