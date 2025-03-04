@@ -11,10 +11,13 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.gowaiter.Loading.Loading_Screen;
 import com.example.gowaiter.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -34,6 +37,7 @@ public class Sign_up extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private boolean is_password_visible = false;
+    private Loading_Screen loadingScreen = new Loading_Screen();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,7 +74,7 @@ public class Sign_up extends AppCompatActivity {
                         if (!is_password_visible) {
                             // Show password
                             password.setTransformationMethod(null);
-                            // Change the drawable to open lock; note: the parameters are for left, top, right, bottom
+                            // Change the drawable to open lock
                             password.setCompoundDrawablesWithIntrinsicBounds(R.drawable.lock_open, 0, 0, 0);
                             is_password_visible = true;
                         } else {
@@ -118,8 +122,6 @@ public class Sign_up extends AppCompatActivity {
 
         // Specify the layout to use when the list of choices appears
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-
-        // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
         spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -127,11 +129,12 @@ public class Sign_up extends AppCompatActivity {
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 if (position > 0) {
                     String selectedRole = parent.getItemAtPosition(position).toString();
+                    // You can use the selected role if needed
                 }
             }
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
-                // Another interface callback
+                // Callback when nothing is selected
             }
         });
     }
@@ -142,9 +145,7 @@ public class Sign_up extends AppCompatActivity {
         String enterpriseText = enterprise_name.getText().toString().trim();
         String emailText = email.getText().toString().trim();
         String passwordText = password.getText().toString().trim();
-        String selectedRole = spinner.getSelectedItem().toString()
-                .trim()
-                .replace("/", "-");
+        String selectedRole = spinner.getSelectedItem().toString().trim().replace("/", "-");
 
         // Check if fields are filled
         if (usernameText.isEmpty() || enterpriseText.isEmpty() || emailText.isEmpty() ||
@@ -159,11 +160,14 @@ public class Sign_up extends AppCompatActivity {
             return;
         }
 
+        // Show the loading screen before starting the registration process
+        loadingScreen.show(this);
+
         // Create user with email and password in Firebase Authentication
         mAuth.createUserWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
-                        // User is created in Auth. We'll store details in the DB next.
+                        // User created in Auth; next, store details in the database
                         FirebaseUser firebaseUser = mAuth.getCurrentUser();
 
                         // Clear the fields
@@ -171,39 +175,43 @@ public class Sign_up extends AppCompatActivity {
                         enterprise_name.setText("");
                         email.setText("");
                         password.setText("");
-
-                        // Reset the spinner to the first item (the hint)
                         spinner.setSelection(0);
 
                         if (firebaseUser != null) {
-                            // Create a Map for user data
+                            // Prepare user data map
                             Map<String, Object> userMap = new HashMap<>();
                             userMap.put("username", usernameText);
                             userMap.put("enterprise", enterpriseText);
                             userMap.put("role", selectedRole);
                             userMap.put("email", emailText);
 
-                            // Build: enterprise_name -> role -> username
+                            // Structure: enterprise -> role -> username
                             mDatabase.child(enterpriseText)
                                     .child(selectedRole)
                                     .child(usernameText)
                                     .setValue(userMap)
                                     .addOnCompleteListener(dbTask -> {
+                                        // Hide the loading screen once database operation completes
+                                        loadingScreen.hide();
                                         if (dbTask.isSuccessful()) {
                                             Toast.makeText(Sign_up.this,
                                                     getString(R.string.registration_successful),
                                                     Toast.LENGTH_SHORT).show();
-                                            // TODO: redirect to another activity or finish()
+                                            // TODO: Redirect to another activity or finish this one
                                         } else {
                                             Toast.makeText(Sign_up.this,
-                                                    getString(R.string.error_storing_data) + ": "
-                                                            + dbTask.getException().getMessage(),
+                                                    getString(R.string.error_storing_data) + ": " +
+                                                            dbTask.getException().getMessage(),
                                                     Toast.LENGTH_SHORT).show();
                                         }
                                     });
+                        } else {
+                            // Hide loading screen if FirebaseUser is null
+                            loadingScreen.hide();
                         }
                     } else {
-                        // Registration in Auth failed
+                        // Hide loading screen if registration failed
+                        loadingScreen.hide();
                         String errorMessage;
                         try {
                             throw task.getException();

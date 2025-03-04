@@ -5,10 +5,16 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MotionEvent;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.FrameLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 import java.util.HashMap;
 import android.util.Log;
@@ -16,6 +22,7 @@ import android.util.Log;
 import com.example.gowaiter.Admin.Admin_Account;
 import com.example.gowaiter.BaristaBarman.Barista_Barman_Account;
 import com.example.gowaiter.ChefCook.Chef_Cook_Account;
+import com.example.gowaiter.Loading.Loading_Screen;
 import com.example.gowaiter.R;
 import com.example.gowaiter.Waiter.Waiter_Account;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,9 +40,10 @@ public class Sign_in extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
     private Button sign_up, sign_in;
-    // Mapping role strings (in Greek) to corresponding activity classes.
     private Map<String, Class<?>> roleActivityMap;
     private boolean is_password_visible = false;
+    private Loading_Screen loadingScreen = new Loading_Screen();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,18 +110,18 @@ public class Sign_in extends AppCompatActivity {
             return false;
         });
     }
-
     private void signInUser() {
         String emailText = email.getText().toString().trim();
         String passwordText = password.getText().toString().trim();
 
-        // 1. Check if email and password are filled
         if (emailText.isEmpty() || passwordText.isEmpty()) {
             Toast.makeText(Sign_in.this, getString(R.string.please_fill_all_fields), Toast.LENGTH_SHORT).show();
             return;
         }
 
-        // 2. Sign in with Firebase Authentication
+        // Show the loading screen using the utility class
+        loadingScreen.show(this);
+
         mAuth.signInWithEmailAndPassword(emailText, passwordText)
                 .addOnCompleteListener(task -> {
                     if (task.isSuccessful()) {
@@ -121,22 +129,20 @@ public class Sign_in extends AppCompatActivity {
                         if (firebaseUser != null) {
                             String userEmail = firebaseUser.getEmail();
 
-                            // 3. Search the entire DB tree for the user record
                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                                    // Hide the loading screen once data is fetched
+                                    loadingScreen.hide();
+
                                     boolean userFound = false;
                                     String userRole = null;
 
-                                    // Loop through each enterprise node
                                     for (DataSnapshot enterpriseSnapshot : snapshot.getChildren()) {
-                                        // Loop through each role node
                                         for (DataSnapshot roleSnapshot : enterpriseSnapshot.getChildren()) {
-                                            // Loop through each username node
                                             for (DataSnapshot userSnapshot : roleSnapshot.getChildren()) {
                                                 String emailFromDb = userSnapshot.child("email").getValue(String.class);
                                                 if (emailFromDb != null && emailFromDb.equals(userEmail)) {
-                                                    // Found the user record
                                                     userFound = true;
                                                     userRole = userSnapshot.child("role").getValue(String.class);
                                                     break;
@@ -147,26 +153,28 @@ public class Sign_in extends AppCompatActivity {
                                         if (userFound) break;
                                     }
 
-                                    // 4. Validate the role key and start the correct activity
                                     if (userFound && userRole != null && roleActivityMap.containsKey(userRole)) {
                                         Class<?> targetActivity = roleActivityMap.get(userRole);
                                         startActivity(new Intent(Sign_in.this, targetActivity));
                                         finish();
                                     } else {
-                                        // Sign in failed – likely wrong credentials
                                         Toast.makeText(Sign_in.this, getString(R.string.error_wrong_credentials), Toast.LENGTH_SHORT).show();
-                                        Log.d("Sign_in", "User role not recognized");                                    }
+                                        Log.d("Sign_in", "User role not recognized");
+                                    }
                                 }
 
                                 @Override
                                 public void onCancelled(@NonNull DatabaseError error) {
-                                    // Sign in failed – likely wrong credentials
+                                    loadingScreen.hide();
                                     Toast.makeText(Sign_in.this, getString(R.string.error_wrong_credentials), Toast.LENGTH_SHORT).show();
-                                    Log.e("Sign_in", "Database error: " + error.getMessage());                                }
+                                    Log.e("Sign_in", "Database error: " + error.getMessage());
+                                }
                             });
+                        } else {
+                            loadingScreen.hide();
                         }
                     } else {
-                        // Sign in failed – likely wrong credentials
+                        loadingScreen.hide();
                         Toast.makeText(Sign_in.this, getString(R.string.error_wrong_credentials), Toast.LENGTH_SHORT).show();
                     }
                 });
