@@ -292,4 +292,8 @@
     <string name="select_role_hint">Select role</string>
     <string name="error_wrong_credentials">Email or password is wrong</string>
     <string name="email_no_greek_chars">Email cannot contain Greek characters</string>
+    <string name="logout_title">Log Out</string>
+    <string name="logout_message">Are you sure you want to log out?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>

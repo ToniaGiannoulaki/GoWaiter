@@ -145,6 +145,10 @@
     <string name="select_role_hint">Επιλέξτε ειδικότητα</string>
     <string name="error_wrong_credentials">Το email ή ο κωδικός είναι λανθασμένα</string>
     <string name="email_no_greek_chars">Το email δεν μπορεί να περιέχει ελληνικούς χαρακτήρες</string>
+    <string name="logout_title">Αποσύνδεση Λογαριασμού</string>
+    <string name="logout_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε;</string>
+    <string name="yes">Ναι</string>
+    <string name="no">Όχι</string>
 </resources>
 
 
