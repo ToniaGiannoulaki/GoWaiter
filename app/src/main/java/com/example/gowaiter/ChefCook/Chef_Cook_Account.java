@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.example.gowaiter.Loading.Loading_Screen;
 import com.example.gowaiter.MainMenu.Sign_in;
 import com.example.gowaiter.R;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,6 +18,7 @@ public class Chef_Cook_Account extends AppCompatActivity {
 
     CardView account_settings, statistics, orders, recipes, training_and_support, supplies;
     TextView logout;
+    private Loading_Screen loadingScreen = new Loading_Screen();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,6 +58,8 @@ public class Chef_Cook_Account extends AppCompatActivity {
                 .setTitle(getString(R.string.logout_title))
                 .setMessage(getString(R.string.logout_message))
                 .setPositiveButton(getString(R.string.yes), (dialog, which) -> {
+                    // Show the loading screen before signing out
+                    loadingScreen.show(Chef_Cook_Account.this);
                     FirebaseAuth.getInstance().signOut();
                     Intent intent = new Intent(Chef_Cook_Account.this, Sign_in.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
