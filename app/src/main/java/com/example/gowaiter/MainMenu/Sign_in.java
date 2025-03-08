@@ -54,7 +54,7 @@ public class Sign_in extends AppCompatActivity {
 
         roleActivityMap = new HashMap<>();
         roleActivityMap.put("Admin", Admin_Account.class);
-        roleActivityMap.put("Waiter-Waitress", Waiter_Account.class);
+        roleActivityMap.put("Waiter", Waiter_Account.class);
         roleActivityMap.put("Barista-Barman-Barwoman", Barista_Barman_Account.class);
         roleActivityMap.put("Cook-Chef", Chef_Cook_Account.class);
 
