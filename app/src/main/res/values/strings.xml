@@ -296,4 +296,5 @@
     <string name="logout_message">Are you sure you want to log out?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="enterprise_not_exist">Enterprise "%1$s" does not exist. Please contact your admin.</string>
 </resources>

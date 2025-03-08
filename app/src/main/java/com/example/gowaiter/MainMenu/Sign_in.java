@@ -54,13 +54,9 @@ public class Sign_in extends AppCompatActivity {
 
         roleActivityMap = new HashMap<>();
         roleActivityMap.put("Admin", Admin_Account.class);
-        roleActivityMap.put("Διαχειριστής", Admin_Account.class);
         roleActivityMap.put("Waiter-Waitress", Waiter_Account.class);
-        roleActivityMap.put("Σερβιτόρος-Σερβιτόρα", Waiter_Account.class);
         roleActivityMap.put("Barista-Barman-Barwoman", Barista_Barman_Account.class);
-        roleActivityMap.put("Μπαριστα-Μπαρμαν-Μπαργουμαν", Barista_Barman_Account.class);
         roleActivityMap.put("Cook-Chef", Chef_Cook_Account.class);
-        roleActivityMap.put("Μάγειρας-Μαγείρισσα-Αρχιμάγειρας", Chef_Cook_Account.class);
 
         // Initialize Firebase Auth and Database
         mAuth = FirebaseAuth.getInstance();
@@ -119,7 +115,6 @@ public class Sign_in extends AppCompatActivity {
             return;
         }
 
-        // Show the loading screen using the utility class
         loadingScreen.show(this);
 
         mAuth.signInWithEmailAndPassword(emailText, passwordText)
@@ -129,22 +124,39 @@ public class Sign_in extends AppCompatActivity {
                         if (firebaseUser != null) {
                             String userEmail = firebaseUser.getEmail();
 
+                            // Search the entire DB for a matching user in accountSettings
                             mDatabase.addListenerForSingleValueEvent(new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot snapshot) {
-                                    // Hide the loading screen once data is fetched
                                     loadingScreen.hide();
-
                                     boolean userFound = false;
                                     String userRole = null;
 
+                                    // Loop over each enterprise
                                     for (DataSnapshot enterpriseSnapshot : snapshot.getChildren()) {
+                                        // Loop over each role node under the enterprise
                                         for (DataSnapshot roleSnapshot : enterpriseSnapshot.getChildren()) {
+                                            String roleKey = roleSnapshot.getKey();  // e.g., "admin", "Waiter", "Barista-Barman-Barwoman", "Cook-Chef"
+                                            // Loop over each user under the role node
                                             for (DataSnapshot userSnapshot : roleSnapshot.getChildren()) {
-                                                String emailFromDb = userSnapshot.child("email").getValue(String.class);
-                                                if (emailFromDb != null && emailFromDb.equals(userEmail)) {
+                                                // Retrieve the accountSettings node as a Map
+                                                Map<String, Object> accountSettings = (Map<String, Object>) userSnapshot.child("accountSettings").getValue();
+                                                if (accountSettings == null) continue;
+                                                String emailFromDb = null;
+                                                // Determine the key to use based on the roleKey
+                                                if (roleKey.equalsIgnoreCase("admin")) {
+                                                    emailFromDb = (String) accountSettings.get("adminEmail");
+                                                } else if (roleKey.equalsIgnoreCase("Waiter") || roleKey.equalsIgnoreCase("waiter")) {
+                                                    emailFromDb = (String) accountSettings.get("waiterEmail");
+                                                } else if (roleKey.equalsIgnoreCase("Barista-Barman-Barwoman")) {
+                                                    emailFromDb = (String) accountSettings.get("baristaEmail");
+                                                } else if (roleKey.equalsIgnoreCase("Cook-Chef")) {
+                                                    emailFromDb = (String) accountSettings.get("chefEmail");
+                                                }
+
+                                                if (emailFromDb != null && emailFromDb.equalsIgnoreCase(userEmail)) {
                                                     userFound = true;
-                                                    userRole = userSnapshot.child("role").getValue(String.class);
+                                                    userRole = roleKey;  // We infer role from the parent key
                                                     break;
                                                 }
                                             }
@@ -159,7 +171,7 @@ public class Sign_in extends AppCompatActivity {
                                         finish();
                                     } else {
                                         Toast.makeText(Sign_in.this, getString(R.string.error_wrong_credentials), Toast.LENGTH_SHORT).show();
-                                        Log.d("Sign_in", "User role not recognized");
+                                        Log.d("Sign_in", "User not found or role not recognized");
                                     }
                                 }
 

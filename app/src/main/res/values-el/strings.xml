@@ -149,6 +149,7 @@
     <string name="logout_message">Είστε βέβαιοι ότι θέλετε να αποσυνδεθείτε;</string>
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
+    <string name="enterprise_not_exist">Η επιχείρηση "%1$s" δεν υπάρχει. Παρακαλώ επικοινωνήστε με τον διαχειριστή σας.</string>
 </resources>
 
 

@@ -1,6 +1,7 @@
 package com.example.gowaiter.Admin;
 
 import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -13,11 +14,17 @@ import com.example.gowaiter.Loading.Loading_Screen;
 import com.example.gowaiter.MainMenu.Sign_in;
 import com.example.gowaiter.R;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class Admin_Account extends AppCompatActivity {
 
     CardView account_settings, staff_settings, enterprise_settings, statistics, payments, supplies;
-    TextView logout;
+    TextView logout, username;
     private Loading_Screen loadingScreen = new Loading_Screen();
 
     @Override
@@ -31,6 +38,7 @@ public class Admin_Account extends AppCompatActivity {
         statistics = findViewById(R.id.card_view_statistics);
         payments = findViewById(R.id.card_view_payments);
         supplies = findViewById(R.id.card_view_supplies);
+        username = findViewById(R.id.textView_username);
         logout = findViewById(R.id.textView_log_out);
 
         account_settings.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Account_Settings.class)));
@@ -39,6 +47,9 @@ public class Admin_Account extends AppCompatActivity {
         statistics.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Statistics.class)));
         payments.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Payments.class)));
         supplies.setOnClickListener(v -> startActivity(new Intent(Admin_Account.this, Admin_Supplies.class)));
+
+        // Retrieve username
+        fetchUsernameDynamically();
 
         // Logout functionality for the logout TextView using string resources
         logout.setOnClickListener(v -> showLogoutConfirmation());
@@ -69,5 +80,50 @@ public class Admin_Account extends AppCompatActivity {
                 })
                 .setNegativeButton(getString(R.string.no), null)
                 .show();
+    }
+
+    private void fetchUsernameDynamically() {
+        // Get the currently logged in user from FirebaseAuth
+        FirebaseUser currentUser = FirebaseAuth.getInstance().getCurrentUser();
+        if (currentUser == null) return;  // No user logged in
+
+        String userEmail = currentUser.getEmail();
+        if (userEmail == null) return;    // User might not have an email
+
+        // Reference to the root of your Realtime Database
+        DatabaseReference rootRef = FirebaseDatabase.getInstance().getReference();
+
+        // Read all data once
+        rootRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                // Loop over all enterprises
+                for (DataSnapshot enterpriseSnap : dataSnapshot.getChildren()) {
+                    // Loop over all roles within each enterprise
+                    for (DataSnapshot roleSnap : enterpriseSnap.getChildren()) {
+                        // Loop over all username nodes under each role
+                        for (DataSnapshot userSnap : roleSnap.getChildren()) {
+                            // Retrieve email from accountSettings for Admin
+                            DataSnapshot accountSettingsSnap = userSnap.child("accountSettings");
+                            String emailInDb = accountSettingsSnap.child("adminEmail").getValue(String.class);
+                            if (emailInDb != null && emailInDb.equalsIgnoreCase(userEmail)) {
+                                // We found the user in the DB
+                                String usernameValue = accountSettingsSnap.child("adminUsername").getValue(String.class);
+                                if (usernameValue != null) {
+                                    username.setText(usernameValue);
+                                }
+                                // Stop searching once the user is found
+                                return;
+                            }
+                        }
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                // Handle any errors if needed
+            }
+        });
     }
 }
