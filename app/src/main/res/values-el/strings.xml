@@ -150,6 +150,8 @@
     <string name="yes">Ναι</string>
     <string name="no">Όχι</string>
     <string name="enterprise_not_exist">Η επιχείρηση "%1$s" δεν υπάρχει. Παρακαλώ επικοινωνήστε με τον διαχειριστή σας.</string>
+    <string name="user_role_not_added">Αυτό το email ή ειδικότητα δεν αναγνωρίζεται από την επιχείρηση. Επικοινωνήστε με τον διαχειριστή σας.</string>
+    <string name="enter_email_select_role">Εισαγάγετε το email του υπαλλήλου και επιλέξτε την ειδικότητα του.</string>
 </resources>
 
 

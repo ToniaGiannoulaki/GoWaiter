@@ -1,5 +1,6 @@
 package com.example.gowaiter.MainMenu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
@@ -8,25 +9,14 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.Spinner;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.widget.*;
 
 import com.example.gowaiter.Loading.Loading_Screen;
 import com.example.gowaiter.R;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.*;
 import com.google.firebase.database.*;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Sign_up extends AppCompatActivity {
     private Spinner spinner;
@@ -56,7 +46,7 @@ public class Sign_up extends AppCompatActivity {
         // Sign up button click
         sing_up.setOnClickListener(view -> registerUser());
 
-        // Toggle password visibility (using drawable on the left)
+        // Toggle password visibility
         password.setOnTouchListener((v, event) -> {
             final int DRAWABLE_LEFT = 0;  // index for drawableStart in LTR layouts
             if (event.getAction() == MotionEvent.ACTION_UP) {
@@ -118,6 +108,59 @@ public class Sign_up extends AppCompatActivity {
         });
     }
 
+    /**
+     * Helper method that loops over all Admin children to find a staffSettings node
+     * containing a record with matching email and expectedRole. If found, it calls onSuccess.run().
+     */
+    private void checkStaffSettingsAndCreateUser(String enterpriseText, String emailText, String expectedRole, Runnable onSuccess) {
+        mDatabase.child(enterpriseText)
+                .child("Admin")
+                .addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot adminSnap) {
+                        boolean staffSettingsFound = false;
+                        for (DataSnapshot adminChild : adminSnap.getChildren()) {
+                            if (adminChild.hasChild("staffSettings")) {
+                                DataSnapshot staffSnap = adminChild.child("staffSettings");
+                                boolean foundUserInStaff = false;
+                                for (DataSnapshot ds : staffSnap.getChildren()) {
+                                    String staffEmail = ds.child("email").getValue(String.class);
+                                    String staffRole = ds.child("role").getValue(String.class);
+                                    if (staffEmail != null && staffEmail.equalsIgnoreCase(emailText)
+                                            && staffRole != null && staffRole.equalsIgnoreCase(expectedRole)) {
+                                        foundUserInStaff = true;
+                                        break;
+                                    }
+                                }
+                                if (foundUserInStaff) {
+                                    onSuccess.run();
+                                } else {
+                                    Toast.makeText(Sign_up.this,
+                                            getString(R.string.user_role_not_added),
+                                            Toast.LENGTH_LONG).show();
+                                    loadingScreen.hide();
+                                }
+                                staffSettingsFound = true;
+                                break;
+                            }
+                        }
+                        if (!staffSettingsFound) {
+                            Toast.makeText(Sign_up.this,
+                                    getString(R.string.user_role_not_added),
+                                    Toast.LENGTH_LONG).show();
+                            loadingScreen.hide();
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError error) {
+                        Toast.makeText(Sign_up.this,
+                                "DB Error: " + error.getMessage(),
+                                Toast.LENGTH_SHORT).show();
+                    }
+                });
+    }
+
     private void registerUser() {
         // Get text from EditTexts
         String usernameText = username.getText().toString().trim();
@@ -139,322 +182,319 @@ public class Sign_up extends AppCompatActivity {
             return;
         }
 
-        // Mapping dictionary: Greek -> normalized English keys
+        // ======================
+        // Mapping dictionary: Greek -> EXACT English keys
+        // ======================
         Map<String, String> roleMapping = new HashMap<>();
         roleMapping.put("Διαχειριστής", "Admin");
-        roleMapping.put("Σερβιτόρος/Σερβιτόρα", "Waiter-Waitress");
+        roleMapping.put("Σερβιτόρος/Σερβιτόρα", "Waiter");
         roleMapping.put("Μπαριστα/Μπαρμαν/Μπαργουμαν", "Barista-Barman-Barwoman");
         roleMapping.put("Μάγειρας/Μαγείρισσα/Αρχιμάγειρας", "Cook-Chef");
 
-        // Convert the selected role to the normalized key
-        final String normalizedRole = (roleMapping.containsKey(selectedRole)
+        // Convert the selected role to the normalized key (e.g. "Waiter", "Barista", etc.)
+        final String normalizedRole = roleMapping.containsKey(selectedRole)
                 ? roleMapping.get(selectedRole)
-                : selectedRole)
-                .replace("/", "-");
+                : selectedRole;
 
         // Show loading screen
         loadingScreen.show(this);
 
-        if (normalizedRole.equalsIgnoreCase("waiter-waitress")) {
-            // ---- WAITERS: Check if enterprise exists
-            mDatabase.child(enterpriseText).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@androidx.annotation.NonNull DataSnapshot snapshot) {
-                    if (!snapshot.exists()) {
-                        loadingScreen.hide();
-                        Toast.makeText(Sign_up.this,
-                                getString(R.string.enterprise_not_exist, enterpriseText),
-                                Toast.LENGTH_LONG).show();
-                    } else {
-                        // Enterprise exists -> proceed with Auth creation
-                        mAuth.createUserWithEmailAndPassword(emailText, passwordText)
-                                .addOnCompleteListener(task -> {
-                                    loadingScreen.hide();
-                                    if (task.isSuccessful()) {
-                                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                                        if (firebaseUser != null) {
-                                            // Build the Waiter structure
-                                            Map<String, Object> waiterNodeMap = new HashMap<>();
+        if (normalizedRole.equalsIgnoreCase("waiter")) {
+            // ---- WAITER: Check if enterprise exists first.
+            mDatabase.child(enterpriseText)
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (!snapshot.exists()) {
+                                loadingScreen.hide();
+                                Toast.makeText(Sign_up.this,
+                                        getString(R.string.enterprise_not_exist, enterpriseText),
+                                        Toast.LENGTH_LONG).show();
+                            } else {
+                                // Use helper method to check staffSettings for "Waiter"
+                                checkStaffSettingsAndCreateUser(enterpriseText, emailText, "Waiter", () -> {
+                                    mAuth.createUserWithEmailAndPassword(emailText, passwordText)
+                                            .addOnCompleteListener(task -> {
+                                                loadingScreen.hide();
+                                                if (task.isSuccessful()) {
+                                                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                                                    if (firebaseUser != null) {
+                                                        // Build the Waiter structure
+                                                        Map<String, Object> waiterNodeMap = new HashMap<>();
 
-                                            // accountSettings
-                                            Map<String, Object> accountSettingsMap = new HashMap<>();
-                                            accountSettingsMap.put("waiterUsername", usernameText);
-                                            accountSettingsMap.put("waiterEmail", emailText);
-                                            waiterNodeMap.put("accountSettings", accountSettingsMap);
+                                                        // accountSettings
+                                                        Map<String, Object> accountSettingsMap = new HashMap<>();
+                                                        accountSettingsMap.put("waiterUsername", usernameText);
+                                                        accountSettingsMap.put("waiterEmail", emailText);
+                                                        waiterNodeMap.put("accountSettings", accountSettingsMap);
 
-                                            // orders -> registeredOrders
-                                            Map<String, Object> ordersMap = new HashMap<>();
-                                            ordersMap.put("registeredOrders", new HashMap<>());
-                                            waiterNodeMap.put("orders", ordersMap);
+                                                        // orders -> registeredOrders
+                                                        Map<String, Object> ordersMap = new HashMap<>();
+                                                        ordersMap.put("registeredOrders", new HashMap<>());
+                                                        waiterNodeMap.put("orders", ordersMap);
 
-                                            // notifications -> inProgress, accepted, rejected, completedOrders
-                                            Map<String, Object> notificationsMap = new HashMap<>();
-                                            notificationsMap.put("inProgress", 0);
-                                            notificationsMap.put("accepted", 0);
-                                            notificationsMap.put("rejected", 0);
-                                            notificationsMap.put("completedOrders", 0);
-                                            waiterNodeMap.put("notifications", notificationsMap);
+                                                        // notifications
+                                                        Map<String, Object> notificationsMap = new HashMap<>();
+                                                        notificationsMap.put("inProgress", 0);
+                                                        notificationsMap.put("accepted", 0);
+                                                        notificationsMap.put("rejected", 0);
+                                                        notificationsMap.put("completedOrders", 0);
+                                                        waiterNodeMap.put("notifications", notificationsMap);
 
-                                            // statistics -> totalOrders
-                                            Map<String, Object> statisticsMap = new HashMap<>();
-                                            statisticsMap.put("totalOrders", 0);
-                                            waiterNodeMap.put("statistics", statisticsMap);
+                                                        // statistics
+                                                        Map<String, Object> statisticsMap = new HashMap<>();
+                                                        statisticsMap.put("totalOrders", 0);
+                                                        waiterNodeMap.put("statistics", statisticsMap);
 
-                                            // payments -> paidTables, unpaidTables
-                                            Map<String, Object> paymentsMap = new HashMap<>();
-                                            paymentsMap.put("paidTables", 0);
-                                            paymentsMap.put("unpaidTables", 0);
-                                            waiterNodeMap.put("payments", paymentsMap);
+                                                        // payments
+                                                        Map<String, Object> paymentsMap = new HashMap<>();
+                                                        paymentsMap.put("paidTables", 0);
+                                                        paymentsMap.put("unpaidTables", 0);
+                                                        waiterNodeMap.put("payments", paymentsMap);
 
-                                            // supplies -> supplyRequest
-                                            Map<String, Object> suppliesMap = new HashMap<>();
-                                            suppliesMap.put("supplyRequest", new HashMap<>());
-                                            waiterNodeMap.put("supplies", suppliesMap);
+                                                        // supplies
+                                                        Map<String, Object> suppliesMap = new HashMap<>();
+                                                        suppliesMap.put("supplyRequest", new HashMap<>());
+                                                        waiterNodeMap.put("supplies", suppliesMap);
 
-                                            // Write to DB -> /enterpriseName/Waiter/username
-                                            mDatabase.child(enterpriseText)
-                                                    .child("Waiter")
-                                                    .child(usernameText)
-                                                    .setValue(waiterNodeMap)
-                                                    .addOnCompleteListener(dbTask -> {
-                                                        if (dbTask.isSuccessful()) {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    getString(R.string.registration_successful),
-                                                                    Toast.LENGTH_SHORT).show();
-
-                                                            // Clear form
-                                                            username.setText("");
-                                                            enterprise_name.setText("");
-                                                            email.setText("");
-                                                            password.setText("");
-                                                            spinner.setSelection(0);
-
-                                                        } else {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    "DB Error: " + dbTask.getException().getMessage(),
-                                                                    Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    });
-                                        }
-                                    } else {
-                                        // Auth error
-                                        String errorMsg = (task.getException() != null)
-                                                ? task.getException().getMessage()
-                                                : "Unknown error";
-                                        Toast.makeText(Sign_up.this,
-                                                "Authentication Error: " + errorMsg,
-                                                Toast.LENGTH_SHORT).show();
-                                    }
+                                                        // Write to DB -> /enterpriseText/Waiter/usernameText
+                                                        mDatabase.child(enterpriseText)
+                                                                .child("Waiter")
+                                                                .child(usernameText)
+                                                                .setValue(waiterNodeMap)
+                                                                .addOnCompleteListener(dbTask -> {
+                                                                    if (dbTask.isSuccessful()) {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                getString(R.string.registration_successful),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                        // Clear form
+                                                                        username.setText("");
+                                                                        enterprise_name.setText("");
+                                                                        email.setText("");
+                                                                        password.setText("");
+                                                                        spinner.setSelection(0);
+                                                                    } else {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                "DB Error: " + dbTask.getException().getMessage(),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                });
+                                                    }
+                                                } else {
+                                                    String errorMsg = (task.getException() != null)
+                                                            ? task.getException().getMessage()
+                                                            : "Unknown error";
+                                                    Toast.makeText(Sign_up.this,
+                                                            "Authentication Error: " + errorMsg,
+                                                            Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 });
-                    }
-                }
+                            }
+                        }
 
-                @Override
-                public void onCancelled(@androidx.annotation.NonNull DatabaseError error) {
-                    loadingScreen.hide();
-                    Toast.makeText(Sign_up.this,
-                            "DB Error: " + error.getMessage(),
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            loadingScreen.hide();
+                            Toast.makeText(Sign_up.this,
+                                    "DB Error: " + error.getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
+        } else if (normalizedRole.equalsIgnoreCase("barista")) {
+            // ---- BARISTA: Check if enterprise exists first.
+            mDatabase.child(enterpriseText)
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (!snapshot.exists()) {
+                                loadingScreen.hide();
+                                Toast.makeText(Sign_up.this,
+                                        getString(R.string.enterprise_not_exist, enterpriseText),
+                                        Toast.LENGTH_LONG).show();
+                            } else {
+                                // Check staffSettings for "Barista"
+                                checkStaffSettingsAndCreateUser(enterpriseText, emailText, "Barista-Barman-Barwoman", () -> {
+                                    mAuth.createUserWithEmailAndPassword(emailText, passwordText)
+                                            .addOnCompleteListener(task -> {
+                                                loadingScreen.hide();
+                                                if (task.isSuccessful()) {
+                                                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                                                    if (firebaseUser != null) {
+                                                        // Build the Barista structure
+                                                        Map<String, Object> baristaNodeMap = new HashMap<>();
 
-        } else if (normalizedRole.equalsIgnoreCase("barista-barman-barwoman")) {
-            // ---- BARISTA-BARMAN-BARWOMAN: Check if enterprise exists
-            mDatabase.child(enterpriseText).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@androidx.annotation.NonNull DataSnapshot snapshot) {
-                    if (!snapshot.exists()) {
-                        loadingScreen.hide();
-                        Toast.makeText(Sign_up.this,
-                                getString(R.string.enterprise_not_exist, enterpriseText),
-                                Toast.LENGTH_LONG).show();
-                    } else {
-                        // Enterprise exists -> proceed with Auth creation
-                        mAuth.createUserWithEmailAndPassword(emailText, passwordText)
-                                .addOnCompleteListener(task -> {
-                                    loadingScreen.hide();
-                                    if (task.isSuccessful()) {
-                                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                                        if (firebaseUser != null) {
-                                            // Build the Barista structure
-                                            Map<String, Object> baristaNodeMap = new HashMap<>();
+                                                        // accountSettings
+                                                        Map<String, Object> accountSettingsMap = new HashMap<>();
+                                                        accountSettingsMap.put("baristaUsername", usernameText);
+                                                        accountSettingsMap.put("baristaEmail", emailText);
+                                                        baristaNodeMap.put("accountSettings", accountSettingsMap);
 
-                                            // accountSettings
-                                            Map<String, Object> accountSettingsMap = new HashMap<>();
-                                            accountSettingsMap.put("baristaUsername", usernameText);
-                                            accountSettingsMap.put("baristaEmail", emailText);
-                                            baristaNodeMap.put("accountSettings", accountSettingsMap);
+                                                        // orders
+                                                        Map<String, Object> ordersMap = new HashMap<>();
+                                                        ordersMap.put("inProgress", 0);
+                                                        ordersMap.put("accepted", 0);
+                                                        ordersMap.put("rejected", 0);
+                                                        ordersMap.put("completedOrders", 0);
+                                                        baristaNodeMap.put("orders", ordersMap);
 
-                                            // orders -> inProgress, accepted, rejected, completedOrders
-                                            Map<String, Object> ordersMap = new HashMap<>();
-                                            ordersMap.put("inProgress", 0);
-                                            ordersMap.put("accepted", 0);
-                                            ordersMap.put("rejected", 0);
-                                            ordersMap.put("completedOrders", 0);
-                                            baristaNodeMap.put("orders", ordersMap);
+                                                        // recipes
+                                                        baristaNodeMap.put("recipes", new HashMap<>());
 
-                                            // recipes
-                                            baristaNodeMap.put("recipes", new HashMap<>());
+                                                        // statistics
+                                                        Map<String, Object> statisticsMap = new HashMap<>();
+                                                        statisticsMap.put("totalOrders", 0);
+                                                        baristaNodeMap.put("statistics", statisticsMap);
 
-                                            // statistics -> totalOrders
-                                            Map<String, Object> statisticsMap = new HashMap<>();
-                                            statisticsMap.put("totalOrders", 0);
-                                            baristaNodeMap.put("statistics", statisticsMap);
+                                                        // trainingAndSupport
+                                                        baristaNodeMap.put("trainingAndSupport", new HashMap<>());
 
-                                            // trainingAndSupport
-                                            baristaNodeMap.put("trainingAndSupport", new HashMap<>());
+                                                        // supplies
+                                                        Map<String, Object> suppliesMap = new HashMap<>();
+                                                        suppliesMap.put("requestedSupplies", new HashMap<>());
+                                                        baristaNodeMap.put("supplies", suppliesMap);
 
-                                            // supplies -> requestedSupplies
-                                            Map<String, Object> suppliesMap = new HashMap<>();
-                                            suppliesMap.put("requestedSupplies", new HashMap<>());
-                                            baristaNodeMap.put("supplies", suppliesMap);
-
-                                            // Write to DB -> /enterpriseName/Barista-Barman-Barwoman/username
-                                            mDatabase.child(enterpriseText)
-                                                    .child("Barista-Barman-Barwoman")
-                                                    .child(usernameText)
-                                                    .setValue(baristaNodeMap)
-                                                    .addOnCompleteListener(dbTask -> {
-                                                        if (dbTask.isSuccessful()) {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    getString(R.string.registration_successful),
-                                                                    Toast.LENGTH_SHORT).show();
-
-                                                            // Clear form
-                                                            username.setText("");
-                                                            enterprise_name.setText("");
-                                                            email.setText("");
-                                                            password.setText("");
-                                                            spinner.setSelection(0);
-
-                                                        } else {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    "DB Error: " + dbTask.getException().getMessage(),
-                                                                    Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    });
-                                        }
-                                    } else {
-                                        // Auth error
-                                        String errorMsg = (task.getException() != null)
-                                                ? task.getException().getMessage()
-                                                : "Unknown error";
-                                        Toast.makeText(Sign_up.this,
-                                                "Authentication Error: " + errorMsg,
-                                                Toast.LENGTH_SHORT).show();
-                                    }
+                                                        // Write to DB -> /enterpriseText/Barista/usernameText
+                                                        mDatabase.child(enterpriseText)
+                                                                .child("Barista")
+                                                                .child(usernameText)
+                                                                .setValue(baristaNodeMap)
+                                                                .addOnCompleteListener(dbTask -> {
+                                                                    if (dbTask.isSuccessful()) {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                getString(R.string.registration_successful),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                        // Clear form
+                                                                        username.setText("");
+                                                                        enterprise_name.setText("");
+                                                                        email.setText("");
+                                                                        password.setText("");
+                                                                        spinner.setSelection(0);
+                                                                    } else {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                "DB Error: " + dbTask.getException().getMessage(),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                });
+                                                    }
+                                                } else {
+                                                    String errorMsg = (task.getException() != null)
+                                                            ? task.getException().getMessage()
+                                                            : "Unknown error";
+                                                    Toast.makeText(Sign_up.this,
+                                                            "Authentication Error: " + errorMsg,
+                                                            Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 });
-                    }
-                }
+                            }
+                        }
 
-                @Override
-                public void onCancelled(@androidx.annotation.NonNull DatabaseError error) {
-                    loadingScreen.hide();
-                    Toast.makeText(Sign_up.this,
-                            "DB Error: " + error.getMessage(),
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
-
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            loadingScreen.hide();
+                            Toast.makeText(Sign_up.this,
+                                    "DB Error: " + error.getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
         } else if (normalizedRole.equalsIgnoreCase("cook-chef")) {
-            // ---- COOK-CHEF: Same structure & logic as Barista
-            // Check if enterprise exists
-            mDatabase.child(enterpriseText).addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@androidx.annotation.NonNull DataSnapshot snapshot) {
-                    if (!snapshot.exists()) {
-                        loadingScreen.hide();
-                        Toast.makeText(Sign_up.this,
-                                getString(R.string.enterprise_not_exist, enterpriseText),
-                                Toast.LENGTH_LONG).show();
-                    } else {
-                        // Enterprise exists -> proceed with Auth creation
-                        mAuth.createUserWithEmailAndPassword(emailText, passwordText)
-                                .addOnCompleteListener(task -> {
-                                    loadingScreen.hide();
-                                    if (task.isSuccessful()) {
-                                        FirebaseUser firebaseUser = mAuth.getCurrentUser();
-                                        if (firebaseUser != null) {
-                                            // Build the Cook/Chef structure (same as Barista)
-                                            Map<String, Object> chefNodeMap = new HashMap<>();
+            // ---- COOK-CHEF: Check if enterprise exists first.
+            mDatabase.child(enterpriseText)
+                    .addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(@NonNull DataSnapshot snapshot) {
+                            if (!snapshot.exists()) {
+                                loadingScreen.hide();
+                                Toast.makeText(Sign_up.this,
+                                        getString(R.string.enterprise_not_exist, enterpriseText),
+                                        Toast.LENGTH_LONG).show();
+                            } else {
+                                // Check staffSettings for "Cook-Chef"
+                                checkStaffSettingsAndCreateUser(enterpriseText, emailText, "Cook-Chef", () -> {
+                                    mAuth.createUserWithEmailAndPassword(emailText, passwordText)
+                                            .addOnCompleteListener(task -> {
+                                                loadingScreen.hide();
+                                                if (task.isSuccessful()) {
+                                                    FirebaseUser firebaseUser = mAuth.getCurrentUser();
+                                                    if (firebaseUser != null) {
+                                                        // Build the Cook/Chef structure
+                                                        Map<String, Object> chefNodeMap = new HashMap<>();
 
-                                            // accountSettings
-                                            Map<String, Object> accountSettingsMap = new HashMap<>();
-                                            accountSettingsMap.put("chefUsername", usernameText);
-                                            accountSettingsMap.put("chefEmail", emailText);
-                                            chefNodeMap.put("accountSettings", accountSettingsMap);
+                                                        // accountSettings
+                                                        Map<String, Object> accountSettingsMap = new HashMap<>();
+                                                        accountSettingsMap.put("chefUsername", usernameText);
+                                                        accountSettingsMap.put("chefEmail", emailText);
+                                                        chefNodeMap.put("accountSettings", accountSettingsMap);
 
-                                            // orders -> inProgress, accepted, rejected, completedOrders
-                                            Map<String, Object> ordersMap = new HashMap<>();
-                                            ordersMap.put("inProgress", 0);
-                                            ordersMap.put("accepted", 0);
-                                            ordersMap.put("rejected", 0);
-                                            ordersMap.put("completedOrders", 0);
-                                            chefNodeMap.put("orders", ordersMap);
+                                                        // orders
+                                                        Map<String, Object> ordersMap = new HashMap<>();
+                                                        ordersMap.put("inProgress", 0);
+                                                        ordersMap.put("accepted", 0);
+                                                        ordersMap.put("rejected", 0);
+                                                        ordersMap.put("completedOrders", 0);
+                                                        chefNodeMap.put("orders", ordersMap);
 
-                                            // recipes
-                                            chefNodeMap.put("recipes", new HashMap<>());
+                                                        // recipes
+                                                        chefNodeMap.put("recipes", new HashMap<>());
 
-                                            // statistics -> totalOrders
-                                            Map<String, Object> statisticsMap = new HashMap<>();
-                                            statisticsMap.put("totalOrders", 0);
-                                            chefNodeMap.put("statistics", statisticsMap);
+                                                        // statistics
+                                                        Map<String, Object> statisticsMap = new HashMap<>();
+                                                        statisticsMap.put("totalOrders", 0);
+                                                        chefNodeMap.put("statistics", statisticsMap);
 
-                                            // trainingAndSupport
-                                            chefNodeMap.put("trainingAndSupport", new HashMap<>());
+                                                        // trainingAndSupport
+                                                        chefNodeMap.put("trainingAndSupport", new HashMap<>());
 
-                                            // supplies -> requestedSupplies
-                                            Map<String, Object> suppliesMap = new HashMap<>();
-                                            suppliesMap.put("requestedSupplies", new HashMap<>());
-                                            chefNodeMap.put("supplies", suppliesMap);
+                                                        // supplies
+                                                        Map<String, Object> suppliesMap = new HashMap<>();
+                                                        suppliesMap.put("requestedSupplies", new HashMap<>());
+                                                        chefNodeMap.put("supplies", suppliesMap);
 
-                                            // Write to DB -> /enterpriseName/Cook-Chef/username
-                                            mDatabase.child(enterpriseText)
-                                                    .child("Cook-Chef")
-                                                    .child(usernameText)
-                                                    .setValue(chefNodeMap)
-                                                    .addOnCompleteListener(dbTask -> {
-                                                        if (dbTask.isSuccessful()) {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    getString(R.string.registration_successful),
-                                                                    Toast.LENGTH_SHORT).show();
-
-                                                            // Clear form
-                                                            username.setText("");
-                                                            enterprise_name.setText("");
-                                                            email.setText("");
-                                                            password.setText("");
-                                                            spinner.setSelection(0);
-
-                                                        } else {
-                                                            Toast.makeText(Sign_up.this,
-                                                                    "DB Error: " + dbTask.getException().getMessage(),
-                                                                    Toast.LENGTH_SHORT).show();
-                                                        }
-                                                    });
-                                        }
-                                    } else {
-                                        // Auth error
-                                        String errorMsg = (task.getException() != null)
-                                                ? task.getException().getMessage()
-                                                : "Unknown error";
-                                        Toast.makeText(Sign_up.this,
-                                                "Authentication Error: " + errorMsg,
-                                                Toast.LENGTH_SHORT).show();
-                                    }
+                                                        // Write to DB -> /enterpriseText/Cook-Chef/usernameText
+                                                        mDatabase.child(enterpriseText)
+                                                                .child("Cook-Chef")
+                                                                .child(usernameText)
+                                                                .setValue(chefNodeMap)
+                                                                .addOnCompleteListener(dbTask -> {
+                                                                    if (dbTask.isSuccessful()) {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                getString(R.string.registration_successful),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                        // Clear form
+                                                                        username.setText("");
+                                                                        enterprise_name.setText("");
+                                                                        email.setText("");
+                                                                        password.setText("");
+                                                                        spinner.setSelection(0);
+                                                                    } else {
+                                                                        Toast.makeText(Sign_up.this,
+                                                                                "DB Error: " + dbTask.getException().getMessage(),
+                                                                                Toast.LENGTH_SHORT).show();
+                                                                    }
+                                                                });
+                                                    }
+                                                } else {
+                                                    String errorMsg = (task.getException() != null)
+                                                            ? task.getException().getMessage()
+                                                            : "Unknown error";
+                                                    Toast.makeText(Sign_up.this,
+                                                            "Authentication Error: " + errorMsg,
+                                                            Toast.LENGTH_SHORT).show();
+                                                }
+                                            });
                                 });
-                    }
-                }
+                            }
+                        }
 
-                @Override
-                public void onCancelled(@androidx.annotation.NonNull DatabaseError error) {
-                    loadingScreen.hide();
-                    Toast.makeText(Sign_up.this,
-                            "DB Error: " + error.getMessage(),
-                            Toast.LENGTH_SHORT).show();
-                }
-            });
-
+                        @Override
+                        public void onCancelled(@NonNull DatabaseError error) {
+                            loadingScreen.hide();
+                            Toast.makeText(Sign_up.this,
+                                    "DB Error: " + error.getMessage(),
+                                    Toast.LENGTH_SHORT).show();
+                        }
+                    });
         } else {
             // ---- OTHER ROLES (Admin, etc.)
             mAuth.createUserWithEmailAndPassword(emailText, passwordText)
@@ -470,56 +510,46 @@ public class Sign_up extends AppCompatActivity {
                             spinner.setSelection(0);
 
                             if (firebaseUser != null) {
-                                // 1) Build the accountSettings mapping
+                                // Build the accountSettings mapping
                                 Map<String, Object> accountSettingsMap = new HashMap<>();
-                                // If it's Admin, we keep the same keys as before:
                                 accountSettingsMap.put("adminUsername", usernameText);
                                 accountSettingsMap.put("adminEmail", emailText);
 
-                                // 2) Build the user node mapping and add subnodes
+                                // Build the user node mapping and add subnodes
                                 Map<String, Object> userNodeMap = new HashMap<>();
                                 userNodeMap.put("accountSettings", accountSettingsMap);
 
-                                switch (normalizedRole.toLowerCase()) {
-                                    case "admin":
-                                        // -- enterpriseSettings node
-                                        Map<String, Object> enterpriseSettingsMap = new HashMap<>();
-                                        enterpriseSettingsMap.put("enterpriseName", enterpriseText);
+                                if (normalizedRole.equalsIgnoreCase("admin")) {
+                                    // enterpriseSettings node
+                                    Map<String, Object> enterpriseSettingsMap = new HashMap<>();
+                                    enterpriseSettingsMap.put("enterpriseName", enterpriseText);
 
-                                        // -- tables
-                                        Map<String, Object> tablesMap = new HashMap<>();
-                                        tablesMap.put("indoorTables", 0);
-                                        tablesMap.put("outdoorTables", 0);
-                                        enterpriseSettingsMap.put("tables", tablesMap);
+                                    // tables
+                                    Map<String, Object> tablesMap = new HashMap<>();
+                                    tablesMap.put("indoorTables", 0);
+                                    tablesMap.put("outdoorTables", 0);
+                                    enterpriseSettingsMap.put("tables", tablesMap);
 
-                                        // -- menu
-                                        Map<String, Object> menuMap = new HashMap<>();
-                                        // categories sub-node with dummy entry
-                                        Map<String, Object> categoriesMap = new HashMap<>();
-                                        categoriesMap.put("dummyCategory", "initialValue");
-                                        menuMap.put("categories", categoriesMap);
+                                    // menu with a dummy category
+                                    Map<String, Object> menuMap = new HashMap<>();
+                                    Map<String, Object> categoriesMap = new HashMap<>();
+                                    categoriesMap.put("dummyCategory", "initialValue");
+                                    menuMap.put("categories", categoriesMap);
+                                    enterpriseSettingsMap.put("menu", menuMap);
+                                    userNodeMap.put("enterpriseSettings", enterpriseSettingsMap);
 
-                                        enterpriseSettingsMap.put("menu", menuMap);
-                                        userNodeMap.put("enterpriseSettings", enterpriseSettingsMap);
+                                    // statistics
+                                    Map<String, Object> statisticsMap = new HashMap<>();
+                                    statisticsMap.put("totalOrders", 0);
+                                    userNodeMap.put("statistics", statisticsMap);
 
-                                        // -- statistics node
-                                        Map<String, Object> statisticsMap = new HashMap<>();
-                                        statisticsMap.put("totalOrders", 0);
-                                        userNodeMap.put("statistics", statisticsMap);
-
-                                        // -- other empty nodes for Admin
-                                        userNodeMap.put("staffSettings", new HashMap<>());
-                                        userNodeMap.put("supplies", new HashMap<>());
-                                        userNodeMap.put("payments", new HashMap<>());
-                                        break;
-
-                                    default:
-                                        Log.d("DEBUG", "Normalized role: [" + normalizedRole + "]");
-                                        // fallback if needed
-                                        break;
+                                    // other empty nodes for Admin
+                                    userNodeMap.put("staffSettings", new HashMap<>());
+                                    userNodeMap.put("supplies", new HashMap<>());
+                                    userNodeMap.put("payments", new HashMap<>());
                                 }
 
-                                // 3) Write to DB at: /<enterpriseText>/<normalizedRole>/<usernameText>
+                                // Write to DB at: /enterpriseText/normalizedRole/usernameText
                                 loadingScreen.hide();
                                 mDatabase.child(enterpriseText)
                                         .child(normalizedRole)
@@ -545,11 +575,11 @@ public class Sign_up extends AppCompatActivity {
                             String errorMessage;
                             try {
                                 throw task.getException();
-                            } catch (com.google.firebase.auth.FirebaseAuthWeakPasswordException e) {
+                            } catch (FirebaseAuthWeakPasswordException e) {
                                 errorMessage = getString(R.string.error_weak_password);
-                            } catch (com.google.firebase.auth.FirebaseAuthInvalidCredentialsException e) {
+                            } catch (FirebaseAuthInvalidCredentialsException e) {
                                 errorMessage = getString(R.string.error_invalid_email);
-                            } catch (com.google.firebase.auth.FirebaseAuthUserCollisionException e) {
+                            } catch (FirebaseAuthUserCollisionException e) {
                                 errorMessage = getString(R.string.error_email_already_in_use);
                             } catch (Exception e) {
                                 errorMessage = getString(R.string.error_registration_failed) + " " + e.getMessage();

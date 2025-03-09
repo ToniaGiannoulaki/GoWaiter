@@ -297,4 +297,6 @@
     <string name="yes">Yes</string>
     <string name="no">No</string>
     <string name="enterprise_not_exist">Enterprise "%1$s" does not exist. Please contact your admin.</string>
+    <string name="user_role_not_added">This email or role is not recognised by the enterprise. Please contact your admin.</string>
+    <string name="enter_email_select_role">Please enter email and select a role.</string>
 </resources>
